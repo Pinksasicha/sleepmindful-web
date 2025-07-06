@@ -1,4 +1,4 @@
-# ใช้ PHP 8 เวอร์ชัน CLI
+
 FROM php:8.1-cli
 
 # ตั้ง working directory
