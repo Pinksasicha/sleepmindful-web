@@ -1,0 +1,9254 @@
+html{color:#000; background-color: #fff}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-spacing:0;}fieldset,img{border:0;}address,b,caption,cite,code,dfn,em,i,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+/* HTML5 tags */
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {display:block;margin:0;padding:0;}
+
+/*FONT DECLARATIONS*/
+@font-face {
+	font-family: 'Niteweit';
+	src: url('/css/fonts/Niteweit.eot');
+	src: url('/css/fonts/Niteweit.eot?#iefix') format('embedded-opentype'),
+	url('/css/fonts/Niteweit.woff') format('woff'),
+	url('/css/fonts/Niteweit.ttf') format('truetype'),
+	url('/css/fonts/Niteweit.svg#NiteweitRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NiteweitBold';
+	src: url('/css/fonts/NiteweitBold.eot');
+	src: url('/css/fonts/NiteweitBold.eot?#iefix') format('embedded-opentype'),
+	url('/css/fonts/NiteweitBold.woff') format('woff'),
+	url('/css/fonts/NiteweitBold.ttf') format('truetype'),
+	url('/css/fonts/NiteweitBold.svg#NiteweitBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Font Awesome - http://fortawesome.github.com/Font-Awesome */
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('/css/fonts/FontAwesome.eot');
+	src: url('/css/fonts/FontAwesome.eot?#iefix') format('embedded-opentype'),
+	url('/css/fonts/FontAwesome.woff') format('woff'),
+	url('/css/fonts/FontAwesome.ttf') format('truetype'),
+	url('/css/fonts/FontAwesome.svg#FontAwesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*GENERAL TAGS*/
+html {
+	background-color: #fff;
+	color: #003366;
+	font-size: 10px;
+	height: 100%;
+}
+
+body {
+	background-color: #fff;
+	color: #003366;
+	font-family: Niteweit, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+	-webkit-print-color-adjust: exact;
+}
+
+a {
+	color: #16a2bb;
+}
+
+a:hover {
+	color: #069;
+}
+
+strong,
+b {
+	font-family: NiteweitBold, Helvetica, Arial, sans-serif;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 34px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+h1.centered {
+	text-align: center;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+h4 {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+h1 em,
+h2 em,
+h3 em,
+h4 em {
+	font-style: normal;
+	color: #003366;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+figcaption {
+	font-size: 14px;
+}
+
+/*GENERAL CLASSES*/
+.clear {
+	float: none;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.notWeit {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.success {
+	color: #0a0 !important;
+}
+
+.error {
+	color: #f09 !important;
+}
+
+.highlight {
+	color: #f09 !important;
+}
+
+.default,
+.description {
+	color: #999 !important;
+}
+
+.strikeThrough {
+	text-decoration: line-through;
+}
+
+/*NB - Can't combine these!*/
+::-webkit-input-placeholder {
+	color: #999 !important;
+}
+::-moz-placeholder {
+	color: #999 !important;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: #999 !important;
+}
+
+.comingSoon {
+	color: #ff6500 !important;
+}
+
+.stage.level1 {
+	background-color: #999 !important;
+}
+
+.stage.level2 {
+	background-color: #939 !important;
+}
+
+.stage.level3,
+.stage.doctor {
+	background-color: #606 !important;
+}
+
+.stage.level4 {
+	background-color: #003366 !important;
+}
+
+.stage.expert,
+.stage.moderator,
+.stage.admin {
+	background-color: #f60 !important;
+}
+
+h1.logoWithText img {
+	display: block;
+	margin: auto;
+}
+
+h3.bulleted {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+ul.bulleted>li {
+	list-style: disc outside;
+	margin-left: 1.5em;
+}
+
+ul.lined>li {
+	padding: 10px 0;
+	border-top: 1px solid #ccc;
+}
+
+ul.lined>li:first-child {
+	padding-top: 0;
+	border-top: 0;
+}
+
+ol.numbered>li {
+	list-style: decimal outside;
+	margin-left: 1.5em;
+}
+
+ol.lettered>li {
+	list-style: lower-alpha outside;
+	margin-left: 1.5em;
+}
+
+.tryOutSleepio {
+	background-color: #003366;
+	color: #fff;
+}
+
+.tryOutSleepio a.square {
+	display: block;
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 10px;
+	background-color: #16a2bb;
+	color: #fff;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+}
+
+.tryOutSleepio a:hover {
+	background-color: #069;
+	color: #fff;
+}
+
+.sideBar .tryOutSleepio p {
+	font-size: 16px;
+}
+
+a.return {
+	display: block;
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+
+.debugging {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	color: #000;
+	font-size: 14px;
+	background-color: #ccc;
+	z-index: 200;
+	opacity: .3;
+}
+
+.debugging>dl {
+	display: none;
+}
+
+.debugging>dl>dt {
+	margin-top: 5px;
+}
+
+.debugging>dl>dt:first-child {
+	margin-top: 0;
+}
+
+.debugging>dl>dd {
+	margin-left: 20px;
+}
+
+.pinned {
+	position: relative;
+}
+
+.pinned:before,
+.pinned:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	background: transparent url(/img/controls/pin.png) left top no-repeat;
+	background-size: 15px 25px;
+	height: 25px;
+	width: 15px;
+}
+
+.pinned:before {
+	left: 0;
+}
+
+.pinned:after {
+	right: 0;
+}
+
+/*EMBED VIDEO*/
+.embedVideoThumbnail {
+	cursor: pointer;
+}
+
+.embedVideoThumbnail:hover img {
+	opacity: .8;
+}
+
+#embedVideo {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	width: 942px;
+	margin-left: -486px;
+	z-index: 20;
+	background-color: #000;
+}
+
+#embedVideoClose {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 3px solid #fff;
+	border-radius: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+
+#embedVideoClose:before {
+	content: '\f00d';
+	display: block;
+	font-family: FontAwesome, sans-serif;
+	font-weight: lighter;
+	font-size: 18px;
+	text-align: center;
+	line-height: 26px;
+	text-align: center;
+	pointer-events: none;
+}
+
+#embedVideo iframe {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #000;
+}
+
+#embedVideoCurtain {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	z-index: 19;
+}
+
+/*FORMS*/
+form>section {
+	padding-top: 30px;
+	border-top: 1px solid #ccc;
+	margin-top: 30px;
+}
+
+form>section:first-child {
+	padding-top: 0;
+	border-top: none;
+	margin-top: 0;
+}
+
+form h1,
+form h2,
+form h3,
+form h4,
+form p,
+form table {
+	width: 600px;
+	margin: 0 0 10px 156px;
+	text-align: left;
+}
+
+form h1.narrow,
+form h2.narrow,
+form h3.narrow,
+form h4.narrow,
+form p.narrow {
+	width: 414px;
+	margin-left: 249px;
+}
+
+form.subNavBody h1,
+form.subNavBody h2,
+form.subNavBody h3,
+form.subNavBody h4,
+form.subNavBody p,
+form.subNavBody table,
+.subNavBody form h1,
+.subNavBody form h2,
+.subNavBody form h3,
+.subNavBody form h4,
+.subNavBody form p,
+.subNavBody form table,
+.subNavBody .questions>li {
+	margin-left: 0;
+}
+
+form h1.twoColumn,
+form h2.twoColumn,
+form h3.twoColumn,
+form h4.twoColumn,
+form p.twoColumn {
+	margin-left: 28px;
+}
+
+form section>h1.twoColumn:first-child,
+form section>h2.twoColumn:first-child,
+form section>h3.twoColumn:first-child,
+form section>h4.twoColumn:first-child,
+form section>p.twoColumn:first-child {
+	margin-bottom: 30px;
+}
+
+form .number {
+	display: inline-block;
+	margin-right: .5em;
+	color: #16a2bb;
+}
+
+form .questions>li {
+	width: 628px;
+	margin: 0 0 20px 156px;
+}
+
+form .questions.narrow>li {
+	width: 442px;
+	margin-left: 249px;
+}
+
+form .questions>li.doubleUp {
+	display: inline-block;
+	vertical-align: top;
+	width: 286px;
+	margin-right: 28px;
+}
+
+form .questions>li.doubleUp.even {
+	margin-left: 0;
+}
+
+form .questions.twoColumn {
+	border-top: 1px solid #ccc;
+}
+
+form .questions.twoColumn>li,
+form .questions.twoColumn>li.narrow {
+	width: 884px;
+	padding: 15px 0 0 28px;
+	border-top: 1px solid #ccc;
+	margin-bottom: 15px;
+	margin-left: 0;
+}
+
+.subNavBody .questions>li.narrow {
+	margin-left: 146px;
+}
+
+.subNavBody .questions.twoColumn>li {
+	width: 677px;
+}
+
+form .questions.twoColumn:first-child,
+form .questions.twoColumn>li:first-child {
+	border-top: none;
+}
+
+form .questions>li.centered,
+.subNavBody .questions>li.centered {
+	width: 100%;
+	text-align: center;
+	margin-left: 0;
+}
+
+.subNavBody .questions>li.centered {
+	width: 600px;
+}
+
+form .questions.twoColumn>li.centered {
+	padding-left: 0;
+}
+
+form .questions p {
+	margin: 10px 0 0;
+}
+
+form .questions .centered p,
+form .questions .centered .errorMessage,
+form .questions .centered .successMessage {
+	display: block;
+	width: 500px;
+	margin: 0 auto 10px;
+}
+
+form .questions .centered .errorMessage>li,
+form .questions .centered .successMessage>li {
+	width: 500px;
+}
+
+form .questions p:first-child {
+	margin-top: 0;
+}
+
+/*LABELS*/
+.radioList h2,
+.radioList h3,
+.radioList h4,
+.checkboxList h2,
+.checkboxList h3,
+.checkboxList h4 {
+	font-size: 18px;
+}
+
+label,
+.radioList h2,
+.radioList h3,
+.radioList h4,
+.checkboxList h2,
+.checkboxList h3,
+.checkboxList h4 {
+	display: block;
+	margin: 0;
+}
+
+label {
+	width: 600px;
+}
+
+.narrow label {
+	width: 414px;
+}
+
+.doubleUp label {
+	width: auto;
+	max-width: 258px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.doubleUp label.noToolTip {
+	max-width: 274px;
+}
+
+.noLabels label {
+	display: none;
+}
+
+.twoColumn label,
+.twoColumn .radioList h2,
+.twoColumn .radioList h3,
+.twoColumn .radioList h4,
+.twoColumn .checkboxList h2,
+.twoColumn .checkboxList h3,
+.twoColumn .checkboxList h4 {
+	display: inline-block;
+	vertical-align: middle;
+	width: 414px;
+	margin-right: 28px;
+}
+
+.subNavBody .radioList h2,
+.subNavBody .radioList h3,
+.subNavBody .radioList h4,
+.subNavBody .checkboxList h2,
+.subNavBody .checkboxList h3,
+.subNavBody .checkboxList h4 {
+	margin-left: 0;
+}
+
+.subNavBody .twoColumn label,
+.subNavBody .twoColumn .radioList h2,
+.subNavBody .twoColumn .radioList h3,
+.subNavBody .twoColumn .radioList h4,
+.subNavBody .twoColumn .checkboxList h2,
+.subNavBody .twoColumn .checkboxList h3,
+.subNavBody .twoColumn .checkboxList h4 {
+	width: 400px;
+}
+
+.twoColumn .radioList h2,
+.twoColumn .radioList h3,
+.twoColumn .radioList h4 {
+	vertical-align: middle;
+}
+
+.twoColumn .checkboxList h2,
+.twoColumn .checkboxList h3,
+.twoColumn .checkboxList h4 {
+	vertical-align: top;
+}
+
+label .optional {
+	color: #999;
+	padding-left: 2px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+/*TEXT INPUT*/
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=num] {
+	height: 36px;
+	line-height: 36px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=num],
+textarea {
+	vertical-align: middle;
+	width: 588px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	color: #003366;
+}
+
+.error input[type=text],
+.error input[type=email],
+.error input[type=password],
+.error input[type=search],
+.error input[type=num],
+.error textarea {
+	border-color: #f09;
+}
+
+.doubleUp input[type=text],
+.doubleUp input[type=email],
+.doubleUp input[type=password],
+.doubleUp input[type=search],
+.doubleUp input[type=num],
+.doubleUp textarea {
+	width: 274px;
+}
+
+.narrow input[type=text],
+.narrow input[type=email],
+.narrow input[type=password],
+.narrow input[type=search],
+.narrow input[type=num],
+.narrow textarea,
+.twoColumn input[type=text],
+.twoColumn input[type=email],
+.twoColumn input[type=password],
+.twoColumn input[type=search],
+.twoColumn input[type=num],
+.twoColumn textarea {
+	width: 402px;
+}
+
+.subNavBody .twoColumn input[type=text],
+.subNavBody .twoColumn input[type=email],
+.subNavBody .twoColumn input[type=password],
+.subNavBody .twoColumn input[type=search],
+.subNavBody .twoColumn input[type=num],
+.subNavBody .twoColumn textarea {
+	width: 209px;
+}
+
+.textLargeButton input[type=text],
+.textExtraLargeButton input[type=text],
+.textLargeButton input[type=email],
+.textExtraLargeButton input[type=email],
+.textLargeButton input[type=password],
+.textExtraLargeButton input[type=password],
+.textLargeButton input[type=search],
+.textExtraLargeButton input[type=search],
+.textLargeButton input[type=num],
+.textExtraLargeButton input[type=num] {
+	width: 336px;
+}
+
+.textLargeButton input[type=text],
+.textLargeButton input[type=email],
+.textLargeButton input[type=password],
+.textLargeButton input[type=search],
+.textLargeButton input[type=num] {
+	font-size: 14px;
+	line-height: 18px;
+	height: 18px;
+	padding: 2px 5px;
+}
+
+.textLargeButton .throbber,
+.textLargeButton .manualThrobber,
+.textExtraLargeButton .throbber,
+.textExtraLargeButton .manualThrobber {
+	margin: 0 5px;
+}
+
+input[type=search] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+	display: none;
+}
+
+textarea {
+	resize: none;
+}
+
+ul.formattingControls li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 5px 5px;
+}
+
+ul.formattingControls li:first-child {
+	margin-left: 0;
+}
+
+button.formatting {
+	height: 20px;
+	width: 20px;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	background-color: #ccc;
+	line-height: 20px;
+	color: #000;
+	font-family: courier, serif;
+}
+
+button.formatting:hover {
+	border-color: #000;
+	background-color: #aaa;
+}
+
+button.formatting.bold {
+	font-weight: bold;
+}
+
+button.formatting.italic {
+	font-style: italic;
+}
+
+/*SELECT*/
+select {
+	width: 600px;
+	color: #003366;
+	vertical-align: middle;
+}
+
+select optgroup {
+	font-weight: bold;
+	font-style: italic;
+}
+
+select optgroup option {
+	font-weight: normal;
+	font-style: normal;
+}
+
+.doubleUp select {
+	width: 286px;
+}
+
+.narrow select,
+.twoColumn select {
+	width: 414px;
+	margin: 14px 0;
+}
+
+.narrow select,
+.twoColumn select#dateOfBirth-day {
+	width: 90px;
+	margin: 14px 0;
+}
+
+.narrow select,
+.twoColumn select#dateOfBirth-month {
+	width: 100px;
+	margin: 14px 0;
+}
+
+.narrow select,
+.twoColumn select#dateOfBirth-year {
+	width: 90px;
+	margin: 14px 0;
+}
+
+.subNavBody .twoColumn select {
+	width: 221px;
+}
+
+select.day,
+select.month,
+select.year,
+select.hours,
+select.minutes,
+select.amPm {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+}
+
+select.day {
+	width: 90px;
+}
+
+select.month {
+	width: 100px;
+}
+
+select.year {
+	width: 90px;
+	margin-right: 30px;
+}
+
+select.hours {
+	width: 90px;
+}
+
+select.minutes {
+	width: 90px;
+}
+
+select.amPm {
+	width: 90px;
+	margin-right: 0;
+}
+
+/*RADIO BUTTONS / CHECK BOXES*/
+.checkboxList .checkboxes .description {
+	width: auto;
+}
+
+input[type=checkbox],
+.twoColumn .checkboxList input[type=checkbox],
+.checkboxList.vertical input[type=checkbox] {
+	display: inline-block;
+	vertical-align: middle;
+	width: 23px;
+	margin-right: 5px;
+	text-align: left;
+}
+
+.checkboxList input[type=checkbox] {
+	width: auto;
+	margin-right: 0;
+}
+
+.radioList>ul,
+.checkboxList>ul {
+	width: 600px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.radioList li,
+.checkboxList li {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	margin: 0 0 0 25px;
+	text-align: center;
+}
+
+.twoColumn .radioList ul,
+.twoColumn .checkboxList>ul,
+.twoColumn .checkboxList>.checkboxes {
+	display: inline-block;
+	vertical-align: middle;
+	width: 414px;
+}
+
+.subNavBody .twoColumn .radioList ul,
+.subNavBody .twoColumn .checkboxList>ul,
+.subNavBody .twoColumn .checkboxList>.checkboxes {
+	display: inline-block;
+	vertical-align: middle;
+	width: 221px;
+}
+
+.twoColumn .radioList>ul.errorMessage,
+.twoColumn .radioList>ul.successMessage,
+.twoColumn .checkboxList>ul.errorMessage,
+.twoColumn .checkboxList>ul.successMessage {
+	width: auto;
+}
+
+.twoColumn .radioList ul>li {
+	width: 87px;
+	margin-left: 22px;
+}
+
+.twoColumn .checkboxList ul>li,
+.checkboxList.vertical li {
+	display: block;
+	width: 100%;
+	margin: 10px 0 0 0;
+	text-align: left;
+}
+
+.twoColumn .checkboxList ul>li:first-child {
+	margin-top: 0;
+}
+
+.radioList.smallLabels ul>li {
+	width: 70px;
+	margin-left: 15px;
+}
+
+.radioList.smallLabels ul>li label {
+	font-size: 14px;
+}
+
+.radioList ul>li:first-child,
+.checkboxList ul>li:first-child {
+	margin-left: 0;
+}
+
+.radioList label,
+.checkboxList label {
+	display: block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.twoColumn .radioList label,
+.twoColumn .checkboxList label,
+.checkboxList.vertical label {
+	padding: 0;
+}
+
+.subNavBody .twoColumn .radioList label {
+	width: 100%;
+}
+
+.twoColumn .checkboxList label,
+.checkboxList.vertical label {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	text-align: left;
+}
+
+.twoColumn .checkboxList label {
+	width: 384px;
+}
+
+.checkboxList.vertical label {
+	width: 572px;
+}
+
+.subNavBody .twoColumn .checkboxList label {
+	width: 193px;
+}
+
+.checkBoxMatrix label {
+	display: none;
+}
+
+.checkBoxMatrix table {
+	margin-left: 0;
+}
+
+.checkBoxMatrix table td,
+.checkBoxMatrix table tbody th {
+	padding: 12px 0;
+	border-top: 1px solid #ccc;
+}
+
+.checkBoxMatrix table thead th {
+	padding-bottom: 12px;
+}
+
+.checkBoxMatrix table tbody th {
+	width: 210px;
+}
+
+.checkBoxMatrix table thead th,
+.checkBoxMatrix table tbody td {
+	width: 130px;
+	text-align: center;
+}
+
+.checkBoxGrid label {
+	display: none;
+}
+
+.checkBoxGrid table {
+	margin-left: 0;
+}
+
+.checkBoxGrid table td,
+.checkBoxGrid table tbody th {
+	padding: 12px 0;
+	border-top: 1px solid #ccc;
+}
+
+.checkBoxGrid table thead th {
+	padding: 12px 0;
+	border-top: 3px solid #ccc;
+}
+
+.checkBoxGrid table tbody th {
+	width: 210px;
+}
+
+.checkBoxGrid table thead th,
+.checkBoxGrid table tbody td {
+	width: 130px;
+	text-align: left;
+}
+
+.checkBoxGrid table tbody tr:first-child td,
+.checkBoxGrid table tbody tr:first-child th {
+	border: 0;
+}
+
+.checkBoxGrid.scheduleReminders table thead th {
+	border-top: 1px solid #ccc;
+}
+
+.checkBoxGrid.unsubscribeAll table {
+	border-top: 3px solid #ccc;
+}
+
+.checkBoxGrid.unsubscribeAll table tbody tr td,
+.checkBoxGrid.unsubscribeAll table tbody tr th {
+	padding: 12px 0 0 0;
+}
+
+/*BUTTONS*/
+.buttonSet>li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+}
+
+.buttonSet>li:first-child {
+	margin-left: 0;
+}
+
+.buttonSet>li button,
+.buttonSet>li a.button {
+	vertical-align: top;
+}
+
+.buttonSet .status {
+	line-height: 24px;
+}
+
+button,
+a.button,
+input[type=button],
+input[type=submit] {
+	display: inline-block;
+	vertical-align: middle;
+	height: 24px;
+	border: 0;
+	border-radius: 12px;
+	background-color: #16a2bb;
+	font-size: 16px;
+	line-height: 24px;
+	color: #fff;
+}
+
+a.button {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+
+.twoColumn button {
+	margin-left: 442px;
+}
+
+.centered button {
+	margin-left: 52px;
+	/* offset for throbber */
+}
+
+.centered button.noThrobber {
+	margin-left: 0;
+}
+
+.twoColumn .buttonRight button {
+	margin-left: 20px;
+	margin-right: 28px;
+}
+
+.twoColumn .buttonRight .throbber,
+.twoColumn .buttonRight .manualThrobber {
+	margin-left: 594px;
+}
+
+.twoColumn .buttonRight.huge .throbber,
+.twoColumn .buttonRight.huge .manualThrobber {
+	margin-left: 516px;
+}
+
+.subNavBody .twoColumn .buttonRight .throbber,
+.subNavBody .twoColumn .buttonRight .manualThrobber {
+	margin-left: 387px;
+}
+
+.subNavBody .twoColumn .buttonRight.huge .throbber,
+.subNavBody .twoColumn .buttonRight.huge .manualThrobber {
+	margin-left: 309px;
+}
+
+button:hover,
+button:focus,
+a.button:hover,
+a.button:focus,
+input[type=button]:hover,
+input[type=button]:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+	background-color: #069;
+	cursor: pointer;
+}
+
+button.tag,
+a.button.tag,
+input[type=button].tag,
+input[type=submit].tag {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+button.tiny,
+a.button.tiny,
+input[type=button].tiny,
+input[type=submit].tiny {
+	width: 50px;
+}
+
+button.small,
+a.button.small,
+input[type=button].small,
+input[type=submit].small {
+	width: 75px;
+}
+
+button.medium,
+a.button.medium,
+input[type=button].medium,
+input[type=submit].medium {
+	width: 164px;
+}
+
+button.large,
+a.button.large,
+input[type=button].large,
+input[type=submit].large {
+	width: 210px;
+}
+
+button.extraLarge,
+a.button.extraLarge,
+input[type=button].extraLarge,
+input[type=submit].extraLarge,
+button.huge,
+a.button.huge,
+input[type=button].huge,
+input[type=submit].huge,
+button.mega,
+a.button.mega,
+input[type=button].mega,
+input[type=submit].mega {
+	width: 210px;
+	height: 48px;
+	border-radius: 24px;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+a.button.extraLarge,
+a.button.huge,
+a.button.mega {
+	height: 24px;
+	padding: 12px 0;
+}
+
+button.extraLarge,
+a.button.extraLarge,
+input[type=button].extraLarge,
+input[type=submit].extraLarge {
+	width: 210px;
+}
+
+button.huge,
+a.button.huge,
+input[type=button].huge,
+input[type=submit].huge {
+	width: 288px;
+}
+
+button.mega,
+a.button.mega,
+input[type=button].mega,
+input[type=submit].mega {
+	width: 638px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button.confirm,
+a.button.confirm,
+input[type=button].confirm,
+input[type=submit].confirm {
+	background-color: #0a0;
+}
+
+button.confirm:hover,
+button.confirm:focus,
+a.button.confirm:hover,
+a.button.confirm:focus,
+input[type=button].confirm:hover,
+input[type=button].confirm:focus,
+input[type=submit].confirm:hover,
+input[type=submit].confirm:focus {
+	background-color: #060;
+}
+
+button.cancel,
+a.button.cancel,
+input[type=button].cancel,
+input[type=submit].cancel {
+	background-color: #c00;
+}
+
+button.cancel:hover,
+button.cancel:focus,
+a.button.cancel:hover,
+a.button.cancel:focus,
+input[type=button].cancel:hover,
+input[type=button].cancel:focus,
+input[type=submit].cancel:hover,
+input[type=submit].cancel:focus {
+	background-color: #900;
+}
+
+button.disabled,
+button.disabled:hover,
+button.disabled:focus,
+a.button.disabled,
+a.button.disabled:hover,
+a.button.disabled:focus,
+input[type=button].disabled,
+input[type=button].disabled:hover,
+input[type=button].disabled:focus,
+input[type=submit].disabled,
+input[type=submit].disabled:hover,
+input[type=submit].disabled:focus {
+	background-color: #999 !important;
+	cursor: default !important;
+}
+
+button.inverse,
+a.button.inverse,
+input[type=button].inverse,
+input[type=submit].inverse {
+	background-color: #fff !important;
+	color: #16a2bb !important;
+}
+
+button.inverse:hover,
+button.inverse:focus,
+a.button.inverse:hover,
+a.button.inverse:focus,
+input[type=button].inverse:hover,
+input[type=button].inverse:focus,
+input[type=submit].inverse:hover,
+input[type=submit].inverse:focus {
+	background-color: #fff !important;
+	color: #069 !important;
+}
+
+button.inverse.confirm,
+a.button.inverse.confirm,
+input[type=button].inverse.confirm,
+input[type=submit].inverse.confirm {
+	color: #0a0 !important;
+}
+
+button.inverse.confirm:hover,
+button.inverse.confirm:focus,
+a.button.inverse.confirm:hover,
+a.button.inverse.confirm:focus,
+input[type=button].inverse.confirm:hover,
+input[type=button].inverse.confirm:focus,
+input[type=submit].inverse.confirm:hover,
+input[type=submit].inverse.confirm:focus {
+	color: #060 !important;
+}
+
+button.lookBelow,
+a.button.lookBelow {
+	position: relative;
+}
+
+button.lookBelow:after,
+a.button.lookBelow:after {
+	content: '';
+	position: absolute;
+	top: 24px;
+	right: 16px;
+	width: 14px;
+	height: 8px;
+	background: url(/img/controls/chevron-down.png) center center no-repeat;
+}
+
+ul.upDownArrows {
+	float: left;
+	margin-left: 10px;
+}
+
+ul.upDownArrows button.upArrow {
+	margin-bottom: 3px;
+}
+
+button.upArrow,
+button.downArrow,
+button.leftArrow,
+button.rightArrow {
+	width: 21px;
+	height: 21px;
+	padding: 0;
+	border-radius: 0;
+	background-color: transparent;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+button.upArrow:hover,
+button.downArrow:hover,
+button.leftArrow:hover,
+button.rightArrow:hover {
+	background-position: left bottom;
+}
+
+button.upArrow span,
+button.downArrow span,
+button.leftArrow span,
+button.rightArrow span {
+	display: none;
+}
+
+button.upArrow {
+	background-image: url(/img/controls/button-arrow-up.png);
+}
+
+button.downArrow {
+	background-image: url(/img/controls/button-arrow-down.png);
+}
+
+button.leftArrow {
+	background-image: url(/img/controls/button-arrow-left.png);
+}
+
+button.rightArrow {
+	background-image: url(/img/controls/button-arrow-right.png);
+}
+
+/*FORM MESSAGES*/
+form .reservedSpace {
+	position: relative;
+}
+
+form .reservedSpace .errorMessage li,
+form .reservedSpace .successMessage li {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+form .errorMessage li,
+form .successMessage li {
+	width: 600px;
+	margin-left: 0;
+	margin-top: 10px !important;
+	font-size: 16px;
+	text-align: left;
+}
+
+.narrow .errorMessage li,
+.narrow .successMessage li,
+.doubleUp .errorMessage li,
+.doubleUp .successMessage li {
+	width: 100%;
+}
+
+.twoColumn .errorMessage li,
+.twoColumn .successMessage li {
+	width: 414px !important;
+	margin-left: 442px !important;
+}
+
+.subNavBody .twoColumn .errorMessage li,
+.subNavBody .twoColumn .successMessage li {
+	width: 221px !important;
+	margin-left: 428px !important;
+}
+
+.twoColumn .centered .errorMessage>li,
+.twoColumn .centered .successMessage>li {
+	width: 500px !important;
+	margin-left: 0 !important;
+}
+
+form .questions .description {
+	margin: 0 0 5px 0;
+	color: #999;
+	font-size: 14px;
+	font-style: italic;
+}
+
+.twoColumn label .description {
+	display: block;
+	margin-bottom: 0;
+}
+
+form .terms label,
+form .terms p,
+form p.terms {
+	display: inline-block;
+	vertical-align: middle;
+	width: 572px;
+	font-size: 16px;
+	color: #999;
+}
+
+form .terms p,
+form p.terms {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.doubleUp.terms label,
+.doubleUp.terms p {
+	width: 258px;
+}
+
+.twoColumn .terms input[type=checkbox],
+.twoColumn .terms p {
+	margin-left: 442px;
+}
+
+.subNavBody .twoColumn .terms input[type=checkbox],
+.subNavBody .twoColumn .terms p {
+	margin-left: 428px;
+}
+
+.twoColumn .terms label,
+.twoColumn .terms p {
+	width: 386px;
+}
+
+.subNavBody .twoColumn .terms label,
+.subNavBody .twoColumn .terms p {
+	width: 193px;
+}
+
+.twoColumn .centered.terms p {
+	width: 500px;
+	margin-left: auto;
+}
+
+/*TOOL TIPS*/
+.toolTip {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	border-radius: 10px;
+	margin-left: 10px;
+	background-color: #16a2bb;
+	color: #fff;
+}
+
+.toolTip:before {
+	content: '?';
+	z-index: 51;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 14px;
+	width: 18px;
+	padding: 3px 0 2px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 13px;
+	text-align: center;
+}
+
+.toolTip .toolTipText {
+	display: none;
+	position: absolute;
+	z-index: 50;
+	top: 0;
+	left: 0;
+	width: 180px;
+	padding: 5px 5px 5px 20px;
+	border-radius: 10px;
+	background-color: #16a2bb;
+	font-size: 14px;
+	color: #fff;
+	text-align: left;
+}
+
+.toolTip .toolTipText a {
+	color: #fff;
+}
+
+.toolTip.right .toolTipText {
+	left: auto;
+	right: 0;
+	padding: 5px 20px 5px 5px;
+}
+
+.toolTip:hover {
+	cursor: help;
+}
+
+/*THROBBER*/
+.throbber,
+.manualThrobber {
+	opacity: 0;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+
+.throbber.visible,
+.manualThrobber.visible {
+	opacity: 1;
+}
+
+/*STICKERS*/
+.sticker {
+	position: relative;
+	display: block;
+	width: 95px;
+	height: 70px;
+	padding: 23px 10px 22px;
+	border-radius: 60px;
+	background-color: #f36;
+	color: #fff;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.sticker:hover {
+	background-color: #c03;
+}
+
+.sticker a,
+.sticker a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.gift.sticker {
+	padding: 15px 10px 30px;
+	background-image: url(/img/controls/gift-bow.png);
+	background-repeat: no-repeat;
+	background-position: center 80px;
+	text-transform: uppercase;
+}
+
+.gift.sticker:hover {
+	background-color: #e32d5a;
+}
+
+.sunBurst.sticker {
+	position: relative;
+	left: .444em;
+	top: .444em;
+	padding: 0;
+	line-height: 1.334em;
+	border-radius: 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.sunBurst.sticker,
+.sunBurst.sticker:before,
+.sunBurst.sticker:after,
+.sunBurst.sticker a,
+.sunBurst.sticker a:before,
+.sunBurst.sticker a:after {
+	display: block;
+	height: 5.5em;
+	width: 5.5em;
+	background-color: #f60;
+}
+
+.sunBurst.sticker:hover,
+.sunBurst.sticker:hover:before,
+.sunBurst.sticker:hover:after,
+.sunBurst.sticker:hover a,
+.sunBurst.sticker:hover a:before,
+.sunBurst.sticker:hover a:after {
+	background-color: #c30;
+}
+
+.sunBurst.sticker:before,
+.sunBurst.sticker:after,
+.sunBurst.sticker a:before,
+.sunBurst.sticker a:after {
+	content: '';
+	position: absolute;
+}
+
+.sunBurst.sticker:before {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+.sunBurst.sticker:after {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
+.sunBurst.sticker a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4em;
+	padding: .75em 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	z-index: 1;
+}
+
+.sunBurst.sticker a:before {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+.sunBurst.sticker a:after {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(75deg);
+	-moz-transform: rotate(75deg);
+	-ms-transform: rotate(75deg);
+	-o-transform: rotate(75deg);
+	transform: rotate(75deg);
+}
+
+.sunBurst.sticker a span {
+	display: block;
+	position: relative;
+	z-index: 10;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.profEspieSignature {
+	width: 94px;
+	height: 50px;
+	margin-bottom: 30px;
+}
+
+/*HEADER*/
+header .sleepioLogo {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+header .companyLogo {
+	vertical-align: middle;
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+}
+
+header nav .sleepioLogo {
+	display: inline-block;
+}
+
+header .sleepioLogo img {
+	width: 129px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header .companyLogo img {
+	height: 37px;
+	margin: 4.5px 0;
+}
+
+.clinic header .sleepioLogo img {
+	width: 213px;
+}
+
+/*FOOTER*/
+footer {
+	width: 100%;
+	min-width: 912px;
+	padding: 40px 0;
+	background-color: #003366;
+	color: #fff;
+}
+
+footer>ul {
+	width: 912px;
+	margin: 0 auto;
+}
+
+footer>ul>li {
+	display: inline-block;
+	vertical-align: top;
+	width: 210px;
+	margin-right: 24px;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer h3 {
+	font-size: 18px !important;
+	margin-bottom: 30px !important;
+}
+
+footer li li {
+	font-size: 14px;
+	line-height: 1.2;
+	margin-bottom: 10px;
+}
+
+footer .connectWithUs {
+	width: 444px;
+	margin-right: 0;
+}
+
+footer .connectWithUs li {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 140px;
+	margin-right: 24px;
+}
+
+footer .connectWithUs li:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 37px;
+	height: 37px;
+	border-radius: 37px;
+	margin-right: 10px;
+	background-color: white;
+	font-family: FontAwesome, sans-serif;
+	font-weight: lighter;
+	font-size: 30px;
+	text-align: center;
+	line-height: 43px;
+	pointer-events: none;
+}
+
+footer .connectWithUs li.twitter:before {
+	content: '\f099';
+	background-color: #1ba7dc;
+}
+
+footer .connectWithUs li.pinterest:before {
+	content: '\f0d3';
+	background-color: #cc2127;
+}
+
+footer .connectWithUs li.facebook:before {
+	content: '\f09a';
+	background-color: #3b5998;
+}
+
+footer .connectWithUs li.youtube:before {
+	content: '\f505';
+	background-color: #f00;
+}
+
+footer .connectWithUs li.googlePlus:before {
+	content: '\f0d5';
+	background-color: #333;
+}
+
+footer .connectWithUs li.rss:before {
+	content: '\f09e';
+	background-color: #f60;
+}
+
+footer .connectWithUs a {
+	display: block;
+	padding-left: 50px;
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+}
+
+footer #forceMobile {
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+	background-color: #fff;
+	color: #003366;
+	text-align: center;
+}
+
+/*PROF MOVIE*/
+#profMovie {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #303;
+}
+
+#movieCurtain {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background-color: #003366;
+}
+
+#movieScrim {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+#profHtml {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#profVideo {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#posterScrim {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: left top;
+	background-color: #003366;
+}
+
+#posterScrim .posterThrobber {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 144px;
+	width: 106px;
+	margin: auto;
+	text-align: center;
+	background-color: #ade0f9;
+	color: #003366;
+	z-index: 5;
+}
+
+#posterScrim .posterThrobber img {
+	display: block;
+	margin-bottom: 10px;
+}
+
+#html5Popup {
+	opacity: 0;
+	float: left;
+	z-index: 5;
+	box-sizing: border-box;
+	border-radius: 15px;
+	background-color: #fff;
+	color: #003366;
+	/* auto adjusted */
+	position: absolute;
+	top: 100px;
+	left: 242px;
+	width: 540px;
+	padding: 20px;
+	font-size: 20px;
+}
+
+#html5Popup p, #html5Popup address {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.html5PopupButton {
+	display: block;
+	margin: 0 auto;
+}
+
+#html5Popup button {
+	/* auto adjusted */
+	font-size: 20px;
+	width: 239px;
+	height: 48px;
+	margin-top: 100px;
+}
+
+#html5Popup button.cancel {
+	margin-left: 20px;
+}
+
+#triggerCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 4;
+}
+
+#triggerCanvas>.trigger {
+	opacity: 0;
+}
+
+/* NEW VIDEO */
+html.sessionVideo,
+html.sessionVideo body {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #003366;
+}
+
+.sessionVideo button {
+	outline: none;
+}
+
+.sessionVideo .startup {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: #003366;
+	z-index: 10;
+}
+
+.sessionVideo .startup:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.sessionVideo .startup div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	color: #ffffff;
+	text-align: center;
+}
+
+.sessionVideo .startup h2 {
+	margin-bottom: 20px;
+}
+
+.sessionVideo .startup .throbber {
+	margin-left: 0;
+	opacity: 1;
+}
+
+.sessionVideo .startup .startSession {
+	opacity: 0;
+}
+
+.sessionVideo .startup .startSession button {
+	margin-bottom: 20px;
+}
+
+.sessionVideo .startup .startSession .notGoodTime {
+	color: #fff;
+	font-size: 14px;
+}
+
+.sessionVideo .safe .happyPlaceControls {
+	display: none;
+	position: absolute;
+	top: 15%;
+	left: 52%;
+	height: 100%;
+	width: 50%;
+	z-index: 10;
+}
+
+.sessionVideo .safe .happyPlaceControls li {
+	height: 10%;
+	width: 50%;
+	margin-bottom: 10%;
+}
+
+.sessionVideo .safe .happyPlaceControls li button {
+	height: 100%;
+	width: 100%;
+	line-height: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
+	border-radius: 100px;
+}
+
+.sessionVideoContainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.safe .sessionVideoContainer {
+	z-index: 1;
+}
+
+.sessionVideoContainer .shell {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	height: 100%;
+	width: 250%;
+}
+
+.sessionVideoContainer .shell video {
+	position: relative;
+	left: -50%;
+	top: 0;
+	width: 100%;
+  	height: 100%;
+  	z-index: 1;
+}
+
+.sessionVideoContainer .shell audio {
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+.sessionVideoContainer .falsePoster {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 8;
+	background-image: url(/movies/generic/init.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center;
+}
+
+.sessionVideoContainer .loading {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 105px;
+	width: 105px;
+	margin: auto;
+	z-index: 13;
+}
+
+.sessionVideoContainer .loading img {
+	height: 105px;
+	width: 105px;
+}
+
+.sessionVideoContainer .overlay {
+	position: absolute;
+	left: 50%;
+	z-index: 10;
+}
+
+.sessionVideoContainer .timer {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	height: 20px;
+	width: 50px;
+	background-color: #fff;
+	font-size: 10px;
+	line-height: 2;
+	text-align: right;
+}
+
+.sessionVideoContainer .transport {
+	position: fixed;
+	z-index: 10;
+	top: 93vh;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.sessionVideoContainer .transport button {
+	height: 4vh;
+	width: 12vh;
+	border-radius: 2vh;
+	line-height: 4vh;
+	font-size: 2vh;
+	vertical-align: top;
+}
+
+/*STANDARD PAGE*/
+#page {
+	width: 100%;
+}
+
+.pageContent {
+	width: 100%;
+	background-color: #fff;
+	color: #003366;
+}
+
+.pageContent>section {
+	width: 912px;
+	padding: 30px 0;
+	border-bottom: 1px solid #ccc;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.pageContent>section:last-of-type {
+	border-bottom: none;
+}
+
+.pageContent>section.contrast {
+	background-color: #e5e4dd;
+}
+
+#page #sleepioExit,
+#page #bootsExit {
+	display: none;
+	position: relative;
+	left: 50%;
+	margin: 0 0 20px -37px;
+}
+
+.pageContent .pageContentHeader {
+	position: relative;
+	padding-bottom: 67px;
+	border-bottom: 3px solid #ccc;
+	background: #fff url(/img/background/header-trees.png) no-repeat center bottom;
+}
+
+.pageContent .pageContentHeader.noTrees {
+	position: relative;
+	padding-bottom: 37px;
+	background: #fff;
+	border-width: 0;
+}
+
+.pageContentHeader h1,
+.pageContentHeader>hgroup>h2 {
+	text-align: center;
+	font-size: 34px;
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.pageContentHeader p {
+	width: 700px;
+	margin: 30px auto 0;
+	text-align: center;
+}
+
+.pageContentHeader .sticker {
+	position: absolute;
+	right: 0;
+	top: 30px;
+}
+
+.pageContentHeader .sunBurst.sticker {
+	left: auto;
+	right: 8px;
+	top: 38px;
+}
+
+.pageContentHeader a.return {
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+
+.pageContentBody h2,
+.pageContentBody .sectionDescription {
+	display: block;
+	float: left;
+	width: 288px;
+}
+
+.pageContentBody .sectionDescription>h2,
+.pageContentBody .sectionDescription>p {
+	clear: left;
+	float: none;
+	width: 100%;
+}
+
+.pageContentBody .sectionDescription>h2 {
+	margin-bottom: 10px;
+}
+
+.pageContentBody h3, .pageContentBody h4 {
+	display: block;
+	float: right;
+	width: 600px;
+	margin-bottom: 30px;
+}
+
+.pageContentBody h4 {
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.pageContentBody p, .pageContentBody .contactDetails {
+	display: block;
+	float: right;
+	width: 600px;
+	margin-bottom: 30px;
+}
+
+.pageContentBody p:last-of-type {
+	margin-bottom: 0;
+}
+
+.pageContentBody figure {
+	display: block;
+	float: right;
+	width: 600px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.pageContentBody figcaption {
+	width: 70%;
+	margin: 0 auto 10px;
+	color: #003366;
+}
+
+.pageContentBody .embedVideo {
+	float: right;
+	width: 592px;
+}
+
+.pageContentBody ul.bulleted,
+.pageContentBody ol.numbered,
+.pageContentBody ol.lettered,
+.pageContentBody ul.lined,
+.pageContentBody ul.spaced {
+	float: right;
+	width: 600px;
+	margin-bottom: 30px;
+}
+
+.pageContentBody ul.bulleted>li,
+.pageContentBody ol.numbered>li,
+.pageContentBody ol.lettered>li,
+.pageContentBody ul.lined>li,
+.pageContentBody ul.spaced>li {
+	clear: right;
+}
+
+.pageContentBody ul.spaced>li {
+	margin-top: 30px;
+}
+
+.pageContentBody ul.spaced>li:first-child {
+	margin-top: 0;
+}
+
+.pageContentBody ul.bulleted ul.bulleted {
+	width: 570px;
+}
+
+.pageContentBody ul.horizontal>li {
+	display: inline-block;
+	padding-left: 8px;
+	margin-right: 4px;
+	border-left: 1px solid #003366;
+	line-height: 1;
+}
+
+.pageContentBody ul.horizontal>li:first-child {
+	padding-left: 0;
+	border: none;
+}
+
+.pageContentFull p {
+	display: block;
+	width: 912px;
+	margin-bottom: 30px;
+}
+
+.pageContentNarrow {
+	display: block;
+	width: 600px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.pageContentNarrow p {
+	margin-bottom: 30px;
+}
+
+.pageContentNarrow figure {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.pageContentCentered hgroup {
+	margin-bottom: 20px;
+}
+
+.pageContentCentered h2,
+.pageContentCentered hgroup>h3 {
+	text-align: center;
+}
+
+.pageContentCentered hgroup>h2,
+.pageContentCentered hgroup>h3 {
+	font-size: 24px;
+	margin-bottom: 0;
+}
+
+.pageContentCentered p {
+	width: 700px;
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+.pageContentCentered a.button.huge {
+	margin: 0 auto 20px;
+}
+
+.pageContent>.pageContentBleed {
+	width: 100%;
+	padding: 0;
+}
+
+.pageContentList>ul,
+.pageContentList>ol,
+.pageContentList>dl>dd {
+	margin-bottom: 30px;
+}
+
+.pageContentList>ul>li,
+.pageContentList>ol>li,
+.pageContentList>dl>dt {
+	margin-bottom: 10px;
+}
+
+/*SUB NAV*/
+.subNav {
+	display: inline-block;
+	vertical-align: top;
+	width: 184px;
+	margin-right: 23px;
+}
+
+.subNav ul {
+	width: 184px;
+}
+
+.subNav ul.group>li {
+	margin-bottom: 10px;
+}
+
+.subNav ul.group h2 {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.subNav ul.item>li {
+	height: 36px;
+	width: 184px;
+	border-bottom: 1px solid #fff;
+	font-size: 16px;
+	background-color: #16a2bb;
+}
+
+.subNav ul.item a,
+.subNav ul.item div.inSession {
+	display: block;
+	width: 174px;
+	line-height: 36px;
+	padding: 0 10px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.subNav ul.item>li.current {
+	background-color: #069;
+}
+
+.subNav ul.item>li.current a:hover {
+	cursor: default;
+}
+
+.subNav ul.item>li:hover {
+	background-color: #069;
+}
+
+.subNav ul.item>li:first-child {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.subNav ul.item>li:last-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.subNavBody {
+	display: inline-block;
+	vertical-align: top;
+	width: 705px;
+}
+
+.subNavBody p.intro {
+	margin-bottom: 20px;
+}
+
+.horizontalSubNav {
+	width: 100%;
+	padding: 20px 0;
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	margin: 10px 0 20px;
+}
+
+.tabHeader .horizontalSubNav {
+	display: inline-block;
+	width: auto;
+	position: relative;
+	top: -5px;
+	padding: 0;
+	border: none;
+	margin: 0 0 0 20px;
+}
+
+.horizontalSubNav>ul>li {
+	display: inline-block;
+	border-radius: 10px;
+	margin-left: 10px;
+	background-color: #16a2bb;
+	color: #fff;
+}
+
+.horizontalSubNav>ul>li:first-child {
+	margin-left: 0;
+}
+
+.horizontalSubNav>ul>li:hover,
+.horizontalSubNav>ul>li.current {
+	background-color: #069;
+}
+
+.horizontalSubNav>ul>li>a {
+	display: block;
+	width: 175px;
+	padding: 10px 0;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+.tabHeader .horizontalSubNav>ul>li>a {
+	width: auto;
+	padding: 5px 10px;
+}
+
+.horizontalSubNav>ul>li.current>a {
+	cursor: default;
+	pointer-events: none;
+}
+
+/*PEOPLE / REVIEW LIST*/
+.peopleList>li,
+#reviewsList>li {
+	clear: left;
+	float: left;
+	width: 100%;
+	padding: 30px 0;
+	border-top: 1px solid #ccc;
+}
+
+.peopleList>li:first-child,
+#reviewsList>li:first-child {
+	border-top: none;
+}
+
+.peopleList .details,
+#reviewsList .reviewDetails {
+	float: left;
+	width: 288px;
+}
+
+.peopleList .name,
+#reviewsList .name {
+	font-size: 24px;
+	color: #003366;
+}
+
+.peopleList .title,
+#reviewsList .description {
+	width: 150px;
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+#reviewsList .description {
+	color: #003366 !important;
+}
+
+.peopleList .details img,
+#reviewsList .reviewDetails img {
+	margin-top: 10px;
+}
+
+/*REVIEWS*/
+#reviewsList>li {
+	border-top: 1px solid #ccc;
+}
+
+#reviewsList q {
+	float: right;
+	width: 600px;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+#reviewsList q:before {
+	content: '“';
+	margin-right: -.3em;
+}
+
+#reviewsList q:after {
+	content: '”';
+	margin-left: -.3em;
+}
+
+/* Select Plan Page */
+.pageContentHeader .selectPlanHeader {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.pageContentHeader .selectPlanSubHeader {
+	text-align: center;
+	color: #999;
+}
+/*SIGN UP*/
+
+.pageContentHeader .buyHeader {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.pageContentHeader .buySubHeader {
+	text-align: center;
+	color: #16a2bb;
+}
+
+.currencyOptions {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.currencyOptions>li {
+	display: inline-block;
+	margin-left: 10px;
+	vertical-align: top;
+}
+
+.currencyOptions>li:first-child {
+	margin-left: 0;
+}
+
+.currencyOptions>li>a {
+	display: block;
+	width: 29px;
+	height: 29px;
+	line-height: 29px;
+	border-radius: 15px;
+	background-color: #16a2bb;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.currencyOptions>li>a:hover {
+	background-color: #069;
+}
+
+#buyOptions {
+	width: 912px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+#buyOptions>ul {
+	margin: 0 auto;
+}
+
+#buyOptions>ul>li {
+	display: inline-block;
+	width: 288px;
+	margin-left: 16px;
+	text-align: center;
+	vertical-align: top;
+}
+
+#buyOptions>ul>li:first-child {
+	margin-left: 0;
+}
+
+#buyOptions>ul>li#weekly {
+	padding-right: 15px;
+	border-right: 1px solid #ccc;
+}
+
+#buyOptions h3 {
+	width: 264px;
+	padding: 15px 10px;
+	border: 2px solid #003366;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin: 0 0 5px;
+	background-color: #003366;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+
+#buyOptions .redeemHere p{
+	margin-top: 30px;
+	line-height: 3;
+	text-align: center;
+}
+
+.buyOptionDetails {
+	padding: 13px;
+	border: 2px solid #003366;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-bottom: 20px;
+	color: #16a2bb;
+	background-color: #003366;
+}
+
+.buyOptionDetails>.price {
+	font-size: 30px;
+	line-height: 1;
+	color: #fff;
+}
+
+.buyOptionDetails>.access {
+	color: #fff;
+}
+
+.buyOptionDetails>.price>.original {
+	text-decoration: line-through;
+}
+
+.buyOptionDetails>.price>.discounted {
+	color: #f09;
+}
+
+.buyOptionDetails>.included {
+	position: relative;
+	width: 218px;
+	height: 82px;
+	padding: 20px;
+	margin: 30px auto 0;
+	background: #fff;
+	color: #003366;
+}
+
+.buyOptionDetails>.included.graduateSubscription {
+	height: 142px;
+}
+
+.buyOptionDetails>.included:before {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+	margin-left: -10px;
+}
+
+.buyOptionDetails .session {
+	padding-bottom: 30px;
+}
+
+.buyOptionDetails .support {
+	margin-top: -15px;
+}
+
+#whatYouGet {
+	clear: left;
+}
+
+#whatYouGet h1 {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+#whatYouGet>ul>li {
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+
+#whatYouGet h2 {
+	padding-top: 70px;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background-position: center 20px;
+	background-size: 49px 44px;
+	color: #003366;
+}
+
+#whatYouGet .course h2 {
+	background-image: url(/img/sign-up/icon-course.png);
+}
+
+#whatYouGet .tools h2 {
+	background-image: url(/img/sign-up/icon-tools.png);
+}
+
+#whatYouGet .library h2 {
+	background-image: url(/img/sign-up/icon-library.png);
+}
+
+#whatYouGet .community h2 {
+	display: block;
+	background-image: url(/img/sign-up/icon-community.png);
+}
+
+#whatYouGet .guarantee h2 {
+	padding-top: 20px;
+}
+
+#whatYouGet>ul>li>ul>li {
+	width: 800px;
+	margin: 0 auto 20px;
+	list-style: disc inside;
+}
+
+#whatYouGet>a {
+	display: block;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#whatYouGet .redeemHere {
+	line-height: 3;
+	text-align: center;
+}
+
+ul#createAccountError > li {
+	text-align: center;
+}
+
+
+/*NEW BUY PAGE*/
+
+.buyFull #buyOptions {
+	width: 912px;
+	margin-bottom: 10px;
+	/*padding-bottom: 20px;*/
+	text-align: center;
+}
+
+.buyFull #buyOptions>ul {
+	margin: 0 auto;
+}
+
+.buyFull #buyOptions>ul>li {
+	display: inline-block;
+	width: 288px;
+	margin-left: 24px;
+	text-align: center;
+}
+
+.buyFull #buyOptions>ul>li:first-child {
+	margin-left: 0;
+}
+
+.buyFull #buyOptions>ul>li#weekly {
+	padding-right: 0px;
+	border-right: 0px solid #ccc;
+}
+
+.buyFull #buyOptions h3 {
+	width: 264px;
+	padding: 15px 10px;
+	border: 2px solid #003366;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin: 0 0 5px;
+	background-color: #003366;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+
+.buyFull .buyOptionDetails {
+	padding: 13px;
+	border: 2px solid #003366;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-bottom: 20px;
+	color: #16a2bb;
+	background-color: #003366;
+}
+
+.buyFull .buyOptionDetails>.price {
+	font-size: 30px;
+	line-height: 1;
+	color: #fff;
+}
+
+.buyFull .buyOptionDetails>.price>.original {
+	text-decoration: line-through;
+}
+
+.buyFull .buyOptionDetails>.price>.discounted {
+	color: #f09;
+}
+
+.buyFull .buyOptionDetails>.included {
+	position: relative;
+	width: 180px;
+	padding: 20px 39px;
+	margin: 30px auto 0;
+	background: #fff;
+	height: 82px;
+	/*background: #fff url(/img/sign-up/included-plus.png) no-repeat center center;*/
+	color: #003366;
+}
+
+.buyFull .buyOptionDetails>.included:before {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+	margin-left: -10px;
+}
+
+.buyFull .buyOptionDetails .session {
+	padding-bottom: 30px;
+}
+
+.buyFull .buyOptionDetails .support {
+	padding-top: 30px;
+}
+
+.buyFull .billing {
+	padding: 5px 0 0;
+	margin: 0;
+	text-align: center;
+	width: auto;
+}
+
+.buyFull .onePayment,
+.buyFull .atWorkUser {
+	padding: 10px 0 0;
+	margin: 0 12px;
+	width: auto;
+}
+
+.buyFull>div {
+	margin-top: 30px;
+}
+
+.buyFull .redeemHere>p{
+	line-height: 3;
+	text-align: center;
+}
+
+.buyFull .redeemHere {
+	margin: 0 auto;
+}
+
+.buyFull .clinicallyProven ul>li {
+	display: inline-block;
+	width: 278px;
+	padding: 226px 5px 5px;
+	margin-left: 24px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+	font-size: 24px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.buyFull .clinicallyProven p {
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .clinicallyProven h1 {
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.buyFull .clinicallyProven h2 {
+	margin-top: 20px;
+	padding-bottom: 40px;
+	color: #16a2bb;
+	text-align: center;
+}
+
+.buyFull .clinicallyProven ul>li:first-child {
+	margin-left: 0;
+}
+
+.buyFull .clinicallyProven li.timeToFallAsleep {
+	background-image: url(/img/growth/growth-circle-1.png);
+}
+
+.buyFull .clinicallyProven li.nightTimeAwakenings {
+	background-image: url(/img/growth/growth-circle-2.png);
+}
+
+.buyFull .clinicallyProven li.daytimeEnergy {
+	background-image: url(/img/growth/growth-circle-3.png);
+}
+
+.buyFull .currencyOptions {
+	width: 100%;
+	text-align: center;
+	margin-bottom:30px;
+}
+
+.buyFull .currencyOptions>li {
+	display: inline-block;
+	margin-left: 10px;
+	vertical-align: top;
+}
+
+.buyFull .currencyOptions>li:first-child {
+	width: 29px;
+	margin-left: 0;
+}
+
+.buyFull .currencyOptions>li>a {
+	display: block;
+	width: 29px;
+	height: 29px;
+	line-height: 29px;
+	border-radius: 15px;
+	background-color: #16a2bb;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.buyFull .currencyOptions>li>a:hover {
+	background-color: #069;
+}
+
+.buyFull .awardWinning {
+	width: 912px;
+	padding-top: 280px;
+}
+
+.buyFull .awardWinning h1 {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+	border-style: none;
+}
+
+.buyFull .awardWinning ul {
+	display: block;
+}
+
+.buyFull .awardWinning li {
+	width: 430px;
+	margin: 0 13px;
+	float: left;
+}
+
+.buyFull .awardWinning h2 {
+	text-align: center;
+	padding-top: 30px;
+	margin-bottom: 30px;
+	background-repeat: no-repeat;
+	background-position: center 20px;
+	background-size: 49px 44px;
+	color: #16a2bb;
+}
+
+
+.buyFull .awardWinning iframe {
+	margin: 20px 40px;
+}
+
+.buyFull .awardWinning img {
+	height: 110px;
+	margin: 90px 40px;
+}
+
+.buyFull .graduateStory {
+	text-align: center;
+}
+
+.buyFull .graduateStory h1 {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .graduateStory h2 {
+	margin-top: 20px;
+	padding-bottom: 40px;
+	color: #16a2bb;
+}
+
+.buyFull .graduateStory iframe {
+	margin: 0 auto 20px;
+}
+
+.buyFull .graduateStory .testimonial {
+	color: #16a2bb;
+}
+
+.buyFull .scienceTeam h1 {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .scienceTeam h2 {
+	margin: 20px 0;
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .scienceTeam ul {
+	width: 912px;
+}
+
+.buyFull .scienceTeam ul.threePortraits {
+	margin: 0 114px;
+}
+
+.buyFull .scienceTeam ul.threePortraits li {
+	margin: 10px 14px;
+}
+
+.buyFull .scienceTeam ul li {
+	width: 200px;
+	height: 330px;
+	text-align: center;
+	float: left;
+}
+
+.buyFull .scienceTeam ul li img {
+	width: 160px;
+}
+
+.buyFull .scienceTeam ul li .name {
+	font-weight: bold;
+}
+
+.buyFull .scienceTeam ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.buyFull .powerfulTools {
+	display: inline;
+}
+
+.buyFull .powerfulTools h1 {
+	padding-bottom: 30px;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.buyFull .powerfulTools h2 {
+	padding-bottom: 30px;
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .powerfulTools ul {
+	width: 912px;
+}
+
+.buyFull .powerfulTools ul.fourTools li {
+	margin: 0 14px;
+}
+
+.buyFull .powerfulTools ul li {
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	float: left;
+}
+
+.buyFull .powerfulTools ul li img {
+	width: 90px;
+}
+
+.buyFull .powerfulTools ul li .name {
+	font-weight: bold;
+	margin: 0;
+}
+
+.buyFull .powerfulTools ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.buyFull .stepByStep {
+	padding-top: 50px;
+}
+
+.buyFull .stepByStep h1 {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .stepByStep h2 {
+	margin: 20px 0;
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .stepByStep ul {
+	width: 912px;
+	margin: 0 54px;
+}
+
+.buyFull .stepByStep ul li {
+	margin: 10px 10px;
+	width: 256px;
+	height: 200px;
+	text-align: center;
+	float: left;
+}
+
+.buyFull .stepByStep ul li img {
+	width: 100px;
+}
+
+.buyFull .stepByStep ul li .name {
+	font-weight: bold;
+	margin: 0;
+}
+
+.buyFull .stepByStep ul li .name--arrow:after {
+	content: "";
+	display: block;
+	position: relative;
+	bottom: 89px;
+	left: 137px;
+	height: 0px;
+	padding-bottom: 5px;
+	width: 120px;
+	margin: 0px auto 0;
+	background: url(/img/growth/arrow-base.png) center top repeat;
+	overflow: visible;
+}
+
+.buyFull .stepByStep ul li .name--arrow {
+	margin-bottom: -5px;
+}
+
+.buyFull .stepByStep ul li .name--arrowEnd:after {
+	content: "";
+	display: block;
+	position: relative;
+	bottom: 101px;
+	left: 108px;
+	height: 30px;
+	width: 60px;
+	margin: 0px auto 0;
+	background: url(/img/growth/arrow-right.png) center top no-repeat;
+}
+
+.buyFull .stepByStep ul li .name--arrowEnd {
+	margin-bottom: -30px;
+}
+
+.buyFull .stepByStep ul li .name--arrowStart:before {
+	content: "";
+	display: block;
+	position: relative;
+	bottom: 44px;
+	left: -108px;
+	height: 30px;
+	width: 60px;
+	margin: 0px auto 0;
+	background: url(/img/growth/arrow-right.png) center top no-repeat;
+}
+
+.buyFull .stepByStep ul li .name--arrowStart {
+	margin-top: -30px;
+}
+
+.buyFull .stepByStep ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.buyFull .featuredIn h1 {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .featuredIn h2 {
+	padding-top: 20px;
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .featuredIn ul {
+	width: 912px;
+	margin: 0 16px;
+}
+
+.buyFull .featuredIn ul li {
+	width: 200px;
+	/*height: 60px;*/
+	margin: 0 10px;
+	text-align: center;
+	float: left;
+}
+
+.buyFull .featuredIn ul li img {
+	width: 200px;
+}
+
+.buyFull .featuredIn ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.buyFull .buyOptions2 {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .buyOptions2 h1 {
+	margin-top: 50px;
+}
+
+.buyFull .buyOptions3 {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .buyOptions3 h1 {
+	margin-top: 50px;
+}
+
+.buyFull .community h1 {
+	margin-top: 50px;
+}
+
+.buyFull .community h2 {
+	display: block;
+	padding-top: 20px;
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .community ul {
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+.buyFull .community ul li {
+	width: 250px;
+	text-align: center;
+	float: left;
+}
+
+.buyFull .community .quote {
+	margin-bottom: 50px;
+	margin-top: 100px;
+}
+
+.buyFull .community .studentImage {
+	padding-top: 90px;
+	display: inline-block;
+	margin-left: 82px;
+	float: left;
+}
+
+.buyFull .community .studentQuote {
+	display: inline-block;
+	padding-top: 20px;
+	float: left;
+	width: 600px;
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 40px;
+}
+
+.buyFull .community .quote h2 {
+	clear: both;
+	margin-left: 140px;
+	padding-top: 0px;
+}
+
+.buyFull .guarantee {
+	margin-bottom: 20px;
+}
+
+.buyFull>a {
+	display: block;
+	padding-top: 20px;
+	margin-top: 20px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+}
+
+.buyFull .moneyBack p {
+	text-align: center;
+}
+
+.buyFull .weeklyQA p {
+	text-align: center;
+}
+
+.buyFull .weeklyQA img {
+	margin: 20px 156px 0;
+	width: 600px;
+}
+
+.buyFull .weeklyQA h1 {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .weeklyQA h2 {
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .whoSleepioCanHelp {
+	padding-bottom: 50px;
+}
+
+.buyFull .whoSleepioCanHelp h1 {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .whoSleepioCanHelp h2 {
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .whoSleepioCanHelp ul {
+	width: 912px;
+	margin: 0 85px;
+	padding-bottom: 50px;
+}
+
+.buyFull .whoSleepioCanHelp li {
+	width: 200px;
+	height: 190px;
+	text-align: center;
+	float: left;
+	margin: 0 25px;
+}
+
+.buyFull .whoSleepioCanHelp img {
+	width: 200px;
+	height: 100px;
+}
+
+.buyFull .getTimeBack h1 {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.buyFull .getTimeBack h2 {
+	text-align: center;
+	color: #16a2bb;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.buyFull .getTimeBack img {
+	width: 912px;
+}
+
+.buyFull .getTimeBack ul li {
+	width: 200px;
+	text-align: center;
+	margin: 10px 0 0 146px;
+	float: left;
+}
+
+.buyFull .getTimeBack ul li:first-of-type {
+	margin-left: 10px;
+}
+
+.buyFull .getTimeBack ul li p span {
+	font-weight: bold;
+}
+
+.buyFull .getTimeBack ul:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.buyFull .sleepEfficiencyIncreases {
+
+}
+
+.buyFull .sleepEfficiencyIncreases h2 {
+	text-align: center;
+	color: #16a2bb;
+	padding-bottom: 30px;
+}
+
+.buyFull .sleepEfficiencyIncreases ul>li {
+	display: block;
+	float: left;
+	width: 200px;
+	padding: 120px 0 0;
+	margin: 10px 52px 0;
+	background-position: center top;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.buyFull .sleepEfficiencyIncreases ul>li.lessTimeWasted {
+	background-image: url(/img/growth/sleep-eff-icon-1.png);
+}
+
+.buyFull .sleepEfficiencyIncreases ul>li.moreTimeSleeping {
+	background-image: url(/img/growth/sleep-eff-icon-2.png);
+}
+
+.buyFull .sleepEfficiencyIncreases ul>li.moreTimeLiving {
+	background-image: url(/img/growth/sleep-eff-icon-3.png);
+}
+
+.buyFull .sleepEfficiencyIncreases ul:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* Google SSO and Facebook SSO */
+
+#google-sso, #facebook-sso, #virginpulse-sso {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 200px;
+	padding: 15px 0 15px 60px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #555555;
+	margin: 0;
+	text-align: left;
+	-webkit-box-shadow: 0px 2px 4px 1px rgba(85,85,85,0.34);
+	-moz-box-shadow: 0px 2px 4px 1px rgba(85,85,85,0.34);
+	box-shadow: 0px 2px 4px 1px rgba(85,85,85,0.34);
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	border: 1px solid #c1c1c1;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+#google-sso {
+	background: #ffffff url(/img/logos/google-sso-logo.png) 15px 14px no-repeat;
+}
+
+#facebook-sso {
+	background: #ffffff url(/img/logos/facebook-sso-logo.png) 15px 14px no-repeat;
+}
+
+#virginpulse-sso {
+	background: #ffffff url(/img/logos/virginpulse-sso-logo.png) 15px 14px no-repeat;
+	background-size: 30px 30px;
+}
+
+.loginPopup #google-sso,
+.loginPopup #facebook-sso,
+.loginPopup #virginpulse-sso {
+	-webkit-box-shadow: 0px 0px 0px 0px;
+	-moz-box-shadow: 0px 0px 0px 0px;
+	box-shadow: 0px 0px 0px 0px;
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border: 0;
+}
+
+.signUpStart #GoogleSignUpForm #google-sso {
+	margin-bottom: 20px;
+}
+
+/*START SKINS*/
+.signUpStart .topLogo {
+	display: block;
+	margin: 0 auto 20px;
+}
+
+.signUpStart hgroup>h1,
+.signUpStart hgroup>h2 {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.signUpStart hgroup>h2 {
+	color: #999;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+.signUpStart h2 {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.signUpStart hgroup {
+	margin-bottom: 30px;
+}
+
+.signUpStart .signUpExplanation {
+	display: inline-block;
+	vertical-align: top;
+	width: 444px;
+	margin-right: 24px;
+}
+
+.signUpStart .KPBanner {
+	width: 912px;
+	text-align: right;
+}
+
+.signUpStart .KPBanner img {
+	width: 211.2px;
+	margin-bottom: 42px;
+}
+.signUpStart .pinned {
+	position: relative;
+	width: 424px;
+	padding: 25px 10px 5px;
+	border-radius: 10px;
+	margin-right: 24px;
+	box-shadow: 1px 1px rgba(0,0,0,.2);
+	background-color: #ff9;
+}
+
+.signUpStart .pinned:before,
+.signUpStart .pinned:after {
+	top: -15px;
+}
+
+.signUpStart .pinned h2:first-child {
+	position: absolute;
+	top: -15px;
+	width: 310px;
+	padding: 25px 91px 50px 10px;
+	margin-top: 0;
+	background-image: url(/img/logos/prof-passport.png);
+	background-repeat: no-repeat;
+	background-position: right 5px;
+	background-size: 90px 90px;
+}
+
+.signUpStart .pinned ul {
+	width: 404px;
+	padding: 65px 10px 10px;
+}
+
+.signUpStart .pinned ul>li {
+	padding-left: 24px;
+	margin-bottom: 10px;
+	background-image: url(/img/controls/check-mark-orange.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+.signUpStart .pinned #readMore {
+	width: 404px;
+	margin: 0 10px 20px;
+}
+
+.signUpStart .signUpExplanation .partner {
+	float: left;
+	width: 434px;
+	margin-top: 10px;
+}
+
+.signUpStart .signUpExplanation .partner .logo {
+	width: 120px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.signUpStart form.withPinned {
+	display: inline-block;
+	vertical-align: top;
+	width: 444px;
+	position: relative;
+	left: 0;
+}
+
+.signUpStart form.withPinned h2 {
+	width: 360px;
+	margin: 0 auto;
+}
+
+.signUpStart form.withPinned p,
+.signUpStart form.withPinned .centered p {
+	width: 416px;
+	margin-left: 0;
+}
+
+.signUpStart form.withPinned .questions>li {
+	width: 444px;
+	margin-left: 0;
+}
+
+.signUpStart form.withPinned label,
+.signUpStart form.withPinned .questions>li.centered {
+	width: 416px;
+}
+
+.signUpStart form.withPinned input[type=text],
+.signUpStart form.withPinned input[type=email],
+.signUpStart form.withPinned input[type=password],
+.signUpStart form.withPinned input[type=search],
+.signUpStart form.withPinned input[type=num] {
+	width: 404px;
+}
+
+.signUpStart .passwordRequirements, .voucherCodeDisclaimer {
+	width: 588px;
+	font-size: 16px;
+	text-align: center;
+	color: #999999;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	padding: 0 7px;
+}
+
+.signUpStart .passwordRequirements ul > li {
+	list-style: disc inside;
+	color: #999999;
+	padding: 0 0 0 25px;
+}
+
+.signUpStart #dataConsentQuestion {
+	box-sizing: border-box;
+	padding: 0 10%;
+}
+
+.signUpStart #dataConsentQuestion #dataConsent {
+	display: inline;
+}
+
+.signUpStart #dataConsentQuestion input#dataConsent {
+	width: auto;
+	margin: 0 10px 0 0;
+	appearance: none
+}
+
+.signUpStart #dataConsentQuestion label#dataConsent {
+	margin: 0;
+}
+
+.signUpStart #dataConsentQuestion #dataConsentError li {
+	text-align: center;
+	margin: 10px 0 15px !important;
+	width: auto;
+}
+
+.signUpStart #emailOptInQuestion > label {
+	text-align: center;
+}
+
+.signUpStart #emailOptInQuestion ul {
+	margin-top: 8px;
+}
+
+.signUpStart #emailOptInQuestion ul li input{
+	height: 17px;
+	display: inline-block;
+}
+
+.signUpStart #emailOptInQuestion ul li label {
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.signUpStart .or {
+	text-align: center;
+	color: #999999;
+	margin: 15px auto;
+	padding: 0;
+}
+
+.signUpStart #ie8-notice {
+	font-size: 23px;
+	color: #f09;
+	margin-bottom: 30px;
+}
+
+.jawboneWelcome .mobileWelcome {
+	width: 100%;
+	max-width: 912px;
+}
+
+.jawboneWelcome .mobileWelcome .pinned {
+	border-radius: 10px;
+	box-shadow: 1px 1px rgba(0,0,0,.2);
+	background-color: #ff9;
+	width: 80%;
+	margin: 0 auto 15px;
+	max-width: 882px;
+	padding: 30px 15px 20px;
+}
+
+.jawboneWelcome .mobileWelcome .pinned:before,
+.jawboneWelcome .mobileWelcome .pinned:after {
+	top: -15px;
+}
+
+.jawboneWelcome .mobileWelcome .pinned h2:first-child {
+	position: relative;
+	background-image: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.jawboneWelcome .mobileWelcome .pinned p {
+	margin-bottom: 10px;
+}
+
+.jawboneWelcome .mobileWelcome #profSignature {
+	height: 81px;
+	background-position: left top 30px;
+	background-repeat: no-repeat;
+	background-image: url(/img/controls/prof-signature.png);
+	margin-top: 0;
+}
+
+.jawboneWelcome .mobileWelcome #profSignature:after {
+	content: '';
+	width: 250px;
+	height: 90px;
+	display: block;
+	background-image: url(/img/logos/prof-passport.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: 90px 90px;
+}
+
+.jawboneWelcome .mobileWelcome #profSignature span {
+	display: none;
+}
+
+.jawboneWelcome .mobileWelcome .centered {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.jawboneWelcome .mobileWelcome .centered a {
+	margin: 0 auto 10px;
+}
+
+.jawboneWelcome .mobileWelcome .centered p {
+	color: #999;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+#enterCodeGroupon .topLogo {
+	position: relative;
+	left: -22px;
+}
+
+#enterCodeGroupon hgroup h1,
+#enterCodeGroupon hgroup h2 {
+	font-size: 30px;
+}
+
+#enterCodeGroupon hgroup h2 {
+	width: 650px;
+	margin: 0 auto;
+}
+
+/* PAYMENT */
+.priceDetails {
+	margin-bottom: 30px;
+}
+
+.priceDetails table {
+	width: 600px;
+	padding: 10px 0;
+	margin: 0 0 10px 156px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.priceDetails table th {
+	width: 490px;
+}
+
+.priceDetails .extension,
+.priceDetails .discount {
+	color: #f09;
+}
+
+.priceDetails .atWorkUser td {
+	padding-top: 5px;
+	font-size: 16px;
+}
+
+#referralCodeForm {
+	position: relative;
+	width: 600px;
+	margin-left: 156px;
+}
+
+#referralCodePrompt,
+#referralCodeEntry,
+#referralCodeAdd label,
+#referralCodeAdd a,
+#referralCodeDisplay {
+	display: inline-block;
+	vertical-align: middle;
+	width: auto;
+	font-size: 16px;
+	line-height: 32px;
+}
+
+#referralCodePrompt {
+	margin-left: 5px;
+	color: #16a2bb;
+	text-decoration: underline;
+}
+
+#referralCodePrompt:hover {
+	color: #069;
+	cursor: pointer;
+}
+
+#referralCodeEntry {
+	margin-left: 5px;
+	opacity: 0;
+}
+
+#referralCodeForm #referralCode {
+	width: 200px;
+	margin-right: 5px;
+}
+
+#referralCodeForm #referralCodeButton {
+	margin-right: 10px;
+}
+
+#referralCodeForm .changePlan {
+	position: absolute;
+	font-size: 16px;
+	line-height: 32px;
+	right: 0;
+	top: 0;
+}
+
+.paymentForm .questions .paymentTypeDivided {
+	position: relative;
+}
+
+.paymentForm .paymentTypeDivider {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	margin-right: 80px;
+	color: #999;
+}
+
+.paymentForm .paymentTypeBlock {
+	display: inline-block;
+	vertical-align: top;
+	position: absolute;
+	right: 0;
+}
+
+.paymentForm #payPalExpress {
+	height: auto;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+
+.paymentForm .cardOnly,
+.paymentForm .cardOnly.doubleUp {
+	opacity: 0;
+}
+
+/*COMMUNITY / LIBRARY*/
+.community .full {
+	width: 912px;
+}
+
+.community.public,
+.library.public {
+	margin-top: -20px;
+}
+
+.community .searchHeader {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.community h1 {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.community h2 {
+	display: none;
+}
+
+.community.public h1,
+.library.public h1 {
+	margin-bottom: 40px;
+	text-align: left;
+}
+
+.breadCrumb {
+	padding: 5px 10px;
+	margin-bottom: 20px;
+	background-color: #ccc;
+}
+
+.public .breadCrumb {
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 30px;
+	background-color: transparent;
+}
+
+.breadCrumb>li {
+	display: inline-block;
+}
+
+.public .breadCrumb>li {
+	padding-left: 10px;
+	font-size: 16px;
+	line-height: 2;
+}
+
+.public .breadCrumb>li:before {
+	content: '>';
+	padding-right: 10px;
+}
+
+.public .breadCrumb>li:first-child {
+	padding-left: 0;
+}
+
+.public .breadCrumb>li:first-child:before {
+	display: none;
+	padding-right: 0;
+}
+
+.breadCrumb>li>a {
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.public .breadCrumb>li>a {
+	text-decoration: underline;
+}
+
+.breadCrumb>li>ul {
+	padding-left: 16px;
+	background-image: url(/img/community/header-arrow.png);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+
+.breadCrumb>li>ul>li {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 14px;
+	line-height: 2;
+}
+
+.breadCrumb>li>ul>li a {
+	padding: 5px;
+	border-radius: 5px;
+	line-height: 2;
+	color: #fff;
+	text-decoration: none;
+}
+
+.breadCrumb>li.areas>ul>li a {
+	background-color: #f09;
+}
+
+.breadCrumb>li.topics>ul>li a {
+	background-color: #003366;
+}
+
+.community .main,
+.library .main {
+	display: inline-block;
+	width: 644px;
+	vertical-align: top;
+}
+
+.sideBar {
+	display: inline-block;
+	width: 242px;
+	margin-left: 26px;
+	vertical-align: top;
+}
+
+.sideBar>div {
+	display: inline-block;
+	width: 222px;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 25px;
+	vertical-align: top;
+}
+
+.sideBar li {
+	margin-top: 10px;
+}
+
+.sideBar li:first-child {
+	margin-top: 0;
+}
+
+#suggestDiscussionForm label,
+#suggestArticleForm label,
+#suggestDiscussionForm div.error,
+#suggestArticleForm div.error,
+#suggestDiscussion p,
+#suggestArticleForm p {
+	font-size: 16px;
+}
+
+#suggestDiscussionForm .questions,
+#suggestArticleForm .questions {
+	margin-top: 30px;
+}
+
+#suggestDiscussionForm .questions>li,
+#suggestArticleForm .questions>li {
+	margin-left: 0;
+}
+
+/*DISCUSSION / ARTICLES LISTS*/
+.list {
+	margin-bottom: 20px;
+}
+
+.community .landing .list {
+	display: inline-block;
+	position: relative;
+	width: 444px;
+	vertical-align: top;
+}
+
+.community .landing .list.recent {
+	margin-left: 24px;
+}
+
+.community .landing .list h2 {
+	display: inline-block;
+}
+
+.community .landing .startNewDiscussion {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+}
+
+.list h3 {
+	line-height: 1;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+	border-bottom: 1px solid #e5e4dd;
+}
+
+.list.blockHeading h3 {
+	padding: 10px;
+	border-radius: 10px;
+	border-bottom: none;
+	margin-bottom: 0;
+	font-size: 16px;
+	background-color: #e5e4dd;
+}
+
+.list h3 a {
+	text-decoration: none;
+	color: #003366;
+}
+
+.list>.empty {
+	color: #999;
+}
+
+.list>ul {
+	margin-bottom: 20px;
+}
+
+.community .landing .list>ul {
+	border-top: 1px solid #999;
+}
+
+.community.public .landing .list>ul {
+	border-top: none;
+}
+
+.list>ul>li {
+	border-bottom: 1px solid #e5e4dd;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.list.blockHeading>ul>li {
+	padding: 0 10px;
+}
+
+.list .title {
+	display: inline-block;
+	vertical-align: top;
+	width: 705px;
+	padding: 10px 0;
+	text-decoration: none;
+}
+
+.list.blockHeading .title {
+	width: 685px;
+}
+
+.community .landing .list .title {
+	width: 304px;
+}
+
+.community .list .title .new {
+	font-size: 14px;
+	line-height: 16px;
+	color: #f09;
+	margin-left: 5px;
+}
+
+.list .detail {
+	display: inline-block;
+	vertical-align: top;
+	width: 187px;
+	padding: 10px 0;
+	margin-left: 20px;
+}
+
+.community .landing .list .detail {
+	width: 120px;
+}
+
+/*COMMUNITY LANDING PAGE*/
+.community>.landing.searchHeader {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+.community>.landing h2 {
+	display: block;
+}
+
+.community>.landing #latestCommunity {
+	position: relative;
+	width: 912px;
+	padding-bottom: 24px;
+	overflow: hidden;
+}
+
+.community>.landing #latestCommunity .control {
+	float: right;
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+.community>.landing #latestCommunity>ul {
+	position: relative;
+}
+
+.community>.landing #latestCommunity>ul>li {
+	display: inline-block;
+	width: 210px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-shadow: 1px 1px rgba(0,0,0,.2);
+	margin-right: 24px;
+	font-size: 16px;
+	background-color: #fff !important;
+	vertical-align: top;
+}
+
+.community>.landing #latestCommunity .latestCommunityUser {
+	padding: 20px 15px 15px;
+	background-image: url(/img/community/ripped-edge.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+.community>.landing #latestCommunity .latestCommunityUser a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.community>.landing #latestCommunity .latestCommunityMain {
+	border: 1px solid #ccc;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.community>.landing #latestCommunity .latestCommunityMain p {
+	padding: 10px;
+	margin-bottom: 0;
+	line-height: 1.4;
+	height: 4.2em;
+	overflow: hidden;
+}
+
+.community>.landing #latestCommunity .latestCommunityMain .activityLink {
+	overflow: hidden;
+	padding: 10px 15px;
+	border-top: 1px solid #e5e4dd;
+}
+
+.community>.landing #latestCommunity>ul>li.level1 .latestCommunityUser {
+	background-color: #999;
+}
+
+.community>.landing #latestCommunity>ul>li.level1 .latestCommunityMain {
+	border-color: #999;
+}
+
+.community>.landing #latestCommunity>ul>li.level2 .latestCommunityUser {
+	background-color: #939;
+}
+
+.community>.landing #latestCommunity>ul>li.level2 .latestCommunityMain {
+	border-color: #939;
+}
+
+.community>.landing #latestCommunity>ul>li.level3 .latestCommunityUser,
+.community>.landing #latestCommunity>ul>li.doctor .latestCommunityUser {
+	background-color: #606;
+}
+
+.community>.landing #latestCommunity>ul>li.level3 .latestCommunityMain,
+.community>.landing #latestCommunity>ul>li.doctor .latestCommunityMain {
+	border-color: #606;
+}
+
+.community>.landing #latestCommunity>ul>li.level4 .latestCommunityUser {
+	background-color: #003366;
+}
+
+.community>.landing #latestCommunity>ul>li.level4 .latestCommunityMain {
+	border-color: #003366;
+}
+
+.community>.landing #latestCommunity>ul>li.expert .latestCommunityUser,
+.community>.landing #latestCommunity>ul>li.moderator .latestCommunityUser,
+.community>.landing #latestCommunity>ul>li.admin .latestCommunityUser {
+	background-color: #f60;
+}
+
+.community>.landing #latestCommunity>ul>li.expert .latestCommunityMain,
+.community>.landing #latestCommunity>ul>li.moderator .latestCommunityMain,
+.community>.landing #latestCommunity>ul>li.admin .latestCommunityMain {
+	border-color: #f60;
+}
+
+.community>.landing #nextLiveSession {
+	position: relative;
+	float: left;
+	width: 892px;
+	padding: 10px 10px 5px;
+	background-color: #ff9;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: 1px 1px rgba(0,0,0,.2);
+}
+
+.community>.landing #nextLiveSession .pinned {
+	float: left;
+	width: 882px;
+	top: -25px;
+	padding: 30px 5px 0;
+	margin-bottom: -25px;
+}
+
+.community>.landing #nextLiveSession h2 {
+	float: left;
+	position: relative;
+	top: 4px;
+	margin-right: 25px;
+	margin-bottom: 0;
+}
+
+.community>.landing #nextLiveSession #details {
+	float: left;
+	margin-top: 8px;
+}
+
+.community>.landing #nextLiveSession #action {
+	float: right;
+	margin-top: 10px;
+}
+
+.community>.landing>.tryOutSleepio {
+	display: inline-block;
+	width: 424px;
+	margin-left: 24px;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #ccc;
+	color: #003366;
+	vertical-align: top;
+}
+
+.community>.landing>.tryOutSleepio ul {
+	border-top: 1px solid #fff;
+	margin-bottom: 15px;
+}
+
+.community>.landing>.tryOutSleepio ul li {
+	padding: 12px 0 10px 34px;
+	border-bottom: 1px solid #fff;
+	background-image: url(/img/controls/check-mark.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+/*COMMUNITY USER*/
+#userView #userDetails {
+	float: left;
+}
+
+#userView #userStats {
+	position: relative;
+	left: -24px;
+	width: 398px;
+	margin-bottom: 50px;
+}
+
+#userView #userStats #userBasics {
+	padding: 0 25px 15px;
+}
+
+#userView #userStats #userBasics div {
+	color: #999;
+}
+
+#userView #userStats #userBasics>#doctorInfo {
+	margin-bottom: 10px;
+}
+
+#userView #userStats #userBasics>#doctorBiography {
+	margin-bottom: 10px;
+	color: #003366;
+}
+
+#userView #userStats #userCommunityProgress>li {
+	width: 348px;
+	padding: 5px 25px;
+	background-color: #ccc;
+	margin-bottom: 1px;
+}
+
+#userView #userStats #userCommunityProgress>li#stage {
+	color: #fff;
+	margin-bottom: 0;
+}
+
+#userView #userStats #userCommunityProgress>li.badges {
+	padding: 7px 25px;
+	height: 30px;
+}
+
+#userView #userStats #userCommunityProgress>li.badges img.badgeIcon {
+	float: left;
+	margin-right: 15px;
+}
+
+#userView #userStats #userCommunityProgress>li#discussionBadges img.badgeIcon {
+	width: 24px;
+	height: 22px;
+	padding: 4px 3px;
+}
+
+#userView #userStats #userCommunityProgress>li#helpedBadges img.badgeIcon {
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+}
+
+#userView #userStats #userCommunityProgress>li#patientsBadges img.badgeIcon {
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+}
+
+#userView #userStats #userCommunityProgress>li.badges ul>li {
+	float: left;
+	width: 30px;
+	border-radius: 15px;
+	margin-left: 9px;
+	background-color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+	color: #999;
+	text-align: center;
+}
+
+#userView #userStats #userCommunityProgress>li.badges ul>li:first-child {
+	margin-left: 0;
+}
+
+#userView #userStats #userCommunityProgress>li.badges ul>li.active {
+	background-color: #0a0;
+	color: #fff;
+}
+
+#userView #userStats #userCommunityProgress>li.badges ul>li span {
+	display: none;
+}
+
+#userView #communityActivity {
+	float: left;
+	width: 374px;
+}
+
+#userView #communityActivity>ul>li,
+#userView #communityActivity .empty {
+	float: left;
+	clear: both;
+	width: 100%;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#userView #communityActivity .empty {
+	color: #999;
+}
+
+#userView #communityActivity>ul>li .activityLink {
+	float: left;
+	width: 254px;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+#userView #communityActivity>ul>li .activityDate {
+	float: right;
+	width: 120px;
+	font-size: 16px;
+	text-align: right;
+}
+
+#userView #userWall {
+	width: 513px;
+	float: left;
+}
+
+#userView #userWall a {
+	color: #16a2bb;
+}
+
+#userWall #newPost label {
+	display: none;
+}
+
+#userView #userWall #newPost textarea {
+	width: 400px;
+	padding: 15px;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+
+#userView #userWall>ul>li {
+	float: left;
+	padding: 15px 0;
+	font-size: 16px;
+	border-bottom: 1px solid #ccc;
+}
+
+#userView #userWall>ul>li .wallPostMain {
+	float: left;
+	clear: left;
+	width: 363px;
+	margin-right: 10px;
+}
+
+#userView #userWall>ul>li .wallPostAuthor {
+	display: inline;
+}
+
+#userView #userWall>ul>li .wallPostActions {
+	float: left;
+	padding-left: 10px;
+	border-left: 1px solid #ccc;
+	width: 129px;
+}
+
+/*DISCUSSIONS*/
+.community>.discussion h2 {
+	display: block;
+}
+
+.community>.discussion>.header {
+	margin-bottom: 20px;
+}
+
+.community>.discussion>.header>.main {
+	display: inline-block;
+	width: 419px;
+	margin-right: 15px;
+}
+
+.community>.discussion>.header .movie {
+	width: 320px;
+	height: 240px;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+
+.community>.discussion>.header .movie>video {
+	width: 320px;
+	height: 240px;
+}
+
+.community>.discussion>.header .description {
+	font-size: 16px;
+	color: #003366 !important;
+}
+
+.community>.discussion>.header .commands>li {
+	padding: 2px 0;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.community>.discussion>.header a#addComment {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.community>.discussion>.details {
+	position: relative;
+	padding: 10px 0;
+	border-top: 1px solid #ccc;
+	color: #999;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.community.public>.discussion>.details {
+	border-bottom: 1px solid #ccc;
+}
+
+.community>.discussion>.details a {
+	color: #999;
+}
+
+.community>.discussion>.details>.posted,
+.community>.discussion>.details>.stats {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.community>.discussion>.details>.stats {
+	margin-left: 10px;
+}
+
+.community>.discussion>.details>.stats>li {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	height: 22px;
+	padding-left: 25px;
+	margin-left: 10px;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+.community>.discussion>.details>.stats>li {
+}
+
+.community>.discussion>.details>.stats>li.numberComments {
+	background-image: url(/img/community/icon-discussions.png);
+}
+
+.community>.discussion>.details>.stats>li.numberHelped {
+	background-image: url(/img/community/icon-helped.png);
+}
+
+.community>.discussion>.details>.stats>li.publiclyVisible {
+	background-image: url(/img/community/icon-visible.png);
+}
+
+.community>.discussion>.details>.stats>li.numberPatients {
+	background-image: url(/img/community/icon-patient.png);
+}
+
+.community>.discussion>.details>.stats>li>span {
+	display: none;
+}
+
+.community>.discussion>.details>.stats>li:hover {
+	cursor: help;
+}
+
+.community>.discussion>.details>.stats>li:hover span,
+.community>.discussion>.details>.stats span:hover {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	width: 130px;
+	left: 50%;
+	bottom: 25px;
+	padding: 5px;
+	border-radius: 10px;
+	margin-left: -70px;
+	background-color: #16a2bb;
+	color: #fff;
+	text-align: center;
+	cursor: help;
+}
+
+.community>.discussion>.details>.stats>li.publiclyVisible:hover span,
+.community>.discussion>.details>.stats>li.publiclyVisible span:hover {
+	width: 200px;
+	margin-left: -105px;
+}
+
+.community>.discussion>.details>.follow {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	text-align: left;
+}
+
+/*COMMENTS*/
+.community>.discussion .comments {
+	display: inline-block;
+	width: 643px;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+.community.public>.discussion .comments {
+	border: none;
+}
+
+.community>.discussion .comments h3 {
+	display: none;
+}
+
+.community>.discussion .comments #showOlderComments,
+.community>.discussion .comments #showOlderClinicComments {
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+	color: #16a2bb;
+	cursor: pointer;
+}
+
+.community>.discussion .comments #showOlderComments span,
+.community>.discussion .comments #showOlderClinicComments span {
+	padding-right: 14px;
+	background-image: url(/img/community/more-comments.png);
+	background-repeat: no-repeat;
+	background-position: right 3px;
+}
+
+.community>.discussion .comments .header {
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #fff;
+}
+
+.community>.discussion .comments .header h4 {
+	font-size: 16px;
+}
+
+.community>.discussion .comments .header a {
+	color: #fff;
+}
+
+.community>.discussion .comments .author {
+	display: inline-block;
+	vertical-align: top;
+	width: 252px;
+}
+
+.community>.discussion .comments .author h4 {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.community>.discussion .comments .author .stats {
+	display: inline-block;
+}
+
+.community>.discussion .comments .author .stats>li {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	height: 23px;
+	padding-left: 25px;
+	margin-left: 10px;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+.community>.discussion .comments .author .stats>li:first-child {
+	margin-left: 0;
+}
+
+.community>.discussion .comments .author .stats>.numberPosts {
+	background-image: url(/img/community/icon-discussions-white.png);
+}
+
+.community>.discussion .comments .author .stats>.numberHelped {
+	background-image: url(/img/community/icon-helped-white.png);
+}
+
+.community>.discussion .comments .author .stats>.numberPatients {
+	background-image: url(/img/community/icon-patient-white.png);
+}
+
+
+.community>.discussion .comments .author .stats span {
+	display: none;
+}
+
+.community>.discussion .comments .author .stats>li:hover {
+	cursor: help;
+}
+
+.community>.discussion .comments .author .stats>li:hover span,
+.community>.discussion .comments .author .stats span:hover {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	width: 130px;
+	left: 50%;
+	bottom: 25px;
+	padding: 5px;
+	border-radius: 10px;
+	margin-left: -70px;
+	background-color: #16a2bb;
+	color: #fff;
+	text-align: center;
+	cursor: help;
+}
+
+.community>.discussion .comments .parent {
+	display: inline-block;
+	vertical-align: top;
+	width: 252px;
+	margin-left: 10px;
+	overflow: hidden;
+}
+
+.community>.discussion .comments.clinic .header {
+	vertical-align: middle;
+}
+
+.community>.discussion .comments.clinic .header h4 {
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+.community>.discussion .comments.clinic .author {
+	width: auto;
+}
+
+.community>.discussion .comments.clinic .parent {
+	float: right;
+	width: auto;
+	margin-left: 0;
+	margin-top: 2px;
+}
+
+.community>.discussion .comments .parent.deleted {
+	font-style: italic;
+}
+
+.community>.discussion .comments .stageTitle {
+	display: inline-block;
+	vertical-align: top;
+	width: 99px;
+	margin-left: 10px;
+}
+
+.community>.discussion .comments .stageTitle>span {
+	position: relative;
+}
+
+.community>.discussion .comments .stageTitle>span>span {
+	display: none;
+}
+
+.community>.discussion .comments .stageTitle .expert,
+.community>.discussion .comments .stageTitle .greeter {
+	display: block;
+	height: 100%;
+	padding-left: 25px;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+.community>.discussion .comments .stageTitle>.greeter {
+	cursor: help;
+}
+
+.community>.discussion .comments .stageTitle:hover>.greeter>span {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	width: 200px;
+	left: 50%;
+	bottom: 25px;
+	padding: 5px;
+	border-radius: 10px;
+	margin-left: -105px;
+	background-color: #16a2bb;
+	color: #fff;
+	text-align: center;
+	cursor: help;
+}
+
+.community>.discussion .comments .stageTitle .expert {
+	background-image: url(/img/community/icon-expert-white.png);
+}
+
+.community>.discussion .comments .stageTitle .greeter {
+	background-image: url(/img/community/icon-greeter-white.png);
+}
+
+.community>.discussion .comments .text {
+	padding-right: 10px;
+	font-size: 16px;
+}
+
+.community>.discussion .comments .commands>li {
+	font-size: 16px;
+	line-height: 1;
+	padding: 2px 0;
+}
+
+.community>.discussion .comments .footer {
+	position: relative;
+	padding: 10px 10px 10px 0;
+	border-top: 1px solid #ccc;
+	margin-top: 10px;
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.community>.discussion .comments .posted {
+	display: inline-block;
+	color: #999;
+}
+
+.community>.discussion .comments .helpful {
+	display: inline-block;
+}
+
+.community>.discussion .comments .helpful h5 {
+	display: inline-block;
+	margin: 0 5px 0 10px;
+}
+
+.community>.discussion .comments .helpful>ul {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.community>.discussion .comments .helpful>ul>li {
+	display: inline-block;
+	position: relative;
+	top: -2px;
+	padding: 0 8px;
+	border-radius: 15px;
+	background-color: #16a2bb;
+	margin-left: 3px;
+}
+
+.community>.discussion .comments .helpful>ul>li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.community>.discussion .comments .helpful>ul>.active {
+	background-color: #003366;
+}
+
+.community>.discussion .comments .helped {
+	display: inline-block;
+}
+
+.community>.discussion .comments .report {
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	padding-right: 20px;
+	margin-left: 10px;
+	color: #f09;
+	background-image: url(/img/community/icon-report.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.community>.discussion .comments .report>a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #f09;
+	text-decoration: none;
+}
+
+.community>.discussion .comments .report>a>span {
+	display: none;
+}
+
+.community>.discussion .comments .report:hover>a>span {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	width: 130px;
+	left: 50%;
+	bottom: 25px;
+	padding: 5px;
+	border-radius: 10px;
+	margin-left: -70px;
+	background-color: #16a2bb;
+	color: #fff;
+	text-align: center;
+	cursor: help;
+}
+
+.community>.discussion .respond {
+	position: relative;
+	left: -24px;
+	width: 619px;
+	padding: 24px;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+
+.community>.discussion .respond .yourComment {
+	margin-bottom: 10px;
+}
+
+.community>.discussion .respond .yourComment>textarea {
+	padding: 0 10px;
+	display: inline-block;
+	vertical-align: top;
+	width: 453px;
+}
+
+.community>.discussion .respond .commentsPolicy {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+	text-align: left;
+}
+
+.community.public .discussionRelated {
+	background-color: #e5e4dd;
+}
+
+.community .discussionRelated h2 {
+	display: block;
+	position: relative;
+	top: -10px;
+	padding: 5px 0 0 20px;
+	margin-bottom: 0;
+	font-size: 18px;
+	line-height: 22px;
+	background-image: url(/img/community/related-articles.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.community.public .discussionRelated h2 {
+	top: 0;
+	padding: 0;
+	background: none;
+}
+
+.community .discussionRelated li {
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+.community.public .discussionRelated li {
+	padding-top: 10px;
+	border-top: 1px solid #fff;
+}
+
+.community.public .discussionRelated li:first-child {
+	padding-top: 0;
+	border-top: none;
+}
+
+/* EXPERT ARTICLES */
+.library.public .article .author {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	height: 53px;
+	line-height: 53px;
+	margin-bottom: 40px;
+}
+
+.library.public .article .author>.avatar {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.library.public .article .author>.userName {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 16px;
+	vertical-align: top;
+}
+
+.library.public .article .filedUnder {
+	display: block;
+	padding-top: 10px;
+	border-top: 1px solid #ccc;
+	margin-top: 10px;
+}
+
+/*LIBRARY*/
+.library #areaView {
+	position: relative;
+}
+
+.library #areaView h2,
+.library #topicView h2 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.library #areaView h2 {
+	margin-bottom: 30px;
+}
+
+.library #areaView .nhsChoices {
+	position: absolute;
+	right: 0;
+	top: -6px;
+}
+
+.library #topicList>li {
+	margin-bottom: 40px;
+}
+
+.library #topicList>li .list {
+	margin-bottom: 0;
+}
+
+.library #topicList .watchAgain {
+	display: inline-block;
+	vertical-align: top;
+	width: 210px;
+	margin-right: 10px;
+}
+
+.library #topicList .watchAgain img {
+	padding: 2px;
+	border: 1px solid #ccc;
+}
+
+.library #topicList .watchAgain+.list {
+	display: inline-block;
+	vertical-align: top;
+	width: 485px;
+}
+
+.library #topicList .watchAgain+.list .title {
+	width: 100%;
+}
+
+#libraryMain #articleView .nhsChoices {
+	padding: 5px 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+#libraryMain #articleView #author {
+	float: left;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+#libraryMain #articleView #author #avatar {
+	float: left;
+	height: 53px;
+	width: 53px;
+	margin-right: 10px;
+}
+
+#libraryMain #articleView #author #name {
+	float: left;
+	font-size: 14px;
+}
+
+#libraryMain #filedUnder {
+	clear: left;
+	float: left;
+	width: 100%;
+	padding: 5px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#libraryMain #filedUnder h3 {
+	float: left;
+	padding-top: 2px;
+	font-size: 14px;
+	line-height: 30px;
+	margin-bottom: 0;
+}
+
+#libraryMain #filedUnder>ul {
+	float: left;
+}
+
+#libraryMain #filedUnder>ul>li {
+	float: left;
+}
+
+#libraryMain #filedUnder>ul>li>ul {
+	float: left;
+}
+
+#libraryMain #filedUnder>ul>li>ul>li {
+	float: left;
+	margin-left: 10px;
+}
+
+#libraryMain #filedUnder>ul>li>ul>li a {
+	padding: 5px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 30px;
+	text-decoration: none;
+}
+
+#libraryMain #filedUnder>ul>li#areas>ul>li a {
+	background-color: #f09;
+}
+
+#libraryMain #filedUnder>ul>li#topics>ul>li a {
+	background-color: #003366;
+}
+
+#libraryMain #articleView #articleText {
+	clear: left;
+	float: left;
+	width: 100%;
+	font-size: 16px;
+	margin: 20px 0 30px;
+}
+
+#libraryMain #articleView #articleText.nhsChoicesContent a.original {
+	display: block;
+	margin-bottom: 15px;
+}
+
+#libraryMain #articleView #articleText.nhsChoicesContent h3 {
+	margin-top: 20px;
+}
+
+#libraryMain #articleView #articleText.nhsChoicesContent p {
+	margin-bottom: 10px;
+}
+
+#libraryMain #articleView #articleText.nhsChoicesContent ul {
+	margin-bottom: 10px;
+}
+
+#libraryMain #articleView #articleText.nhsChoicesContent li {
+	list-style: disc inside;
+}
+
+#libraryMain #articleView #articleCommands {
+	margin-bottom: 20px;
+}
+
+#libraryMain #articleView #articleCommands li {
+	padding: 2px 0;
+}
+
+#libraryMain #missingSomething,
+#libraryMain #missingArticle {
+	clear: left;
+	float: left;
+	width: 685px;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 16px;
+	line-height: 1;
+	background-color: #ccc;
+}
+
+#libraryMain #missingSomething {
+	clear: left;
+	margin-bottom: 20px;
+}
+
+#libraryMain #articleView #relatedArticles,
+#libraryMain #articleView #relatedDiscussions,
+#libraryMain #topicView #articleList,
+#libraryMain #topicView #discussionList {
+	clear: left;
+	margin-bottom: 20px;
+}
+
+#libraryMain #topicView #filedUnder {
+	border-bottom: none;
+}
+
+/*RESEARCH*/
+.research cite {
+	font-style: italic;
+}
+
+ol#sleepDisordersAlgorithm>li {
+	margin-bottom: 20px;
+}
+
+.researchPaper .leftColumn {
+	clear: left;
+	float: left;
+	width: 444px;
+	margin-right: 22px;
+}
+
+.researchPaper .rightColumn {
+	float: left;
+	width: 446px;
+}
+
+.researchPaper .leftColumn p,
+.researchPaper .rightColumn p {
+	width: 100%;
+}
+
+.researchPaper img {
+	margin-bottom: 10px;
+}
+
+.researchPaper img.newWindow {
+	margin-bottom: 0;
+}
+
+.researchPaper div.caption {
+	font-size: 14px;
+	margin-top: 3px;
+}
+
+.researchPaper ul.media li {
+	margin-bottom: 20px;
+}
+
+.researchPaper ul.media li img {
+	width: 444px;
+}
+
+.researchPaper ul.media li .movie {
+	height: 252px;
+	border: 1px solid #ccc;
+}
+
+.researchPaper ul.media li .movie video {
+	width: 444px;
+	height: 252px;
+}
+
+.dialsTrial .pageContentHeader {
+	background-size: 90px ;
+}
+
+.dialsTrial .pageContentHeader .researchLogos {
+	width: 450px;
+	display: block;
+	margin: 10px auto;
+}
+
+.dialsTrial .pageContentHeader .researchLogos img.oxford {
+	display: inline-block;
+	height: 90px;
+	margin-left: 55px;
+}
+
+.dialsTrial .pageContentHeader .researchLogos img.woolcock {
+	display: inline-block;
+	height: 40px;
+	margin-bottom: 30px;
+	margin-left: 65px;
+}
+
+.dialsTrial .pageContentHeader h2 {
+	margin: 30px auto 0;
+	width: 550px;
+	text-align: center;
+}
+
+.dialsTrial .pageContentCentered a.button {
+	margin-top: 30px;
+}
+
+.privacy .pageContentHeader h2 {
+	margin: 30px auto 0;
+	width: 550px;
+	text-align: center;
+}
+
+.privacy .pageContentCentered a.button {
+	margin-top: 30px;
+}
+
+.researchEligibility ul.buttonSet {
+	width: 445px;
+	margin: 25px auto 0;
+}
+
+/* GIFTING */
+#giftStart hgroup h1 {
+	margin-bottom: 10px;
+}
+
+#giftStart hgroup h2 {
+	text-align: center;
+}
+
+.giftIntro {
+	position: relative;
+	padding-bottom: 40px;
+	border-bottom: 3px solid #ccc;
+	margin-bottom: 40px;
+}
+
+.giftIntro:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -18px;
+	height: 22px;
+	width: 100%;
+	margin: -10px auto 0;
+	background: url(/img/gift/bow-grey.png) center top no-repeat;
+}
+
+.giftSteps {
+	margin: 40px 0;
+}
+
+.giftSteps>li {
+	display: inline-block;
+	width: 288px;
+	margin-left: 24px;
+	vertical-align: top;
+}
+
+.giftSteps>li:first-child {
+	margin-left: 0;
+}
+
+.giftSteps dl {
+	position: relative;
+	display: table;
+	width: 268px;
+	height: 84px;
+	padding: 0 10px;
+	border-radius: 10px;
+	background-color: #f36;
+	color: #fff;
+	text-align: center;
+}
+
+.giftSteps dl:before {
+	content: '';
+	position: absolute;
+	top: 32px;
+	right: 302px;
+	width: 0;
+	height: 0;
+	border-bottom: 10px solid transparent;
+	border-top: 10px solid transparent;
+	border-left: 10px solid #f36;
+	margin-left: -10px;
+}
+
+.giftSteps>li:first-child dl:before {
+	border: none;
+}
+
+.giftSteps dt {
+	display: table-cell;
+	width: 40px;
+	height: 40px;
+	line-height: 84px;
+	margin: 0 20px;
+	color: #f36;
+	background: url(/img/gift/sunburst-white.png) center center no-repeat;
+}
+
+.giftSteps dd {
+	display: table-cell;
+	padding: 10px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.giftSteps .imageFrame {
+	width: 100%;
+	height: 244px;
+	border-radius: 10px;
+	margin-top: 10px;
+	background-color: #eae9e4;
+	line-height: 244px;
+}
+
+.giftSteps img {
+	vertical-align: middle;
+}
+
+.giftIntro .button.lookBelow {
+	margin: 0 auto;
+}
+
+.giftPlans {
+	margin-top: 20px;
+	margin-left: 180px;
+}
+
+.giftPlans>li {
+	display: inline-block;
+	width: 245px;
+}
+
+.giftPlans>li:first-child {
+	margin-right: 20px;
+}
+
+.giftPlans h3,
+.giftPlans p,
+.giftPlans label {
+	width: 100%;
+	margin: 0 0 5px 0;
+	text-align: center;
+}
+
+.giftPlans h3 {
+	color: #16a2bb;
+}
+
+.giftPlans label {
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.giftPlans input[type=radio] {
+	display: block;
+	margin: 5px auto;
+}
+
+#previewGift {
+	margin-bottom: 20px;
+}
+
+#giftForm #personalMessage {
+	height: auto;
+	width: auto;
+	font-size: 24px;
+	font-family: courier, courier new, monospace;
+}
+
+.giftSendOptions {
+	margin-top: 10px;
+}
+
+.giftSendOptions li {
+	margin-top: 10px;
+}
+
+.giftSendOptions li:first-child {
+	margin-top: 0;
+}
+
+.giftSendOptions input[type=radio] {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.giftSendOptions label {
+	display: inline-block;
+	vertical-align: middle;
+	width: 480px;
+	margin-left: 10px;
+}
+
+/*SLEEP TEST*/
+#sleepTestPage .toolTip {
+	margin-left: 0px;
+}
+
+#sleepTestPage .tabHeader {
+	margin-bottom: 0;
+}
+
+#sleepTestPage .tabHeader h1 {
+	font-size: 24px;
+}
+
+#sleepTestPage .tabHeader h3 {
+	padding-top: 10px;
+}
+
+#sleepTestPage ul.notice {
+	margin-top: 10px;
+}
+
+#sleepTestPage .sleepTestDeviceImport {
+	padding-left: 34px;
+	margin: 5px 0;
+	background-position: left center;
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+}
+
+#sleepTestPage .sleepTestDeviceImport.active {
+	color: #16a2bb;
+	cursor: pointer;
+}
+
+#sleepTestPage .sleepTestDeviceImport.active:hover {
+	color: #069;
+}
+
+#sleepTestPage .sleepTestDeviceImport.fitbit {
+	background-image: url(/img/device/fitbit-small.png);
+}
+
+#sleepTestPage .sleepTestDeviceImport.jawbone {
+	background-image: url(/img/device/jawbone-small.png);
+}
+
+#sleepTestPage .questions.twoColumn>li:not(.hidden) {
+	border-top: none;
+}
+
+#sleepTestPage .questions.twoColumn>li:not(.hidden) ~ li:not(.hidden) {
+	border-top: 1px solid #ccc;
+}
+
+#sleepTestPage .bigNext {
+	text-align: right;
+}
+
+#sleepTestPage .bigNext #processNext {
+	position: relative;
+	margin-right: 28px;
+}
+
+#sleepTestPage .readOnlyText {
+	text-align: right;
+	margin-right: 28px;
+}
+
+#sleepTestPage .controls {
+	position: relative;
+	height: 24px;
+	margin-top: 15px;
+}
+
+#sleepTestPage .controls.last {
+	height: 38px;
+}
+
+#sleepTestPage .controls.last #processPrevious {
+	margin-top: 10px;
+}
+
+#sleepTestPage #processPrevious {
+	position: absolute;
+	left: 0;
+}
+
+#sleepTestPage #errorMessage {
+	text-align: center;
+}
+
+#sleepTestPage #processNext {
+	position: absolute;
+	right: 0;
+}
+
+#sleepTestPage #processNext.huge {
+	top: 14px;
+}
+
+#sleepTestPage #dateOfBirthDay {
+	vertical-align: middle;
+}
+
+#sleepTestPage #dateOfBirthMonth {
+	vertical-align: middle;
+}
+
+#sleepTestPage #dateOfBirthYear {
+	vertical-align: middle;
+}
+
+/* SHOP */
+.shop .product h2 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	font-size: 18px;
+}
+
+.shop .product p {
+	font-size: 16px;
+}
+
+.shop .product>ul {
+	margin: 40px 0;
+}
+
+.shop .product>ul>li {
+	padding-top: 40px;
+	border-top: 1px solid #ccc;
+	margin-top: 40px;
+}
+
+.shop .product>ul>li:first-child {
+	padding-top: 0;
+	border-top: none;
+	margin-top: 0;
+}
+
+.shop .product>ul>li>img,
+.shop .product>ul>li>form {
+	display: inline-block;
+	vertical-align: top;
+	width: 444px;
+}
+
+.shop .product>ul>li>form {
+	width: 280px;
+	margin-left: 24px;
+}
+
+.shop .product h3 {
+	width: 100%;
+	margin: 0;
+}
+
+.shop .product form p {
+	width: 100%;
+	margin: 0;
+	line-height: 1.2;
+}
+
+.shop .product form .price {
+	line-height: 20px;
+	margin-top: 20px;
+}
+
+.shop .product form .price>.value {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.shop .product .terms {
+	font-size: 14px;
+	text-align: left;
+}
+
+.shop .product .questions {
+	margin-top: 20px;
+}
+
+.shop .product>ul>li>form>ul>li {
+	width: 100%;
+	margin-left: 0;
+}
+
+.shop .product .payPalBuyNow label {
+	font-size: 16px;
+}
+
+.shop .product .payPalBuyNow select {
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+.shop .product p.questions {
+	text-align: center;
+}
+
+/* SLEEP TEST SHORT */
+.sleepTestShortReport header {
+	margin-bottom: 20px;
+}
+
+.sleepTestShortReport header h1 {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 0 271px;
+	line-height: 47px;
+}
+
+.sleepTestShortReport section {
+	width: 912px;
+	margin: 0 auto 50px;
+}
+
+.sleepTestShortReport h2 {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 30px;
+	line-height: 1.6;
+}
+
+.sleepTestShortReport .details {
+	display: inline-block;
+	vertical-align: top;
+	width: 350px;
+	margin-right: 50px;
+}
+
+.sleepTestShortReport .description {
+	display: inline-block;
+	vertical-align: top;
+	width: 512px;
+	color: #003366 !important;
+}
+
+.sleepTestShortReport .yourDetails dt,
+.sleepTestShortReport .yourDetails dd {
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px 0;
+	border-bottom: 1px solid #ccc;
+	font-size: 24px;
+	line-height: 1;
+}
+
+.sleepTestShortReport .yourDetails dt {
+	width: 400px;
+}
+
+.sleepTestShortReport .yourDetails dd {
+	width: 512px;
+}
+
+.sleepTestShortReport .score .sleepScore {
+	color: #16a2bb;
+	font-size: 60px;
+	line-height: 1;
+}
+
+.sleepTestShortReport .score .sleepRating {
+	color: #16a2bb;
+	font-size: 30px;
+	line-height: 1;
+}
+
+.sleepTestShortReport .compare dl {
+	margin-bottom: 20px;
+}
+
+.sleepTestShortReport .compare .details dt {
+	line-height: 1;
+}
+
+.sleepTestShortReport .compare .details dd {
+	color: #16a2bb;
+	font-size: 60px;
+	line-height: 1;
+}
+
+.sleepTestShortReport .compare .average,
+.sleepTestShortReport .compare .you {
+	padding-left: 40px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 34px 75px;
+}
+
+.sleepTestShortReport .compare.male .average,
+.sleepTestShortReport .compare.male .you {
+	background-image: url(/img/controls/male-solid.png);
+}
+
+.sleepTestShortReport .compare.female .average,
+.sleepTestShortReport .compare.female .you {
+	background-image: url(/img/controls/female-solid.png);
+}
+
+.sleepTestShortReport .compare .you,
+.sleepTestShortReport .compare .difference {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sleepTestShortReport .compare .you {
+	margin-right: 35px;
+}
+
+.sleepTestShortReport .compare .difference dd {
+	position: relative;
+	color: #0a0;
+}
+
+.sleepTestShortReport .compare .difference dd:before {
+	content: '\f062';
+	margin-right: 10px;
+	font-family: FontAwesome, sans-serif;
+	font-weight: lighter;
+	font-size: 48px;
+	text-align: center;
+	line-height: 60px;
+}
+
+.sleepTestShortReport .compare .difference.negative dd {
+	color: #c00;
+}
+
+.sleepTestShortReport .compare .difference.negative dd:before {
+	content: '\f063';
+}
+
+.sleepTestShortReport .sleepPattern figure img {
+	width: 350px;
+	height: 178px;
+}
+
+.sleepTestShortReport .improve .details dl {
+	margin-bottom: 20px;
+}
+
+.sleepTestShortReport .improve .details dt {
+	line-height: 1.2;
+}
+
+.sleepTestShortReport .improve .details dd {
+	color: #16a2bb;
+	font-size: 30px;
+}
+
+.sleepTestShortReport .couldSleepioHelp .details dt {
+	margin-bottom: 10px;
+	color: #16a2bb;
+	font-size: 100px;
+	line-height: 1;
+}
+
+.sleepTestShortReport .sleepioDetails {
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	padding: 30px 0;
+}
+
+.sleepTestShortReport .sleepioDetails img {
+	display: block;
+	width: 225px;
+}
+
+.sleepTestShortReport .sleepioDetails .description {
+	font-size: 22px;
+	color: #16a2bb !important;
+}
+
+.sleepTestShortReport .sleepioDetails .description a.button {
+	margin-top: 20px;
+}
+
+.sleepTestShortReport .share {
+	padding: 20px;
+	background-color: #ccc;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+.sleepTestShortReport .share h2 {
+	display: inline-block;
+	vertical-align: top;
+	width: 330px;
+	padding-bottom: 0;
+	border-bottom: none;
+	margin-bottom: 0;
+	margin-right: 50px;
+	line-height: 50px;
+}
+
+.sleepTestShortReport .share ul {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sleepTestShortReport .share ul>li {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	margin-left: 50px;
+	color: #fff;
+	background-color: #000;
+	font-family: FontAwesome, sans-serif;
+	font-weight: lighter;
+	font-size: 30px;
+	line-height: 59px;
+	text-align: center;
+}
+
+.sleepTestShortReport .share ul>li:first-child {
+	margin-left: 0;
+}
+
+.sleepTestShortReport .share ul>li:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 50px;
+	height: 50px;
+	pointer-events: none;
+	text-align: inherit;
+}
+
+.sleepTestShortReport .share ul>li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sleepTestShortReport .share ul>li a>span {
+	display: none;
+}
+
+.sleepTestShortReport .share .twitter {
+	background-color: #1ba7dc;
+}
+
+.sleepTestShortReport .share .twitter:before {
+	content: '\f099';
+}
+
+.sleepTestShortReport .share .facebook {
+	background-color: #3b5998;
+}
+
+.sleepTestShortReport .share .facebook:before {
+	content: '\f09a';
+}
+
+.sleepTestShortReport .share .googlePlus {
+	background-color: #c00;
+}
+
+.sleepTestShortReport .share .googlePlus:before {
+	content: '\f0d5';
+}
+
+.sleepTestShortReport .share .linkedIn {
+	background-color: #069
+}
+
+.sleepTestShortReport .share .linkedIn:before {
+	content: '\f0e1'
+}
+
+.sleepTestShortReport .take p {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* NEW SHORT SLEEP TEST REPORT */
+
+.sleepTestReport {
+	color: #003366;
+}
+
+.sleepTestReport header {
+	background: #003366;
+}
+
+.sleepTestReport h2 {
+	font-size: 52px;
+	margin-bottom: 40px;
+}
+
+.sleepTestReport h3 {
+	font-size: 30px;
+	margin-bottom: 35px;
+}
+
+.sleepTestReport h4 {
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.sleepTestReport section {
+	width: 912px;
+	padding-bottom: 30px;
+	margin: 0 auto 30px;
+	border-bottom: 2px solid #ccd6e0;
+	font-size: 16px;
+}
+
+.sleepTestReport section .container {
+	width: 780px;
+}
+
+.sleepTestReport section .container .button {
+	float: left;
+	margin-top: 20px;
+}
+
+.sleepTestReport section .container .info {
+	float: left;
+	width: 288px;
+}
+
+.sleepTestReport section .container .content {
+	float: right;
+	width: 445px;
+}
+
+.sleepTestReport section.postTest .container .content {
+	display: table;
+	min-height: 107px;
+}
+
+.sleepTestReport section.postTest .container .content p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.sleepTestReport .theProfMessage {
+	margin-top: 30px;
+	padding-bottom: 0;
+	border: 0;
+}
+
+.sleepTestReport .theProfMessage .container {
+	background-color: #ffd800;
+	width: 720px;
+	display: block;
+	padding: 30px;
+	margin: 0;
+	border-radius: 5px;
+}
+
+.sleepTestReport .theProfMessage figure {
+	float: left;
+	width: 100px;
+}
+
+.sleepTestReport .theProfMessage .container .content {
+	float: right;
+	width: 600px;
+	position: relative;
+	overflow: hidden;
+}
+
+.sleepTestReport .yourSleepScore .bubble {
+	position: relative;
+	width: 194px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: #30c3e6;
+	text-align: center;
+	padding: 25px 0 20px 0;
+	margin: 0 0 19px 0;
+}
+
+.sleepTestReport .yourSleepScore .bubble:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -19px;
+	height: 20px;
+	content: '▼';
+	line-height: 20px;
+	font-size: 30px;
+	color: #30c3e6;
+}
+
+.sleepTestReport .yourSleepScore .bubble .sleepScore {
+	font-size: 72px;
+	line-height: 1;
+	margin-bottom: 5px;
+}
+
+.sleepTestReport .yourSleepScore .bubble .sleepScoreRating {
+	font-size: 16px;
+	text-transform: capitalize;
+	line-height: 1;
+}
+
+.sleepTestReport .yourSleepPattern img {
+	width: 288px;
+}
+
+.sleepTestReport .howYouCompare .info .box {
+	padding-top: 20px;
+	border-top: 2px solid #ccd6e0;
+}
+
+.sleepTestReport .howYouCompare .info .box:first-of-type {
+	border: 0;
+	padding: 0;
+}
+
+.sleepTestReport .howYouCompare .info .box .sleepScore {
+	font-size: 60px;
+	line-height: 1;
+}
+
+.sleepTestReport .howYouCompare .info .box .bubble {
+	position: relative;
+	width: 110px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: #30c3e6;
+	font-size: 48px;
+	line-height: 1;
+	text-align: center;
+	padding: 15px 0 ;
+	margin: 0 0 30px 0;
+}
+
+.sleepTestReport .howYouCompare .info .box .bubble:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	height: 20px;
+	content: '▼';
+	line-height: 20px;
+	font-size: 30px;
+	color: #30c3e6;
+}
+
+.sleepTestReport .needYourHelp {
+	border: 0;
+}
+
+.sleepTestReport .needYourHelp h3 {
+	margin-bottom: 0;
+}
+
+.sleepTestReport .needYourHelp p.percentageHelped {
+	font-size: 60px;
+	line-height: 1;
+	margin-bottom: 5px;
+}
+
+.sleepTestReport .needYourHelp .s0 {
+    clear: both;
+    padding-top: 20px;
+}
+
+.sleepTestReport .container .content #screenReaderCopy {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+/* NEW 197v1 SHORT SLEEP TEST REPORT HEADER */
+
+.exp197v1SleepTestReport h3 {
+	font-size: 22px;
+	line-height: 25px;
+	margin-bottom: 10px;
+}
+
+.exp197v1SleepTestReport h4 {
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.exp197v1SleepTestReport p {
+	font-size: 18px;
+	line-height: 23px;
+}
+
+.exp197v1SleepTestReport .header {
+	width: 100%;
+	height: 78px;
+	color: #ffffff;
+	z-index: 10;
+	display: table;
+}
+
+.exp197v1SleepTestReport .header > ul {
+	position: relative;
+	height: 100%;
+	margin: 0 52px;
+	height: 100%;
+	text-align: center;
+}
+
+.exp197v1SleepTestReport .header > ul > li {
+	display: inline-block;
+}
+
+.exp197v1SleepTestReport .header > ul > li.sleepioLogo {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.exp197v1SleepTestReport .header > ul > li.sleepioLogo img {
+	width: 127px;
+	margin: 16px 0 0 0;
+	z-index: 15;
+}
+
+.exp197v1SleepTestReport .header > ul > li > h3 {
+	text-transform: uppercase;
+	font-size: 21px;
+	text-align: center;
+	padding: 26px 0;
+	margin: 0 0 0 0;
+}
+
+.exp197v1SleepTestReport section {
+	width: 600px;
+	margin: 0 auto 20px;
+}
+
+.exp197v1SleepTestReport section .container .button {
+	margin: 30px auto 40px;
+}
+
+.exp197v1SleepTestReport section .container {
+	margin-bottom: 20px;
+}
+
+.exp197v1SleepTestReport .yourSleepScore .bubble {
+	position: relative;
+	width: 260px;
+	height: 140px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: #30c3e6;
+	text-align: center;
+	padding: 25px 0 20px 0;
+	margin: 50px auto 55px;
+}
+
+.exp197v1SleepTestReport .yourSleepScore .bubble:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -19px;
+	height: 20px;
+	content: '▼';
+	line-height: 20px;
+	font-size: 30px;
+	color: #30c3e6;
+}
+
+.exp197v1SleepTestReport .yourSleepScore .bubble .sleepScore {
+	font-size: 60px;
+	line-height: 1;
+	margin-top: 20px;
+	margin-bottom: 18px;
+}
+
+.exp197v1SleepTestReport .yourSleepScore .bubble .sleepScoreRating {
+	font-size: 21px;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.exp197v1SleepTestReport .tipForTonight ul li {
+	list-style: disc;
+	list-style-position: inside;
+	margin-bottom: 10px;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.exp197v1SleepTestReport .tailorYourProgram ul li {
+	list-style: disc;
+	list-style-position: inside;
+	margin-bottom: 10px;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.exp197v1SleepTestReport .tailorYourProgram .s0 {
+    text-align: center;
+}
+
+.exp197v1SleepTestReport .tailorYourProgram a.button {
+    margin-bottom: 30px;
+}
+
+.exp197v1SleepTestReport .container #screenReaderCopy {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+@media only screen
+and (min-width: 601px)
+and (max-width: 1023px) {
+
+	.exp197v1SleepTestReport .header {
+		height: 90px;
+	}
+
+	.exp197v1SleepTestReport .header > ul > li.sleepioLogo img {
+		width: 100px;
+		margin-top: 27px;
+	}
+
+	.exp197v1SleepTestReport .header > ul > li > h3 {
+		padding: 32px 0;
+	}
+}
+
+@media only screen
+and (max-width: 1023px) {
+
+	.signUpStart {
+		width: 100%;
+	}
+
+	.signUpStart header {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.signUpStart header .sleepioLogo img {
+		padding-left: 10px;
+	}
+
+	.signUpStart header .companyLogo img {
+		padding-right: 10px;
+	}
+
+	.signUpStart .container {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.signUpStart hgroup>h1,
+	.signUpStart hgroup>h2 {
+		width: 68%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.signUpStart .KPBanner {
+		width: 211.2px;
+		margin: 0 auto;
+	}
+
+	.signUpStart .KPBanner img {
+		position: static;
+	}
+}
+
+@media only screen
+and (max-width: 600px) {
+
+	.exp197v1SleepTestReport .header {
+		height: 65px;
+	}
+
+	.exp197v1SleepTestReport .header > ul > li > h3 {
+		font-size: 15px;
+		padding: 21px 0 0 0;
+	}
+
+	.exp197v1SleepTestReport .header > ul > li.sleepioLogo img {
+		display: none;
+	}
+
+	.exp197v1SleepTestReport section {
+		width: 100%;
+		margin: 0;
+		font-size: 18px;
+	}
+
+	.exp197v1SleepTestReport section .container {
+		margin: 0 20px 20px;
+	}
+
+}
+
+/* NEW SHORT SLEEP TEST REPORT SLEEPIO & SLEEPCHARGE */
+
+.sleepioSleepChargeFull #sleepioSleepChargeOptions {
+	width: 912px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.sleepioSleepChargeFull #sleepioSleepChargeOptions>ul {
+	margin: 0 auto;
+}
+
+.sleepioSleepChargeFull #sleepioSleepChargeOptions>ul>li {
+	display: inline-block;
+	width: 288px;
+	margin-left: 24px;
+	text-align: center;
+}
+
+.sleepioSleepChargeFull #sleepioSleepChargeOptions>ul>li:first-child {
+	margin-left: 0;
+}
+
+.sleepioSleepChargeOptionWrapper {
+	float: left;
+}
+
+.sleepioSleepChargeOptionWrapper:first-of-type {
+	margin-right: 24px;
+}
+
+.sleepioSleepChargeFull #sleepioSleepChargeOptions h3 {
+	width: 264px;
+	padding: 15px 10px;
+	border: 2px solid #003366;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin: 0 0 5px;
+	background-color: #003366;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+
+.sleepioSleepChargeDetails {
+	background-color: #003366;
+	border: 2px solid #003366;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: #16a2bb;
+	height: 350px;
+	margin-bottom: 20px;
+	padding: 13px;
+	width: 259px;
+}
+
+.sleepioSleepChargeDetails>.sleepioSleepChargeOptionHeader {
+	font-size: 30px;
+	line-height: 1;
+	color: #fff;
+}
+
+
+.sleepioSleepChargeDetails>.included {
+	position: relative;
+	width: 218px;
+	height: 82px;
+	padding: 20px;
+	margin: 30px auto 0;
+	background: #fff;
+	color: #003366;
+}
+
+.sleepioSleepChargeFull .sleepioSleepChargeDetails {
+	padding: 13px;
+	border: 2px solid #003366;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-bottom: 20px;
+	color: #16a2bb;
+	background-color: #003366;
+}
+
+.sleepioSleepChargeFull .sleepioSleepChargeDetails>.sleepioSleepChargeOptionHeader {
+	font-size: 30px;
+	line-height: 1;
+	color: #fff;
+}
+
+.sleepioSleepChargeFull .sleepioSleepChargeDetails>.included {
+	position: relative;
+	width: 180px;
+	padding: 20px 39px;
+	margin: 30px auto 0;
+	background: #fff;
+	height: 230px;
+	color: #003366;
+}
+
+.sleepioSleepChargeFull .sleepioSleepChargeDetails>.included:before {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+	margin-left: -10px;
+}
+
+.sleepioSleepChargeFull .sleepioSleepChargeDetails .optionText {
+	padding-bottom: 30px;
+}
+
+.exp197v1SleepTestReport .tailorYourProgram .sleepioSleepChargeOptionsLi {
+	list-style: none;
+}
+
+.exp197v1SleepTestReport .tailorYourProgram .optionText {
+	list-style: none;
+}
+
+/* NEW SHORT SLEEP TEST THANK YOU PAGE */
+
+.sleepTestThankYou {
+	color: #003366;
+}
+
+.sleepTestThankYou header {
+	background: #003366;
+}
+
+.sleepTestThankYou>section.pageContentCentered {
+	margin-top: 20px;
+}
+
+/* INSTANT SLEEP TEST */
+
+body.instantSleepTest {
+	width: 100%;
+	height: 100%;
+}
+
+body.instantSleepTest.result {
+	background-color: #003366;
+}
+
+.instantSleepTest header {
+	padding: 30px 0;
+}
+
+.instantSleepTest header .sleepioLogo,
+.instantSleepTest header .sleepioLogo img {
+	display: block;
+	margin: 0 auto;
+}
+
+.instantSleepTest header .sleepioLogo.bupa img {
+	float: left;
+	margin-left: 20px;
+}
+
+.instantSleepTest header .sleepioLogo.bupa img.bupaLogo {
+	width: auto;
+	margin-left: 28px;
+	margin-top: -10px;
+}
+
+.instantSleepTest .pageContentHead {
+	width: 100%;
+	min-width: 912px;
+	padding: 0;
+	border-bottom: none;
+	margin-bottom: 30px;
+	background-color: #003366;
+	color: #fff;
+}
+
+.instantSleepTest .pageContentHead hgroup {
+	width: 912px;
+	margin: 0 auto 45px;
+}
+
+.instantSleepTest .pageContentHead.bupa hgroup,
+.instantSleepTest.result .pageContentHead hgroup {
+	margin-bottom: 17px;
+}
+
+.instantSleepTest .pageContentHead hgroup>h1 {
+	margin-bottom: 15px;
+}
+
+.instantSleepTest .pageContentHead hgroup>h2 {
+	font-size: 18px;
+	line-height: 30px;
+	color: #16a2bb;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+.instantSleepTest .pageContentHead.bupa hgroup>h1,
+.instantSleepTest .pageContentHead.bupa hgroup>h2 {
+	text-align: left;
+	margin-left: 28px;
+}
+
+.instantSleepTest .pageContentHead.bupa hgroup>h2,
+.instantSleepTest .pageContentHead.contact hgroup>h2{
+	text-transform: none;
+}
+
+.instantSleepTest.result .pageContentBody.score > h2 {
+	float: none;
+	width: 100%;
+	text-align: center;
+	color: #16a2bb;
+	margin-bottom: 30px;
+}
+
+.instantSleepTest.result .pageContentBody.score > h2.score {
+	line-height: 100px;
+	font-size: 100px;
+	margin-bottom: 0;
+}
+
+.instantSleepTest.result .pageContentBody.score > h2.rating {
+	font-size: 34px;
+}
+
+.instantSleepTest.result .pageContentBody.score > .percentSleepioHelped {
+	float: none;
+	width: 550px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+	color: #16a2bb;
+}
+
+.instantSleepTest .aboutTheTest {
+	position: relative;
+	width: 744px;
+	padding-top: 85px;
+	margin: 0 auto;
+}
+
+.instantSleepTest .aboutTheTest>ul {
+	background-color: #e5e4dd;
+	color: #003366;
+}
+
+.instantSleepTest .aboutTheTest>ul:before {
+	content: "";
+	position: absolute;
+	top: 85px;
+	left: 0;
+	border-style: solid;
+	border-width: 0 0 32px 32px;
+	border-color: #003366 #d6d5d0 #d6d5d0 #003366;
+	box-shadow: 0 1px 1px rgba(0,0,0,.3), -1px 1px 1px rgba(0,0,0,.2);
+}
+
+.instantSleepTest .aboutTheTest li {
+	display: inline-block;
+	vertical-align: top;
+	width: 168px;
+	height: 100px;
+	padding: 30px 40px 20px;
+	text-align: center;
+}
+
+.instantSleepTest .aboutTheTest h2 {
+	padding-bottom: 5px;
+	border-bottom: 2px solid #003366;
+	margin: 0 10px 7px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.instantSleepTest .aboutTheTest figcaption {
+	position: absolute;
+	top: 0;
+	width: 168px;
+	padding-bottom: 50px;
+	background-image: url(/img/sleep-test/short/instant/call-out-line.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 6px 43px;
+	color: #fff;
+}
+
+.instantSleepTest .aboutTheTest .score .sleepScore {
+	font-size: 60px;
+	line-height: 1;
+}
+
+.instantSleepTest .aboutTheTest .score .sleepRating {
+	font-size: 14px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.instantSleepTest .aboutTheTest .compare {
+	padding-bottom: 71px;
+	background-image: url(/img/sleep-test/short/instant/female-male.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 61px 64px;
+}
+
+.instantSleepTest .aboutTheTest .tips {
+	padding-bottom: 71px;
+	background-image: url(/img/sleep-test/short/instant/sleeping-moon.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 61px 60px;
+}
+
+.instantSleepTest .test {
+	width: 912px;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 30px;
+}
+
+.instantSleepTest .test>ol>li:last-child {
+	margin-bottom: 0;
+}
+
+.instantSleepTest .test:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #fff;
+	margin-left: -10px;
+}
+
+.instantSleepTest .contact {
+	width: 100%;
+	min-width: 912px;
+	padding: 40px 0;
+	background-color: #e5e4dd;
+}
+
+.instantSleepTest .contact .container {
+	width: 912px;
+	margin: 0 auto;
+}
+
+.instantSleepTest .contact p.terms {
+	text-align: center;
+}
+
+.instantSleepTest.result .contact p.terms {
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+.instantSleepTest.result .contact {
+	background-color: #003366;
+	/* iOS adjacent color div fix */
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+}
+
+.instantSleepTestThankYou .tryOutSleepio {
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 40px;
+}
+
+.instantSleepTestThankYou .tryOutSleepio p {
+	margin-bottom: 0;
+	text-align: left;
+}
+
+.instantSleepTestThankYou .tryOutSleepio .details {
+	display: inline-block;
+	vertical-align: top;
+	width: 672px;
+	margin-right: 20px;
+}
+
+.instantSleepTestThankYou .tryOutSleepio .square {
+	display: inline-block;
+	vertical-align: top;
+	width: 160px;
+	padding: 20px 10px;
+	margin-top: 0;
+}
+
+/* SCI 8 Tool */
+
+.sci8Tool section.pageContentHead {
+	width: 100%;
+	max-width: 912px;
+	display: block;
+	padding: 35px 0 70px;
+	margin: 0 auto 0;
+	border-bottom: 3px solid #ccc;
+	background: #fff url(/img/background/header-trees.png) no-repeat center bottom;
+	text-align: center;
+}
+
+.sci8Tool section.pageContentHead p {
+	margin: 0 25px;
+}
+
+.sci8Tool #sci8ToolForm {
+	box-sizing: border-box;
+	width: 700px;
+	display: block;
+	margin: 30px auto 40px;
+}
+
+.sci8Tool #sci8ToolForm ul li {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.sci8Tool #sci8ToolForm section:last-of-type {
+	border-bottom: 1px solid #ccc;;
+}
+
+.sci8Tool #sci8ToolForm ul li label, .sci8Tool #sci8ToolForm ul li select, .sci8Tool #sci8ToolForm ul li input {
+	box-sizing: border-box;
+	margin-right: 25px;
+	display: inline-block;
+}
+
+.sci8Tool #sci8ToolForm ul li label {
+	width: 400px;
+}
+
+.sci8Tool #sci8ToolForm ul li select, .sci8Tool #sci8ToolForm ul li input {
+ 	width: 200px;
+}
+
+.sci8Tool #sci8ToolForm input.confirm {
+	display: block;
+	margin: 50px auto;
+}
+
+.sci8ToolResult .sci8ToolResultGraph {
+	width: 100%;
+	max-width: 780px;
+	margin: 35px auto 0;
+}
+
+.sci8ToolResult .sci8ToolResultGraph h1 {
+	font-size: 24px;
+	margin: 0;
+}
+
+.sci8ToolResult .sci8ToolResultGraph figure {
+	position: relative;
+	margin: 15px 20px 40px;
+}
+
+.sci8ToolResult .sci8ToolResultGraph figure figcaption {
+	font-size: 50px;
+	line-height: 50px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+.sci8ToolResult .sci8ToolResultGraph figure img {
+	width: 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.sci8ToolResult .sci8ToolResultGraph figure div.scale {
+	display: block;
+	position: absolute;
+	bottom: -22px;
+	font-size: 16px;
+	width: 30px;
+	margin-left: -15px;
+	text-align: center;
+}
+
+.sci8ToolResult .sci8ToolResultGraph figure div.scaleMax {
+	left: 100%;
+}
+
+.sci8ToolResult .sci8ToolResultGraph figure div.scaleMin {
+	left: 0;
+}
+
+.sci8ToolResult .sci8ToolResultGraph figure div.scaleScore {
+	font-size: 24px;
+	bottom: -31px;
+}
+
+.sci8ToolResult .sci8ToolResultInfo {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 10px 25px;
+}
+
+.sci8ToolResult .sci8ToolResultInfo p {
+	line-height: 21px;
+}
+
+.sci8ToolResult .sci8ToolResultInfo span.lowerPercentage {
+	color: #ff6600;
+}
+
+.sci8ToolResult .sci8ToolResultInfo a.button {
+	display: block;
+	margin: 35px auto;
+}
+
+/* SnapEngage Live Chat page */
+.liveChat {
+    height: 100%;
+    background: #003366;
+}
+
+/* ONBOARDING SLEEP TEST */
+#onboardingSleepTestResult .overlay.clickable {
+	cursor: pointer;
+}
+
+#onboardingSleepTestResult .overlay.button {
+	padding: 2.5vh 1.5vh;
+	border-radius: 5vh;
+	background-color: #16a2bb;
+	color: #fff;
+	line-height: 1;
+}
+
+#onboardingSleepTestResult .overlay.button:hover {
+	background-color: #069;
+}
+
+#onboardingSleepTestResult .overlay.button.continue {
+	background-color: #0a0;
+}
+
+#onboardingSleepTestResult .overlay.button.continue:hover {
+	background-color: #060;
+}
+
+#onboardingSleepTestResult .overlay.summaryRoundel {
+	color: #fff;
+}
+
+#onboardingSleepTestResult .overlay.summaryText {
+	padding: 1.5vh;
+	border-radius: 15px;
+	line-height: 1.2;
+	background-color: #ade0f9;
+}
+
+#onboardingSleepTestResult .overlay#sleepScore,
+#onboardingSleepTestResult .overlay#percentHelped {
+	padding: 12vh 0 18vh;
+	border-radius: 20vh;
+	background-color: #fff;
+	line-height: 10vh;
+}
+
+#onboardingSleepTestResult .overlay#percentHelped {
+	padding: 15vh 0 15vh;
+}
+
+#onboardingSleepTestResult .overlay.compareLabel,
+#onboardingSleepTestResult .overlay.compareItem {
+	padding-left: 6vh;
+}
+
+#onboardingSleepTestResult .overlay.compareItem {
+	padding-top: 3.5vh;
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: auto 75%;
+	color: #16a2bb;
+}
+
+#onboardingSleepTestResult .overlay.compareItem.m {
+	background-image: url(/img/controls/male-solid.png);
+}
+
+#onboardingSleepTestResult .overlay.compareItem.f {
+	background-image: url(/img/controls/female-solid.png);
+}
+
+#onboardingSleepTestResult .overlay#compareDifferenceLabel,
+#onboardingSleepTestResult .overlay#compareDifference {
+	padding-left: 0;
+}
+
+#onboardingSleepTestResult .overlay#compareDifference {
+	color: #0a0;
+}
+
+#onboardingSleepTestResult .overlay#compareDifference:before {
+	content: '\f062';
+	font-family: FontAwesome, sans-serif;
+	font-weight: lighter;
+	font-size: 80%;
+	line-height: 1;
+}
+
+#onboardingSleepTestResult .overlay#compareDifference.negative {
+	color: #c00;
+}
+
+#onboardingSleepTestResult .overlay#compareDifference.negative:before {
+	content: '\f063';
+}
+
+
+#onboardingSleepTestResult .overlay#badSleepPercentile li {
+	display: inline-block;
+	height: 9.8vh;
+	width: 4.4vh;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#onboardingSleepTestResult .overlay#badSleepPercentile li.m-filled {
+	background-image: url(/img/controls/male-solid.png);
+}
+
+#onboardingSleepTestResult .overlay#badSleepPercentile li.m-empty {
+	background-image: url(/img/controls/male-hollow.png);
+}
+
+#onboardingSleepTestResult .overlay#badSleepPercentile li.f-filled {
+	background-image: url(/img/controls/female-solid.png);
+}
+
+#onboardingSleepTestResult .overlay#badSleepPercentile li.f-empty {
+	background-image: url(/img/controls/female-hollow.png);
+}
+
+#onboardingSleepTestResult .overlay#sleepPattern img {
+	height: 22vh;
+}
+
+/* FREE DOWNLOAD */
+.freeDownload header {
+	padding: 30px 0;
+}
+
+.freeDownload header .sleepioLogo,
+.freeDownload header .sleepioLogo img {
+	display: block;
+	margin: 0 auto;
+}
+
+.freeDownload .pageContentCentered {
+	border-bottom: none;
+}
+
+.freeDownload p {
+	width: 912px;
+}
+
+.freeDownload .whatIsSleepio {
+	padding: 30px 0;
+}
+
+
+/* Prof pinned table */
+#profNote {
+	position: relative;
+	width: 590px;
+	padding: 10px 5px 5px;
+	border-radius: 10px;
+	margin: 10px 0 20px;
+	box-shadow: 1px 1px rgba(0,0,0,.2);
+	background-color: #ff9;
+}
+
+#profNote .pinned {
+	left: 0;
+	width: 580px;
+	top: -25px;
+	padding: 30px 5px 0;
+	margin-bottom: -25px;
+}
+
+#profNote h1 {
+	position: absolute;
+	top: -5px;
+	left: 20px;
+	width: 550px;
+	padding: 40px 0 50px 0;
+	font-size: 24px;
+	border-bottom: none;
+	background-image: url(/img/logos/prof-passport.png);
+	background-repeat: no-repeat;
+	background-position: right 5px;
+	background-size: 90px 90px;
+	text-align: left;
+}
+
+#profNote p {
+	width: 400px;
+	margin: 0 15px 20px;
+	font-size: 16px;
+}
+
+#profNote .pinned p:first-child {
+	margin-top: 44px;
+}
+
+#profNote .nextSteps {
+	margin: 0 33px 20px;
+}
+
+#profNote .step {
+	font-size: 16px;
+	list-style: disc;
+	margin-bottom: 5px;
+}
+
+#profNote #profSignature {
+	width: 128px;
+	height: 51px;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-image: url(/img/controls/prof-signature.png);
+}
+
+#profNote #profSignature span {
+	display: none;
+}
+
+#profNoteProblems {
+	margin-top: 20px;
+	font-size: 16px;
+}
+
+#profNote.browserCheck {
+	margin: 0 auto;
+}
+
+#profNote.browserCheck p {
+	width: 550px;
+}
+#profNote.browserCheck p:first-child {
+	margin-top: 64px;
+}
+#profNote.browserCheck p#profSignature {
+	float: left;
+	margin-bottom: 0;
+}
+#profNote.browserCheck p#downloadChrome {
+	width: auto;
+	float: right;
+	margin-bottom: 0;
+}
+
+/*********************
+
+ SLEEPIO AT WORK
+
+**********************/
+
+/* SLEEPIO AT WORK SLEEP TEST */
+.atWork.sleepTest {
+	width: 100%;
+	height: 100%;
+}
+
+.atWork.sleepTest.result {
+	background-color: #003366;
+}
+
+.atWork.sleepTest header {
+	padding: 30px 0;
+	background: white;
+}
+
+.atWork.sleepTest header div.thankYou {
+	text-align: center;
+}
+
+.atWork.sleepTest header .sleepioLogo,
+.atWork.sleepTest header .sleepioLogo img {
+	display: block;
+	margin: 0 auto;
+}
+
+.atWork.sleepTest header .sleepioLogo.google img {
+	margin: 0 auto;
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.atWork.sleepTest header .sleepioLogo.google img.googleLogo {
+	width: 158px;
+}
+
+.atWork.sleepTest .pageContentHead {
+	width: 100%;
+	min-width: 912px;
+	padding: 0;
+	border-bottom: none;
+	margin-bottom: 30px;
+	background-color: #003366;
+	color: #fff;
+}
+
+.atWork.sleepTest .pageContentHead hgroup {
+	width: 912px;
+	margin: 0 auto 45px;
+}
+
+.atWork.sleepTest .pageContentHead.google hgroup,
+.atWork.sleepTest.result .pageContentHead hgroup {
+	padding-top: 17px;
+	margin-bottom: 17px;
+}
+
+.atWork.sleepTest .pageContentHead hgroup>h1 {
+	margin: 15px 0;
+}
+
+.atWork.sleepTest .pageContentHead hgroup>h2 {
+	font-size: 18px;
+	line-height: 30px;
+	color: #16a2bb;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.atWork.sleepTest .pageContentHead.google hgroup>h1,
+.atWork.sleepTest .pageContentHead.google hgroup>h2 {
+	text-align: left;
+	margin-left: 28px;
+}
+
+.atWork.sleepTest .pageContentHead.google hgroup>h2,
+.atWork.sleepTest .pageContentHead.contact hgroup>h2{
+	text-transform: none;
+}
+
+.atWork.sleepTest header .sleepioLogo.atWorkDynamic {
+	padding-left: 28px;
+	width: 884px;
+	margin: 0 auto;
+	display: block;
+}
+
+.atWork.sleepTest header .sleepioLogo.atWorkDynamic img {
+	margin: 0 auto;
+	display: inline-block;
+	float: none;
+	padding-right: 20px;
+}
+
+.atWork.sleepTest header .sleepioLogo.atWorkDynamic img.viagogoLogo {
+	width: 161px;
+}
+
+.atWork.sleepTest header .sleepioLogo.atWorkDynamic img.goodyearLogo {
+	width: 185px;
+}
+
+.atWork.sleepTest header .sleepioLogo.atWorkDynamic img.bupaLogo {
+	width: 80px;
+	margin-top: -17px;
+	position: absolute;
+}
+
+.atWork.sleepTest .pageContentHead.atWorkDynamic hgroup,
+.atWork.sleepTest.result .pageContentHead hgroup {
+	padding-top: 17px;
+	margin-bottom: 17px;
+}
+
+.atWork.sleepTest .pageContentHead.atWorkDynamic hgroup>h1,
+.atWork.sleepTest .pageContentHead.atWorkDynamic hgroup>h2 {
+	text-align: left;
+	padding-left: 28px;
+}
+
+.atWork.sleepTest .pageContentHead.atWorkDynamic hgroup>h2,
+.atWork.sleepTest .pageContentHead.contact hgroup>h2{
+	text-transform: none;
+}
+
+.atWork.sleepTest.result .pageContentBody.score > h2 {
+	float: none;
+	width: 100%;
+	text-align: center;
+	color: #16a2bb;
+	margin-bottom: 30px;
+}
+
+.atWork.sleepTest.result .pageContentBody.score > h2.score {
+	line-height: 100px;
+	font-size: 100px;
+	margin-bottom: 0;
+}
+
+.atWork.sleepTest.result .pageContentBody.score > h2.rating {
+	font-size: 34px;
+}
+
+.atWork.sleepTest.result .pageContentBody.score > .percentSleepioHelped {
+	float: none;
+	max-width: 420px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 23px;
+	line-height: 26px;
+	color: #16a2bb;
+}
+
+.atWork.sleepTest .aboutTheTest {
+	position: relative;
+	width: 744px;
+	padding-top: 85px;
+	margin: 0 auto;
+}
+
+.atWork.sleepTest .aboutTheTest>ul {
+	background-color: #e5e4dd;
+	color: #003366;
+}
+
+.atWork.sleepTest .aboutTheTest>ul:before {
+	content: "";
+	position: absolute;
+	top: 85px;
+	left: 0;
+	border-style: solid;
+	border-width: 0 0 32px 32px;
+	border-color: #003366 #d6d5d0 #d6d5d0 #003366;
+	box-shadow: 0 1px 1px rgba(0,0,0,.3), -1px 1px 1px rgba(0,0,0,.2);
+}
+
+.atWork.sleepTest .aboutTheTest li {
+	display: inline-block;
+	vertical-align: top;
+	width: 168px;
+	height: 100px;
+	padding: 30px 40px 20px;
+	text-align: center;
+}
+
+.atWork.sleepTest .aboutTheTest h2 {
+	padding-bottom: 5px;
+	border-bottom: 2px solid #003366;
+	margin: 0 10px 7px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.atWork.sleepTest .aboutTheTest figcaption {
+	position: absolute;
+	top: 0;
+	width: 168px;
+	padding-bottom: 50px;
+	background-image: url(/img/sleep-test/short/instant/call-out-line.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 6px 43px;
+	color: #fff;
+}
+
+.atWork.sleepTest .aboutTheTest .score .sleepScore {
+	font-size: 60px;
+	line-height: 1;
+}
+
+.atWork.sleepTest .aboutTheTest .score .sleepRating {
+	font-size: 14px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.atWork.sleepTest .aboutTheTest .compare {
+	padding-bottom: 71px;
+	background-image: url(/img/sleep-test/short/instant/female-male.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 61px 64px;
+}
+
+.atWork.sleepTest .aboutTheTest .tips {
+	padding-bottom: 71px;
+	background-image: url(/img/sleep-test/short/instant/sleeping-moon.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: 61px 60px;
+}
+
+.atWork.sleepTest .test {
+	width: 912px;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 30px;
+}
+
+.atWork.sleepTest .test>ol>ol {
+	border-top: 1px solid #ccc;
+}
+
+.atWork.sleepTest .test>ol>ol>h3 {
+	color: #16a2bb;
+	text-align: left;
+	margin: 25px 0 0;
+	padding: 0;
+	padding-left: 28px;
+}
+
+.atWork.sleepTest .test>ol>ol:first-of-type {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.atWork.sleepTest .test>ol>ol>li {
+	width: 884px;
+	padding: 15px 0 0 28px;
+	margin-bottom: 15px;
+	margin-left: 0;
+}
+
+.atWork.sleepTest .test:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #fff;
+	margin-left: -10px;
+}
+
+.atWork.sleepTest.result .score {
+	position: relative;
+}
+
+.atWork.sleepTest.result section.score:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #fff;
+	margin-left: -10px;
+}
+
+.atWork.sleepTest.result .pageContentBody.score .oldScore {
+	text-align: center;
+	width: 356px;
+	float: left;
+	color: #16a2bb;
+	padding-left: 100px;
+}
+
+.atWork.sleepTest.result .pageContentBody.score .oldScore:after {
+	content: '';
+	width: 100px;
+	height: 32px;
+	display: block;
+	position: relative;
+	left: 100%;
+	top: 40px;
+	margin-left: -45px;
+	background-image: url(/img/at-work/sleep-score-arrow.png);
+}
+
+.atWork.sleepTest.result .pageContentBody.score .newScore {
+	text-align: center;
+	width: 356px;
+	float: right;
+	color: #16a2bb;
+	padding-right: 100px;
+}
+
+.atWork.sleepTest.result .pageContentBody.score .oldScore h2.score {
+	line-height: 100px;
+	font-size: 100px;
+	width: 100%;
+}
+
+.atWork.sleepTest.result .pageContentBody.score .oldScore h2.rating {
+	font-size: 34px;
+	width: 100%;
+	padding-bottom: 15px;
+}
+
+.atWork.sleepTest.result .pageContentBody.score .newScore h2.score {
+	line-height: 100px;
+	font-size: 100px;
+	width: 100%;
+}
+
+.atWork.sleepTest.result .pageContentBody.score .newScore h2.rating {
+	font-size: 34px;
+	width: 100%;
+	padding-bottom: 15px;
+}
+
+.atWork.sleepTest .contact {
+	width: 100%;
+	min-width: 912px;
+	padding: 0;
+	background-color: #e5e4dd;
+}
+
+.atWork.sleepTest .contact .container {
+	width: 912px;
+	padding: 15px 0;
+	margin: 0 auto;
+}
+
+.atWork.sleepTest .contact h2 {
+	font-size: 18px;
+	text-align: center;
+}
+
+.atWork.sleepTest .contact hgroup>h2 {
+	line-height: 20px;
+	color: #fff;
+}
+
+.atWork.sleepTest .contact p.terms {
+	text-align: center;
+}
+
+.atWork.sleepTest.result .contact p.terms {
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+.atWork.sleepTest.result .contact {
+	background-color: #003366;
+	/* iOS adjacent color div fix */
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+}
+
+.atWork.sleepTest .thankYou h1 {
+	padding-top: 50px;
+}
+
+.atWork.sleepTest.result p.footnote {
+	color: #999;
+	font-size: 16px;
+	margin-top: 100px;
+}
+
+.atWorkClosed .pageContent .pageContentHeader {
+	color: #003366;
+}
+
+.atWorkClosed .pageContent .pageContentHeader p {
+	width: 470px;
+}
+
+.atWorkClosed .happySleepers .happySleeperImage {
+	width: 284px;
+	height: 284px;
+	margin-left: 24px;
+	display: inline-block;
+}
+
+.atWorkClosed .happySleepers .happySleeperImage:first-child {
+	margin-left: 0;
+}
+
+.atWorkClosed .happySleepers p {
+	text-align: center;
+	padding-top: 20px;
+	color: #003366;
+}
+
+.atWorkClosed .atWorkClosedForm,
+.InterestRegistration {
+	text-align: center;
+	width: 610px;
+	padding: 0;
+	margin: auto;
+}
+
+.atWorkClosed .atWorkClosedForm label {
+	text-align: left;
+	padding-left: 5px;
+	margin-bottom: 5px;
+}
+
+.atWorkClosed .atWorkClosedForm input[type=email] {
+	outline: none;
+	border-radius: 12px;
+	padding-left: 15px;
+}
+
+.atWorkClosed .atWorkClosedForm .errorMessage li {
+	text-align: center;
+	padding-top: 8px;
+	font-size: 18px;
+}
+
+.atWorkClosed .atWorkClosedForm li.overlaySubmit {
+	padding-left: 50px;
+	margin: 30px 0 20px;
+}
+
+.pageContent>section.InterestRegistration {
+	padding-top: 0;
+}
+
+.InterestRegistration label {
+	margin: auto;
+	text-align: left;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.InterestRegistration input[type=text] {
+	outline: none;
+	border-radius: 12px;
+	padding-left: 15px;
+	margin: 5px 0 30px;
+}
+
+
+.InterestRegistration li.overlaySubmit {
+	padding-left: 50px;
+	margin-top: 15px;
+}
+
+.InterestRegistration p {
+	width: 600px;
+	font-size: 17px;
+	color: #999;
+	margin: auto;
+}
+
+.InterestRegistration .error input[type=text] {
+	margin-bottom: 0;
+}
+
+.InterestRegistration .errorMessage li {
+	width: 600px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+/*********************
+
+ EXPERT ARTICLE GUIDES
+
+**********************/
+
+div.guideTopics {
+	width: 912px;
+	margin: 0 auto;
+	padding: 0 0 40px;
+	border-bottom: 3px solid #ccc;
+	background: #fff url(/img/background/header-trees.png) no-repeat center bottom;
+}
+
+div.guideTopics section {
+	display: inline-block;
+	width: 288px;
+	padding: 0;
+	margin: 0 0 30px 24px;
+	float: none;
+	vertical-align: top;
+	border: none;
+}
+
+div.guideTopics section.firstInRow {
+	margin-left: 0;
+}
+
+div.guideTopics section img {
+	width: 100%;
+	height: 448px;
+	display: block;
+}
+
+div.guideTopics section h2 {
+	margin-top: 20px;
+	width: 100%;
+	float: none;
+	font-size: 17px;
+}
+
+div.guideTopics section p {
+	font-size: 14px;
+	float: none;
+	width: 100%;
+	margin-top: 20px;
+	display: block;
+	line-height: 20px;
+}
+
+div.guideTopics section .sleepGuideBookCover {
+	box-shadow: 5px 2px 5px -5px #888;
+	-moz-box-shadow: 2px 2px 5px -5px #888;
+	-webkit-box-shadow: 4px 4px 10px -4px #888;
+}
+
+.guideTopics .pageContentBody .sleepGuideTopic>h2 {
+	font-size: 24px;
+	margin: 25px 0 25px;
+}
+
+.guideTopics .pageContentBody .sleepGuideTopic>p {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.sleepGuide .pageContentHeader {
+	margin: 12px auto 5px;
+	padding: 0;
+}
+
+.sleepGuide #tabPanelContainer .pageContentHeader {
+	padding: 0;
+}
+
+.sleepGuide .pageContent .pageContentBody {
+	margin: 30px auto;
+	padding: 0;
+}
+
+.sleepGuide .pageContentBody .container {
+	display: block;
+	margin: auto;
+	width: 684px;
+}
+
+.sleepGuide .pageContentHeader .breadCrumb {
+	text-align: left;
+	background: none;
+	padding: 5px 0px 0px;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.sleepGuide .pageContentHeader .breadCrumb li a {
+	text-decoration: underline;
+}
+
+.sleepGuide .pageContentHeader .breadCrumb > li:before {
+	content: '>';
+	padding-right: 5px;
+}
+
+.sleepGuide .pageContentHeader .breadCrumb > li:first-child:before {
+	display: none;
+	padding-right: 0;
+}
+
+.sleepGuide .pageContentBody h1 {
+	font-size: 34px;
+	text-align: left;
+	line-height: 40px;
+	margin-bottom: 20px;
+}
+
+.sleepGuide .pageContentBody {
+	padding-top: 0;
+	border: 0;
+}
+
+.sleepGuide .pageContentHeader.noTrees {
+	padding-bottom: 0;
+	border-width: 1px;
+}
+
+.sleepGuide .pageContentBody h3 {
+	float: left;
+	width: 330px;
+	margin-bottom: 28px;
+	font-size: 24px;
+}
+
+.sleepGuide .pageContentBody figure {
+	float: left;
+	display: block;
+	width: 289px;
+	margin: 0 23px 0 41px;
+}
+
+.sleepGuide .pageContentBody ul {
+	margin-top: 0px;
+}
+
+.sleepGuide .pageContentBody p,
+.sleepGuide .pageContentBody ul {
+	float: left;
+	display: block;
+	width: 330px;
+	margin-right: 0px;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.sleepGuide .pageContentBody ul > li {
+	margin-top: 15px;
+}
+
+.sleepGuide .pageContentBody a.button {
+	margin-top: 40px;
+	width: 210px;
+}
+
+.sleepGuide .article {
+	padding: 20px 0 28px 0;
+	border: 0;
+}
+
+.sleepGuide .article h3 {
+	display: block;
+	margin-bottom: -20px;
+}
+
+.sleepGuide .article h1 {
+	text-align: left;
+	font-size: 34px;
+	float: left;
+	width: 644px;
+}
+
+.sleepGuide .article figure {
+	margin-bottom: 15px;
+}
+
+.sleepGuide .article .author {
+	display: block;
+	height: 50px;
+	width: 230px;
+	line-height: 50px;
+	margin-bottom: 25px;
+	margin-left: 680px;
+}
+
+.sleepGuide .article .author .avatar {
+	display: inline-block;
+	vertical-align: top;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+}
+
+.sleepGuide .article .userName {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	height: 53px;
+	margin-left: 5px;
+}
+
+.sleepGuide .article .content {
+	float: none;
+	display: block;
+	width: 644px;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.sleepGuide .nextGuide {
+	width: 912px;
+	margin: 0 auto;
+	text-align: center;
+	border-bottom: 0;
+	border-top: 1px solid #003366;
+}
+
+.sleepGuide .nextGuide h2 {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	font-size: 18px;
+	text-align: left;
+}
+
+.sleepGuide .needMoreHelp {
+	width: 100%;
+	height: 470px;
+	background: #daf4ff url('/img/articles/need-more-help-background-line.png') repeat-x;
+	padding: 0;
+}
+
+.sleepGuide .needMoreHelp .container {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	min-width: 912px;
+	padding: 30px 0;
+	background: url('/img/articles/need-more-help-background.png') top center no-repeat;
+}
+
+.sleepGuide .needMoreHelp h2 {
+	margin-bottom: 0;
+	font-size: 28px;
+}
+
+.sleepGuide .needMoreHelp a.button,
+.sleepGuide .nextGuide a.button {
+	margin: 0 0 30px 0px;
+	width: 210px;
+}
+
+.sleepGuide .needMoreHelp ul {
+	display: table;
+	margin: 0 auto;
+	border-collapse: separate;
+	border-spacing: 40px;
+}
+
+.sleepGuide .needMoreHelp ul > li {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 16px;
+	line-height: 1.2;
+	padding: 0 15px;
+	width: 120px;
+	height: 150px;
+	overflow: hidden;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: #fff;
+}
+
+/* Forgot/Reset password */
+
+.passwordResetRequirements {
+	margin: 30px 0 0 156px;
+}
+
+.passwordResetRequirements p {
+	width: auto;
+}
+
+.passwordResetRequirements p:first-child {
+	margin-bottom: 0;
+}
+
+.passwordResetRequirements > ul > li {
+	list-style: disc inside;
+}
+
+.passwordResetRequirements > ul > li .toolTip {
+	top: -2px;
+	left: -5px;
+}
+
+/* Data usage */
+
+.dataUsage header {
+	min-width: 0;
+}
+
+.dataUsage section {
+	width: auto;
+	min-width: 0;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.dataUsage section .container {
+	margin: 0 20px;
+}
+
+.dataUsage section .container p {
+	width: auto;
+}
+
+.dataUsage form {
+	text-align: center;
+}
+
+.dataUsage form .questions>li {
+	width: auto;
+	margin: 30px 0 0;
+}
+
+.dataUsage form .errorMessage>li {
+	text-align: center;
+	width: auto;
+}
+
+.dataUsage form .questions>li label, .dataUsage form .questions>li input {
+	display: inline;
+}
+
+.dataUsage form input[type=submit] {
+	margin: 30px 0 20px;
+}
+
+/*POST TEST HOLDING PAGE*/
+.posttest-holding-page {
+	width: 100%;
+	background-color: #003366;
+	color: #fff;
+	min-height: 100%;
+}
+
+.posttest-holding-page .content {
+	text-align: center;
+}
+
+.posttest-holding-page img.wavingProf {
+	max-width: 80%;
+	margin: 3% auto 2%;
+}
+
+.posttest-holding-page section p {
+	text-align: center;
+	max-width: 80%;
+}
+
+.posttest-holding-page #p1 {
+	font-size: 160%;
+	margin: 5% auto;
+}
+
+.posttest-holding-page #p2 {
+	font-size: 110%;
+	margin: 0 auto;
+}
+
+/*PRINT ADJUSTMENTS*/
+@media print {
+	.sleepTestShortReport header img {
+		margin-left: 15px;
+	}
+
+	.sleepTestShortReport header h1 {
+		margin-left: 256px;
+	}
+}
+
+/* Devices ----------- */
+@media only screen
+and (max-width : 768px) {
+
+	/* Test page styles */
+
+	.instantSleepTest header {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.instantSleepTest header .container {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.instantSleepTest .pageContentHead {
+		min-width: 0;
+		width: 100%;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+
+	.instantSleepTest .pageContentHead hgroup {
+		width: 90%;
+		margin-bottom: 20px;
+	}
+
+	.instantSleepTest.result .pageContentBody.score > .percentSleepioHelped {
+		width: 90%;
+	}
+
+	/* cheat for now - turn off bothersome about section and footer */
+	.instantSleepTest .aboutTheTest {
+		display: none;
+	}
+
+	.instantSleepTest footer {
+		display: none;
+	}
+
+	.instantSleepTest .test {
+		width: 90%;
+	}
+
+	.instantSleepTest .test ol {
+		width: 100%;
+		margin: auto;
+	}
+
+	.instantSleepTest .test ol li {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.instantSleepTest .test ol li h2 {
+		display: inline;
+		width: 100%;
+	}
+
+	.instantSleepTest .test ol li label {
+		display: block;
+		width: 100%;
+	}
+
+	.instantSleepTest .test ol li h2 {
+		display: block;
+		width: 100%;
+	}
+
+	.instantSleepTest .test ol li select {
+		display: block;
+		width: 100%;
+	}
+
+	.instantSleepTest .test ol li input[type="text"] {
+		display: block;
+		width: 100%;
+		padding: 5px 0;
+	}
+
+	.instantSleepTest .test ol li ul {
+		width: 100%;
+		margin: 15px 0 5px;
+	}
+
+	.instantSleepTest .test ol li ul li {
+		width: 50%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.instantSleepTest .test ol li .checkboxes {
+		display: block;
+		width: 100%;
+	}
+
+	.instantSleepTest .test ol li .checkboxes ul li {
+		display: block;
+		width: 100%;
+		margin: 10px auto;
+	}
+
+	.instantSleepTest .test ol li .checkboxes ul li input {
+		display: inline;
+		width: 10%;
+		margin: 5%;
+	}
+
+	.instantSleepTest .test ol li .checkboxes ul li label {
+		display: inline-block;
+		width: 80%;
+		margin: 0;
+	}
+
+	/* have to override importants here - tsk */
+	.instantSleepTest ul.errorMessage>li {
+		min-width: 0 !important;
+		width: 100% !important;
+		margin: auto !important;
+	}
+
+	.instantSleepTest #instantSleepTestForm .contact {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.instantSleepTest #instantSleepTestForm .contact .container {
+		width: 0;
+		width: 100%;
+	}
+
+	.instantSleepTest #instantSleepTestForm .contact .container h1 {
+		width: 80%;
+		margin: auto;
+	}
+
+	.instantSleepTest #instantSleepTestForm .contact .container li {
+		width: 288px;
+		margin: 15px auto;
+	}
+
+	.instantSleepTest #instantSleepTestForm .contact .container li input[type="text"] {
+		display: block;
+		width: 90%;
+		padding: 5px 10px;
+		margin: auto;
+	}
+
+	.instantSleepTest #instantSleepTestForm .contact .container li p {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.instantSleepTest #instantSleepTestForm .contact .container li button {
+		margin: 0;
+	}
+
+	.instantSleepTest #instantSleepTestForm .contact .container li ul.errorMessage li {
+		padding: 15px 10px 0;
+	}
+
+	/* SCI 8 Tool */
+
+	.sci8Tool #sci8ToolForm {
+		width: 100%;
+		padding: 0 10px;
+		margin-top: 15px;
+	}
+
+	.sci8Tool #sci8ToolForm ul li {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.sci8Tool #sci8ToolForm h3 {
+		width: auto;
+		margin: 0;
+		padding: 20px 15px;
+	}
+
+	.sci8Tool #sci8ToolForm ul li label {
+		width: 100%;
+		margin-right: 0;
+		padding: 0;
+	}
+
+	.sci8Tool #sci8ToolForm ul li select, .sci8Tool #sci8ToolForm ul li input {
+	 	width: 100%;
+		margin-right: 0;
+		padding: 0;
+		max-width: 300px;
+	}
+
+	.sci8ToolResult .sci8ToolResultGraph figure figcaption {
+		margin-bottom: 10px;
+	}
+
+	.sci8ToolResult .sci8ToolResultInfo {
+		padding-top: 10px;
+	}
+
+	.signUpStart section {
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	.signUpStart .topLogo {
+		display: block;
+		margin: 0 auto 20px;
+	}
+
+	.signUpStart hgroup {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.signUpStart hgroup>h1 {
+		margin-bottom: 10px;
+		padding: 0 5%;
+	}
+
+	.signUpStart hgroup>h2 {
+		width: 82%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.signUpStart form {
+		width: 100%;
+	}
+
+	.signUpStart form ul {
+		width: 100%;
+	}
+
+	.signUpStart form ul li {
+		width: 100%;
+		padding: 0;
+		display: block;
+		max-width: 100%;
+		margin: 0 0 20px;
+	}
+
+	.signUpStart form ul li label {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form ul li input {
+		width: 78%;
+		padding: 1%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form ul li select {
+		width: 80%;
+		border: 1px solid #ccc;
+		margin-left: 10%;
+	}
+
+	.signUpStart form ul li.doubleUp {
+		width: 100%;
+		padding: 0;
+		display: block;
+		max-width: 100%;
+		margin: 0 0 20px;
+	}
+
+	.signUpStart form ul li.doubleUp label {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form ul li.doubleUp input {
+		width: 78%;
+		padding: 1%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form ul.errorMessage li {
+		width: 78%;
+		padding: 1%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form .toolTip {
+		display: none;
+	}
+
+	.signUpStart form .centered {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.signUpStart form .centered .terms {
+		width: 90%;
+		padding: 0 5%;
+		min-width: 0;
+		max-width: 500px;
+		margin: 0 auto 25px;
+	}
+
+	.signUpStart form .centered button {
+		display: block;
+		margin: 0 auto 0;
+	}
+
+	.signUpStart form ul.errorMessage>li {
+		width: 80 !important%;
+		margin-left: 10% !important;
+	}
+
+	.signUpStart #dataConsentQuestion #dataConsentError {
+		width: auto;
+	}
+
+	.signUpStart form .throbber {
+		margin: 10px 0 0;
+	}
+
+	/* Pinned form styles */
+
+	.signUpStart form.withPinned {
+		width: 100%;
+	}
+
+	.signUpStart form.withPinned h2 {
+		width: 90%;
+		padding: 0 5%;
+		margin-bottom: 10px;
+	}
+
+	.signUpStart form.withPinned ul.questions {
+		width: 100%;
+	}
+
+	.signUpStart form.withPinned ul.questions>li {
+		width: 100%;
+		padding: 0;
+		display: block;
+		max-width: 100%;
+		margin: 0 0 20px;
+	}
+
+	.signUpStart form.withPinned ul.questions>li label {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form.withPinned ul.questions>li input {
+		width: 78%;
+		padding: 1%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form.withPinned ul.questions>li.doubleUp {
+		width: 100%;
+		padding: 0;
+		display: block;
+		max-width: 100%;
+		margin: 0 0 20px;
+	}
+
+	.signUpStart form.withPinned ul.questions>li.doubleUp label {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form.withPinned ul.questions>li.doubleUp input {
+		width: 78%;
+		padding: 1%;
+		margin-left: 10%;
+	}
+
+	.signUpStart form.withPinned .toolTip {
+		margin-left: 10%;
+	}
+
+	.signUpStart form.withPinned ul.questions>li.centered {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.signUpStart form.withPinned ul.questions>li.centered .terms {
+		width: 90%;
+		padding: 0 5%;
+		min-width: 0;
+		max-width: 500px;
+		margin: 0 auto 25px;
+	}
+
+	.signUpStart form.withPinned ul.questions>li.centered button {
+		display: block;
+		margin: 0 auto 0;
+	}
+
+	.signUpStart form.withPinned ul.errorMessage>li {
+		width: 80 !important%;
+		margin-left: 10% !important;
+	}
+
+	.signUpStart form.withPinned .throbber {
+		margin: 10px 0 0;
+	}
+
+	/* Pinned content styles */
+
+	.signUpStart .signUpExplanation {
+		width: 100%;
+		margin: 0;
+	}
+
+	.signUpStart .pinned {
+		width: 90%;
+		padding: 45px 5% 15px;
+		margin-bottom: 15px;
+	}
+
+	.signUpStart .pinned:before {
+		left: 5px;
+	}
+
+	.signUpStart .pinned:after {
+		right: 5px;
+	}
+
+	.signUpStart .pinned h2:first-child {
+		width: 100%;
+		position: relative;
+		padding: 0;
+		background-image: none;
+	}
+
+	.signUpStart .pinned ul {
+		width: 100%;
+		padding: 0;
+	}
+
+	.signUpStart .signUpExplanation .partner {
+		width: 90%;
+		padding: 0 5%;
+		margin: 0 0 15px;
+		text-align: center;
+	}
+
+	.signUpStart .passwordRequirements, .voucherCodeDisclaimer {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.signUpStart .passwordRequirements ul > li {
+		display: list-item;
+		list-style: disc outside;
+		padding: 0;
+		margin: 0 0 0 25px;
+	}
+
+	/* Jawbone welcome page styles */
+
+	.jawboneWelcome {
+		width: 100%;
+	}
+
+	.jawboneWelcome header {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.jawboneWelcome header img {
+		padding-left: 10px;
+	}
+
+	.jawboneWelcome .container {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.jawboneWelcome section {
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	.jawboneWelcome .topLogo {
+		display: block;
+		margin: 0 auto 20px;
+	}
+
+	.jawboneWelcome hgroup {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.jawboneWelcome .mobileWelcome .pinned {
+		padding: 45px 5% 15px;
+	}
+
+	.jawboneWelcome .pinned:before {
+		left: 5px;
+	}
+
+	.jawboneWelcome .pinned:after {
+		right: 5px;
+	}
+
+	.jawboneWelcome .pinned h2:first-child {
+		width: 100%;
+		position: relative;
+		padding: 0;
+		background-image: none;
+	}
+
+	.jawboneWelcome .pinned ul {
+		width: 100%;
+		padding: 0;
+	}
+
+	/* Score page styles */
+
+	.instantSleepTest .score {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.instantSleepTest #instantSleepTestResultForm .container {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.instantSleepTest #instantSleepTestResultForm ul {
+		width: 100%;
+		margin: auto;
+	}
+
+	.instantSleepTest #instantSleepTestResultForm ul li {
+		display: block;
+		width: 80%;
+		margin: auto;
+	}
+
+	.instantSleepTest #instantSleepTestResultForm ul li input {
+		width: 100%;
+		display: inline;
+		margin: 10px auto 0;
+		margin-left: -6px;
+	}
+
+	.instantSleepTest #instantSleepTestResultForm ul li.centered{
+		width: 100%;
+	}
+
+	.instantSleepTest #instantSleepTestResultForm ul li.centered button {
+		display: block;
+		margin: 30px auto 0;
+	}
+
+	.instantSleepTest #instantSleepTestResultForm ul li.centered p {
+		width: 80%;
+	}
+
+	.instantSleepTest #instantSleepTestResultForm ul li .errorMessage {
+		width: 100%;
+		margin: 10px 0 0;
+	}
+
+
+	/* At Work Test page styles */
+
+	.atWork.sleepTest header {
+		height: 100%;
+	}
+
+	.atWork.sleepTest header .sleepioLogo.atWorkDynamic {
+		width: 90%;
+		padding: 0;
+	}
+
+	.atWork.sleepTest header .sleepioLogo.atWorkDynamic img {
+		display: inline-block;
+		margin-right: auto;
+	}
+
+	.atWork.sleepTest header {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.atWork.sleepTest header .container {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.atWork.sleepTest .pageContentHead {
+		min-width: 0;
+		width: 100%;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+
+	.atWork.sleepTest .pageContentHead hgroup {
+		width: 90%;
+		margin: auto;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+
+	.atWork.sleepTest .pageContentHead.atWorkDynamic hgroup>h1,
+	.atWork.sleepTest .pageContentHead.atWorkDynamic hgroup>h2 {
+		padding-left: 0;
+	}
+
+	.atWork.result .pageContentBody.score > .percentSleepioHelped {
+		width: 90%;
+	}
+
+	/* cheat for now - turn off bothersome about section and footer */
+	.atWork.sleepTest .aboutTheTest {
+		display: none;
+	}
+
+	.atWork.sleepTest footer {
+		display: none;
+	}
+
+	.atWork.sleepTest .test {
+		width: 90%;
+	}
+
+	.atWork.sleepTest .test ol {
+		width: 100%;
+		margin: auto;
+	}
+
+	.atWork.sleepTest .test ol ol h3 {
+		padding: 0;
+	}
+
+	.atWork.sleepTest .test ol ol li {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.atWork.sleepTest .test ol ol li h2 {
+		display: inline;
+		width: 100%;
+	}
+
+	.atWork.sleepTest .test ol ol li label {
+		display: block;
+		width: 100%;
+	}
+
+	.atWork.sleepTest .test ol ol li h2 {
+		display: block;
+		width: 100%;
+	}
+
+	.atWork.sleepTest .test ol ol li select {
+		display: block;
+		width: 100%;
+	}
+
+	.atWork.sleepTest .test ol ol li input[type="text"] {
+		display: block;
+		width: 100%;
+	}
+
+	.atWork.sleepTest .test ol ol li ul {
+		width: 100%;
+		margin: 15px 0 5px;
+	}
+
+	.atWork.sleepTest .test ol ol li ul li {
+		width: 50%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.atWork.sleepTest .test ol ol li .checkboxes {
+		display: block;
+		width: 100%;
+	}
+
+	.atWork.sleepTest .test ol ol li .checkboxes ul {
+		margin-top: 0;
+	}
+
+	.atWork.sleepTest .test ol ol li .checkboxes ul li {
+		display: block;
+		width: 100%;
+		margin: 10px auto;
+	}
+
+	.atWork.sleepTest .test ol ol li .checkboxes ul li input {
+		display: inline;
+		width: 10%;
+		margin: 0 5%;
+	}
+
+	.atWork.sleepTest .test ol ol li .checkboxes ul li label {
+		display: inline-block;
+		width: 80%;
+		margin: 0;
+	}
+
+	/* have to override importants here - tsk */
+	.atWork.sleepTest ul.errorMessage>li {
+		min-width: 0 !important;
+		width: 100% !important;
+		margin: auto !important;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container {
+		width: 0;
+		width: 100%;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container h1,
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container h2 {
+		width: 80%;
+		margin: auto;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container li {
+		width: 288px;
+		margin: 15px auto;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container li.doubleUp {
+		display: block;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container li input[type="text"] {
+		display: block;
+		width: 90%;
+		padding: 5px 10px;
+		margin: auto;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container li p {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container li button {
+		margin: 0;
+	}
+
+	.atWork.sleepTest #atWorkSleepTestForm .contact .container li ul.errorMessage li {
+		padding: 15px 10px 0;
+	}
+
+	/* Score page styles */
+
+	.atWork.sleepTest.result .score {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.atWork.sleepTest.result .pageContentBody.score .oldScore {
+		text-align: center;
+		height: 160px;
+		width: 100%;
+		float: none;
+		color: #16a2bb;
+		margin-bottom: 60px;
+		padding-left: 0;
+	}
+
+	.atWork.sleepTest.result .pageContentBody.score .oldScore:after {
+		content: '';
+		background-image: url(/img/at-work/sleep-score-arrow-down.png);
+		width: 44px;
+		height: 54px;
+		left: 50%;
+		margin-left: -22px;
+		top: 100%;
+	}
+
+	.atWork.sleepTest.result .pageContentBody.score .newScore {
+		text-align: center;
+		width: 100%;
+		float: none;
+		color: #16a2bb;
+		padding-right: 0;
+	}
+
+	.atWork.sleepTest.result .pageContentBody.score>.percentSleepioHelped {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.atWork.sleepTest.result .contact #atWorkSleepTestResultForm .container {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.atWork.sleepTest.result #atWorkSleepTestResultForm ul {
+		width: 100%;
+		margin: auto;
+	}
+
+	.atWork.sleepTest.result #atWorkSleepTestResultForm ul li {
+		display: block;
+		width: 80%;
+		margin: auto;
+	}
+
+	.atWork.sleepTest.result #atWorkSleepTestResultForm ul li input {
+		width: 100%;
+		display: inline;
+		margin: 10px auto 0;
+		margin-left: -6px;
+	}
+
+	.atWork.sleepTest.result #atWorkSleepTestResultForm ul li.centered{
+		width: 100%;
+	}
+
+	.atWork.sleepTest.result #atWorkSleepTestResultForm ul li.centered button {
+		display: block;
+		margin: 30px auto 0;
+	}
+
+	.atWork.sleepTest.result #atWorkSleepTestResultForm ul li.centered p {
+		width: 80%;
+	}
+
+	.atWork.sleepTest.result #atWorkSleepTestResultForm ul li .errorMessage {
+		width: 100%;
+		margin: 10px 0 0;
+	}
+
+	/* NEW SHORT SLEEP TEST THANK YOU PAGE */
+
+	.sleepTestThankYou {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.sleepTestThankYou header {
+		background: #003366;
+		width: 100%;
+		min-width: 100%;
+	}
+
+	.sleepTestThankYou header .container {
+		width: 100%;
+	}
+
+	.sleepTestThankYou header .sleepioLogo img {
+		margin-left: 20px;
+	}
+
+	.sleepTestThankYou>section {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.sleepTestThankYou>section.pageContentCentered>p {
+		width: 265px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+}
+
+/* Devices ----------- */
+@media only screen
+and (max-width : 480px) {
+
+	.sleepGuide .pageContentHeader .breadCrumb,
+	.sleepGuide .article h1,
+	.sleepGuide .article .content,
+	.sleepGuide .article .author,
+	.sleepGuide .nextGuide h2,
+	.sleepGuide .nextGuide a.button {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.sleepGuide .article h1 {
+		font-size: 52px;
+		display: inline-block;
+		margin-bottom: 30px;
+		width: 700px;
+	}
+
+	.sleepGuide .article .content {
+		font-size: 30px;
+		display: block;
+		width: 700px;
+		line-height: auto;
+		line-height: 42px;
+	}
+
+	.sleepGuide .article .content h3 {
+		font-size: 30px;
+	}
+
+	.sleepGuide .article .author {
+		display: none;
+		margin-bottom: 30px;
+	}
+
+	.sleepGuide .article .author .avatar,
+	.sleepGuide .article .userName {
+		display: none;
+	}
+
+	.sleepGuide .article .titleAuthorContainer {
+		width: 700px;
+	}
+}
+
+@media only screen
+and (max-width: 350px) {
+	.signUpStart header .companyLogo {
+		display: none;
+	}
+}
+
+/*RETINA IMAGES*/
+@media
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+	.pinned:before,
+	.pinned:after {
+		background-image: url(/img/controls/pin@2x.png);
+	}
+
+	.signUpSkin .pinned h2:first-child {
+		background-image: url(/img/logos/prof-passport@2x.png);
+	}
+
+	.instantSleepTest .pageContentHead .aboutTheTest figcaption {
+		background-image: url(/img/sleep-test/short/instant/call-out-line@2x.png);
+	}
+
+	.instantSleepTest .aboutTheTest .compare {
+		background-image: url(/img/sleep-test/short/instant/female-male@2x.png);
+	}
+
+	.instantSleepTest .aboutTheTest .tips {
+		background-image: url(/img/sleep-test/short/instant/sleeping-moon@2x.png);
+	}
+
+	.sleepTestShortReport .compare.male .average,
+	.sleepTestShortReport .compare.male .you {
+		background-image: url(/img/controls/male-solid@2x.png);
+	}
+
+	.sleepTestShortReport .compare.female .average,
+	.sleepTestShortReport .compare.female .you {
+		background-image: url(/img/controls/female-solid@2x.png);
+	}
+
+	#whatYouGet .course h2 {
+		background-image: url(/img/sign-up/icon-course@2x.png);
+	}
+
+	#whatYouGet .tools h2 {
+		background-image: url(/img/sign-up/icon-tools@2x.png);
+	}
+
+	#whatYouGet .library h2 {
+		background-image: url(/img/sign-up/icon-library@2x.png);
+	}
+
+	#whatYouGet .community h2 {
+		background-image: url(/img/sign-up/icon-community@2x.png);
+	}
+
+	#onboardingSleepTestResult .overlay #badSleepPercentile li.m-filled {
+		background-image: url(/img/controls/male-solid@2x.png);
+	}
+
+	#onboardingSleepTestResult .overlay #badSleepPercentile li.m-empty {
+		background-image: url(/img/controls/male-hollow@2x.png);
+	}
+
+	#onboardingSleepTestResult .overlay #badSleepPercentile li.f-filled {
+		background-image: url(/img/controls/female-solid@2x.png);
+	}
+
+	#onboardingSleepTestResult .overlay #badSleepPercentile li.f-empty {
+		background-image: url(/img/controls/female-hollow@2x.png);
+	}
+
+	.buyFull .clinicallyProven li.timeToFallAsleep {
+		background-image: url(/img/growth/growth-circle-1@2x.png);
+	}
+
+	.buyFull .clinicallyProven li.nightTimeAwakenings {
+		background-image: url(/img/growth/growth-circle-2@2x.png);
+	}
+
+	.buyFull .clinicallyProven li.daytimeEnergy {
+		background-image: url(/img/growth/growth-circle-3@2x.png);
+	}
+
+	.atWork.landing .teamImprove ul.fourIcon li.focusAndProductivity {
+		background-image: url(/img/at-work/focus-productivity@2x.png);
+	}
+
+	.atWork.landing .teamImprove ul.fourIcon li.wellbeingAndStress {
+		background-image: url(/img/at-work/wellbeing-stress@2x.png);
+	}
+
+	.atWork.landing .teamImprove ul.fourIcon li.energyAndHealth {
+		background-image: url(/img/at-work/energy-health@2x.png);
+	}
+
+	.atWork.landing .teamImprove ul.fourIcon li.safetyAndConcentration {
+		background-image: url(/img/at-work/safety-concentration@2x.png);
+	}
+
+	.atWork.landing .howSleepioAtWorkCanHelp li.engageWorkforce {
+		background-image: url(/img/at-work/engage-workforce@2x.png);
+	}
+
+	.atWork.landing .howSleepioAtWorkCanHelp li.personalizedFeedback {
+		background-image: url(/img/at-work/personalized-feedback@2x.png);
+	}
+
+	.atWork.landing .howSleepioAtWorkCanHelp li.clinicallyProven {
+		background-image: url(/img/at-work/clinically-proven@2x.png);
+	}
+
+	.atWork.landing .howSleepioAtWorkCanHelp li.outcomeReporting {
+		background-image: url(/img/at-work/outcome-reporting@2x.png);
+	}
+
+	.atWork.landing .caseStudies ul.twoIcon li.wellbeingAtWork {
+		background-image: url(/img/at-work/wellbeing-at-work@2x.png);
+	}
+
+	.atWork.landing .caseStudies ul.twoIcon li.mentalHealth {
+		background-image: url(/img/at-work/mental-health@2x.png);
+	}
+}

@@ -1,0 +1,1551 @@
+/*HEADER*/
+header {
+	width: 100%;
+	min-width: 912px;
+	height: 46px;
+	padding: 12px 0;
+	/* iOS adjacent color div fix */
+	margin-bottom: -1px;
+	background-color: #003366;
+	color: #fff;
+}
+
+.clinic header {
+	background-color: #fff;
+	color: #003366;
+}
+
+header nav,
+header .container {
+	position: relative;
+	width: 912px;
+	margin: 0 auto;
+}
+
+header nav>ul>li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+header nav>ul>li:first-child {
+	margin-left: 0;
+}
+
+header nav>ul>li>a,
+header nav>ul>li.login>p {
+	display: block;
+	padding: 0 10px;
+	margin: 8px 0;
+	color: #16a2bb;
+	font-size: 16px;
+	line-height: 31px;
+	text-decoration: none;
+}
+
+header nav>ul>li>a:hover,
+header nav>ul>li.login>p:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+.clinic header nav>ul>li>a:hover,
+.clinic header nav>ul>li.login>p:hover {
+	color: #069;
+}
+
+header nav>ul>li.current>a,
+header nav>ul>li.current>a:hover {
+	border-radius: 12px;
+	background-color: #fff;
+	color: #003366;
+	cursor: default;
+	pointer-events: none;
+}
+
+header nav .sleepioLogo {
+	margin-right: 25px;
+}
+
+header nav .sleepioLogo>a {
+	padding: 0;
+	margin: 0;
+}
+
+header nav .sleepioLogo.current>a {
+	background-color: transparent;
+}
+
+header nav>ul>li.alternate>a {
+	color: #fff;
+}
+
+header nav>ul>li.alternate>a:hover {
+	color: #16a2bb;
+}
+
+header nav>ul>li.alternate.current>a,
+header nav>ul>li.alternate.current>a:hover {
+	color: #003366;
+}
+
+header nav>ul>li.login {
+	position: absolute;
+	right: 0;
+}
+
+header nav>ul>li.login.open>p,
+header nav>ul>li.login.open>p:hover {
+	margin-bottom: 0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	background-color: #16a2bb;
+	color: #fff;
+}
+
+header nav>ul>li.login .loginPopup {
+	display: none;
+	position: absolute;
+	right: 0;
+	width: 260px;
+	border-radius: 8px;
+	border-top-right-radius: 0;
+	background-color: #16a2bb;
+	color: #fff;
+	z-index: 15;
+}
+
+header nav>ul>li.login.open .loginPopup {
+	display: block;
+	padding: 20px;
+}
+
+header nav>ul>li.login.open .loginPopup>form>ul>li:first-child {
+	margin-bottom: 10px;
+}
+
+header nav>ul>li.login.open .loginPopup a {
+	color: #fff;
+}
+
+header nav>ul>li.login.open .loginPopup label {
+	font-size: 16px;
+	font-size: bold;
+	width: 260px;
+	margin-bottom: 5px;
+}
+
+header nav>ul>li.login.open .loginPopup input {
+	height: auto;
+	width: 250px;
+	border: 0;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+}
+
+header nav>ul>li.login.open .loginPopup div {
+	font-size: 16px;
+}
+
+header nav>ul>li.login.open .loginAction {
+	margin-top: 20px;
+}
+
+header nav>ul>li.login.open button[type=submit] {
+	height: 42px;
+	width: 260px;
+	font-size: 16px;
+}
+
+header nav>ul>li.login.open .forgotPassword {
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1;
+	margin: 20px 0;
+}
+
+header nav>ul>li.login.open .error {
+	color: #fbc !important;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+header nav>ul>li.login.open .errorMessage a {
+	text-decoration: underline;
+	color: #fbc;
+}
+
+header nav>ul>li.login .loginPopup .or {
+	text-align: center;
+	color: #ffffff;
+	margin: 15px auto;
+	display: block;
+}
+
+/* HOME */
+.home section,
+.clinic.home .pageContent>section {
+	border-bottom: 1px solid #ccc;
+	padding: 50px 0;
+}
+
+.clinic.home .pageContent>section {
+	width: 100%;
+	margin: 0;
+}
+
+.home section>.container,
+.clinic.home .pageContent>section>.container {
+	position: relative;
+	width: 912px;
+	margin: 0 auto;
+}
+
+.home h1 {
+	min-height: 4.8em;
+	margin-bottom: 50px;
+	font-size: 40px;
+	text-align: left;
+}
+
+.home .whatIsSleepio h1 {
+	margin-bottom: 20px;
+	min-height: 0;
+}
+
+.home h2 {
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 40px;
+	color: #16a2bb;
+}
+
+.home h3 {
+	margin-bottom: 10px;
+	font-size: 30px;
+}
+
+.home .continueLinks {
+	text-align: center;
+}
+
+.home .continueLinks>li {
+	display: inline-block;
+	margin-left: 20px;
+	vertical-align: top;
+	text-align: center;
+}
+
+.home .continueLinks>li:first-child {
+	margin-left: 0;
+}
+
+.home .continueLinks .secondary {
+	line-height: 48px;
+	text-decoration: none;
+}
+
+.home .followLink {
+	display: block;
+	margin: 40px auto 0;
+	font-size: 24px;
+	text-align: center;
+}
+
+.home .testYourSleep {
+	display: table;
+	width: 100%;
+	min-height: 500px;
+	padding: 0;
+	border-bottom: none;
+	margin-bottom: 20px;
+	background-color: #003366;
+	color: #fff;
+}
+
+.home .testYourSleep .container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.home .testYourSleep h1 {
+	width: 300px;
+	min-height: 0;
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+.home .testYourSleep.sleepTestLanding h1 {
+	line-height: 1;
+	width: 700px;
+	padding-top: 162px;
+	margin-bottom: 15px;
+	background: transparent url(/img/home/the-prof-sleep-test-landing.png) no-repeat 50% top;
+	background-size: 397px 152px;
+}
+
+.home .testYourSleep.sleepTestLanding p {
+	margin: 0 auto 15px;
+	width: 400px;
+	text-align: center;
+}
+
+.home .testYourSleep .continueLinks .secondary {
+	font-size: 14px;
+}
+
+.home .intro {
+	border-bottom: none;
+	padding: 30px 0 0;
+	margin-bottom: 20px;
+	background: #003366 url(/img/home/mountains.png) no-repeat 50% bottom;
+	background-size: 952px 104px;
+	color: #fff;
+}
+
+.home .intro>.container,
+.home .whatIsSleepio>.container {
+	overflow: visible;
+}
+
+.home .intro .embedVideoThumbnail,
+.home .whatIsSleepio .embedVideoThumbnail {
+	position: relative;
+	display: inline-block;
+	height: 256px;
+	width: 456px;
+	border-radius: 15px;
+	margin-right: 31px;
+	background: #003366 url(/img/home/sleepio-intro-video-thumbnail.jpg) no-repeat left top;
+	background-size: 456px 256px
+}
+
+.home .intro .embedVideoThumbnail.alternatePoster,
+.home .whatIsSleepio .embedVideoThumbnail.alternatePoster {
+	background-image: url(/img/home/sleepio-intro-video-alternate-thumbnail.jpg);
+}
+
+.home .intro .embedVideoThumbnail button,
+.home .whatIsSleepio .embedVideoThumbnail button {
+	position: absolute;
+	display: block;
+	left: 50%;
+	top: 50%;
+	height: 140px;
+	width: 140px;
+	padding: .2em .3em .1em .5em;
+	border: 10px solid #fff;
+	border-radius: 70px;
+	margin: -70px 0 0 -70px;
+	background-color: transparent !important;
+	opacity: .7;
+	font-size: 60px;
+}
+
+.home .intro .embedVideoThumbnail button:before,
+.home .whatIsSleepio .embedVideoThumbnail button:before {
+	content: '\f04b';
+	font-family: FontAwesome, sans-serif;
+}
+
+.home .intro .embedVideoThumbnail:hover button,
+.home .whatIsSleepio .embedVideoThumbnail:hover button {
+	opacity: 1;
+	background-color: transparent !important;
+}
+
+.home .intro .details,
+.home .whatIsSleepio .details {
+	width: 425px;
+	display: inline-block;
+	margin-bottom: 50px;
+	vertical-align: top;
+}
+
+.home .whatIsSleepio .details {
+	margin-bottom: 0;
+}
+
+.home .intro .continueLinks,
+.home .whatIsSleepio .continueLinks {
+	text-align: left;
+}
+
+.home .intro .continueLinks .secondary:hover,
+.home .testYourSleep .continueLinks .secondary:hover{
+	color: #fff;
+}
+
+.home .testYourSleep .continueLinks>li {
+	display: block;
+	text-align: center;
+	margin-left: 0;
+}
+
+.home .testYourSleep .continueLinks>li .button {
+	margin: 0 auto;
+}
+
+.home .intro .tabbedLinks {
+	position: relative;
+}
+
+.home .intro .tabbedLinks h4 {
+	font-size: 14px;
+	line-height: 1;
+}
+
+.home .intro .tabbedLinks>li {
+	position: absolute;
+	width: 80px;
+	padding: 10px 20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: #fff;
+	color: #003366;
+	text-align: center;
+}
+
+.home .intro .tabbedLinks>li.boots {
+	left: 0;
+	bottom: -39px;
+}
+
+.home .intro .tabbedLinks>li.jawbone {
+	left: 130px;
+	bottom: -50px;
+}
+
+.home .intro .tabbedLinks>li.gift {
+	left: 260px;
+	bottom: -42px;
+}
+
+.home .intro .tabbedLinks>li.gift a {
+	padding-bottom: 48px;
+	background-image: url(/img/controls/gift-bow-pink.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: 50px 38px;
+	font-size: 14px;
+	line-height: 1;
+	color: #f36;
+}
+
+.home .intro .tabbedLinks>li.gift img {
+	position: relative;
+	top: -5px;
+}
+
+.home .intro .tabbedLinks a {
+	display: block;
+	color: #003366;
+	text-decoration: none;
+}
+
+.home .intro .tabbedLinks img {
+	display: block;
+	margin: 10px auto;
+}
+
+.home .partners {
+	padding: 20px 0;
+}
+
+.home .partners>ul {
+	text-align: center;
+}
+
+.home .partners>ul>li,
+.home .partners>ul>li>h3,
+.home .partners>ul>li>ul,
+.home .partners>ul>li>ul>li,
+.clinic.home .availableVia h3,
+.clinic.home .availableVia ul,
+.clinic.home .availableVia ul>li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.home .partners>ul>li {
+	margin-left: 50px;
+}
+
+.home .partners>ul>li:first-child {
+	margin-left: 0;
+}
+
+.home .partners>ul>li>h3,
+.clinic.home .availableVia h3 {
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 1;
+}
+
+.home .partners>ul>li>ul>li,
+.clinic.home .availableVia ul>li {
+	margin-left: 20px;
+}
+
+.home .partners .worksWith>ul>li {
+	margin-right: 30px;
+}
+
+.home .partners>ul>li>ul>li>a>img,
+.clinic.home .availableVia ul>li>a>img {
+	display: block;
+}
+
+.home .howSleepioWorks ol {
+	margin-bottom: 40px;
+}
+
+.home .howSleepioWorks ol>li {
+	position: relative;
+	padding: 60px 308px 60px 154px;
+	width: 450px;
+	background-repeat: no-repeat;
+	background-position: 650px center;
+}
+
+.home .howSleepioWorks ol>li.alternate {
+	padding-left: 308px;
+	padding-right: 154px;
+	background-position: 100px center;
+}
+
+.home .howSleepioWorks li.questionnaire {
+	background-image: url(/img/home/notepad.png);
+	background-size: 169px 186px;
+}
+
+.home .howSleepioWorks li.questionnaire.withPartners {
+	padding: 64px 378px 64px 154px;
+	width: 380px;
+	background-image: url(/img/home/notepad-partners.png);
+	background-size: 280px 265px;
+	background-position: 580px center;
+}
+
+.home .howSleepioWorks li.theProf {
+	background-image: url(/img/home/the-prof.png);
+	background-size: 120px 198px;
+}
+
+.home .howSleepioWorks li.techniques {
+	background-image: url(/img/home/schedule-bedroom-lifestyle-thoughts.png);
+	background-size: 182px 166px;
+}
+
+.home .howSleepioWorks li.tools {
+	background-image: url(/img/home/alarm-clock.png);
+	background-size: 140px 149px;
+}
+
+.home .howSleepioWorks ol>li:before,
+.home .howSleepioWorks ol>li:after {
+	display: block;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+.home .howSleepioWorks li.questionnaire:before {
+	content: '';
+	width: 76px;
+	height: 41px;
+	left: 50px;
+	top: 50px;
+	background-size: 76px 41px;
+	background-image: url(/img/home/clouds.png);
+}
+
+.home .howSleepioWorks li.theProf:after {
+	content: '';
+	width: 69px;
+	height: 149px;
+	right: 50px;
+	top: -60px;
+	background-size: 69px 149px;
+	background-image: url(/img/home/arrow-curved-nw-to-sw.png);
+}
+
+.home .howSleepioWorks li.techniques:before {
+	content: '';
+	width: 61px;
+	height: 153px;
+	left: 50px;
+	top: -60px;
+	background-size: 61px 153px;
+	background-image: url(/img/home/arrow-curved-ne-to-se.png);
+}
+
+.home .howSleepioWorks li.tools:before {
+	content: '';
+	width: 76px;
+	height: 41px;
+	left: 10px;
+	top: 80px;
+	background-size: 76px 41px;
+	background-image: url(/img/home/clouds.png);
+}
+
+.home .howSleepioWorks li.tools:after {
+	content: '';
+	width: 69px;
+	height: 149px;
+	right: 50px;
+	top: -60px;
+	background-size: 69px 149px;
+	background-image: url(/img/home/arrow-curved-nw-to-sw.png);
+}
+
+.home .howSleepioWorks p {
+	color: #999;
+}
+
+.home .recommendedByUsers ul>li {
+	display: inline-block;
+	width: 248px;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 56px 0 0 24px;
+	background-color: #16a2bb;
+	text-align: center;
+}
+
+.home .recommendedByUsers ul>li:first-child {
+	margin-left: 0;
+}
+
+.home .recommendedByUsers img {
+	display: block;
+	margin: -76px auto 0;
+	position: relative;
+}
+
+.home .recommendedByUsers q {
+	display: block;
+	width: 100%;
+	height: 3.6em;
+	margin-bottom: 10px;
+	font-size: 24px;
+	line-height: 1.2;
+	color: #fff;
+}
+
+.home .recommendedByUsers q:before {
+	content: '“';
+}
+
+.home .recommendedByUsers q:after {
+	content: '”';
+}
+
+.home .recommendedByUsers h3 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.home .recommendedByUsers p,
+.home .recommendedByUsers li a {
+	margin: 0;
+	line-height: 1.2;
+}
+
+.home .recommendedByUsers li a {
+	color: #fff;
+}
+
+.home .clinicallyProven ul>li {
+	display: inline-block;
+	width: 278px;
+	padding: 126px 5px 5px;
+	margin-left: 24px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 113px 111px;
+	font-size: 24px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.home .clinicallyProven ul>li:first-child {
+	margin-left: 0;
+}
+
+.home .clinicallyProven li.fallAsleepFaster {
+	background-image: url(/img/home/face-1.png);
+}
+
+.home .clinicallyProven li.reduceNightTimeAwakenings {
+	background-image: url(/img/home/face-2.png);
+}
+
+.home .clinicallyProven li.boostDaytimeEnergy {
+	background-image: url(/img/home/face-3.png);
+}
+
+.home .featuredIn .pressMentions {
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+.home .featuredIn .pressMentions>li {
+	display: inline-block;
+	height: 50px;
+}
+
+.home .featuredIn .pressMentions>li>img {
+	height: 50px;
+}
+
+.home .featuredIn figure {
+	margin: 0 auto 30px;
+	text-align: center;
+}
+
+.home .featuredIn figure figcaption {
+	font-size: 16px;
+}
+
+.home .featuredIn figure>blockquote:before,
+.home .featuredIn figure>blockquote:after {
+	font-size: 50px;
+	line-height: 10px;
+	vertical-align: bottom;
+	color: #16a2bb;
+}
+
+.home .featuredIn figure>blockquote:before {
+	content: '“';
+}
+
+.home .featuredIn figure>blockquote:after {
+	content: '”';
+}
+
+.home .featuredIn figure>figcaption:before {
+	content: '–';
+}
+
+.home .featuredIn .shareButtons {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.home .featuredIn .shareButtons>li {
+	display: inline-block;
+	width: 100px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.home .featuredIn .shareButtons .buttonWrapper {
+	margin: 0 auto;
+}
+
+.home .featuredIn .shareButtons .fb-like>span {
+	vertical-align: top !important;
+}
+
+.home .haveQuestions .followLink {
+	font-size: 18px;
+}
+
+.home .appComingSoon {
+	text-align: center;
+}
+
+.home .appComingSoon input {
+	display: block;
+	margin: auto;
+	width: 288px;
+}
+
+.home .appComingSoon button {
+	display: block;
+	margin: 20px auto 0;
+}
+
+.home .appComingSoon img.iphoneLaunch {
+	width: 322px;
+	height: 234px;
+}
+
+.home .appComingSoon label {
+	display: inline-block;
+	padding-top: 20px;
+}
+
+.home .appComingSoon label.emailMessage {
+	color: #000;
+}
+
+.home .appComingSoon label.emailError {
+	color: #e00;
+}
+
+
+/* TOUR */
+.tour {
+	min-width: 912px;
+	width: 100%;
+}
+
+#page.tour {
+	position: absolute;
+	top: 70px;
+	z-index: 10;
+}
+
+#page.tour .pageContent {
+	padding-top: 20px;
+}
+
+.tour #tryItNow {
+	min-width: 912px;
+	width: 100%;
+	border-color: #ccc;
+	padding: 50px 0 200px;
+}
+
+.tour .pageContent>section>.container {
+	width: 912px;
+	margin: 0 auto;
+}
+
+.tour .theProf {
+	display: block;
+	margin: 30px auto;
+}
+
+#meetTheProf label {
+	display: none;
+}
+
+.tour .pageContentHeader {
+	width: 912px;
+}
+
+.tour #suitableForMeError {
+	display: none;
+	margin: 20px auto;
+	text-align: center;
+	font-size: 18px;
+}
+
+/*TOUR TRIGGERS*/
+#triggerCanvas .simpleButton.hidden {
+	visibility: hidden;
+	pointer-events: none;
+	cursor: default;
+}
+
+#triggerCanvas .buttonlist button {
+	display: block;
+	box-sizing: content-box;
+	border-radius: 54px;
+	/* auto adjusted */
+	width: 340px;
+	height: 14px;
+	padding: 20px 10px;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.homeNew section {
+	padding: 0;
+	position: relative;
+	width: 912px;
+	margin: 0 auto 65px;
+	border: 0;
+	/*padding-top: 0;*/
+}
+
+.homeNew section>h1 {
+	text-align: center;
+	color: #003366;
+	font-size: 36px;
+	line-height: 36px;
+	margin-bottom: 15px;
+	min-height: 0;
+}
+
+.homeNew section>h1.noSubtitle {
+	margin-bottom: 35px;
+}
+
+.homeNew section>h2 {
+	text-align: center;
+	color: #003366;
+	font-size: 24px;
+	margin-bottom: 42px;
+	min-height: 0;
+}
+
+.homeNew a.button {
+	margin: 0 auto;
+}
+
+.homeNew ul>li>p {
+	color: #999;
+	font-size: 18px;
+	line-height: 23px;
+}
+
+.homeNew ul>li>h3 {
+	font-size: 24px;
+}
+
+.homeNew ul.threeIcon {
+	text-align: center;
+	margin: 45px 0 60px;
+}
+
+.homeNew ul.threeIcon>li {
+	display: inline-block;
+	width: 288px;
+	padding: 0;
+	margin-left: 24px;
+}
+
+.homeNew ul.threeIcon>li:first-child {
+	margin-left: 0;
+}
+
+.homeNew ul.threeIcon>li>h3 {
+	margin-bottom: 12px;
+}
+
+.homeNew ul.fourIcon {
+	text-align: center;
+	margin: 45px 0 60px;
+}
+
+.homeNew ul.fourIcon>li {
+	display: inline-block;
+	width: 210px;
+	padding: 0;
+	margin-left: 24px;
+}
+
+.homeNew ul.fourIcon>li:first-child {
+	margin-left: 0;
+}
+
+.homeNew .buildImprovementProgram {
+	display: table;
+	width: 100%;
+	min-height: 500px;
+	padding: 0;
+	border-bottom: none;
+	margin-bottom: 0;
+	background-color: #003366;
+	color: #fff;
+}
+
+.homeNew .buildImprovementProgram .container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.homeNew .buildImprovementProgram h1 {
+	width: 600px;
+	min-height: 0;
+	margin: 0 auto 35px;
+	text-align: center;
+}
+
+.homeNew .buildImprovementProgram.sleepTestLanding h1 {
+	line-height: 1;
+	width: 700px;
+	padding-top: 162px;
+	margin-bottom: 15px;
+	background: transparent url(/img/home/the-prof-sleep-test-landing.png) no-repeat 50% top;
+	background-size: 397px 152px;
+}
+
+.homeNew .buildImprovementProgram.sleepTestLanding p {
+	margin: 0 auto 15px;
+	width: 400px;
+	text-align: center;
+}
+
+.homeNew .buildImprovementProgram .continueLinks .secondary {
+	font-size: 14px;
+}
+
+.homeNew .buildImprovementProgram .continueLinks .secondary:hover{
+	color: #fff;
+}
+
+.homeNew .buildImprovementProgram .continueLinks>li {
+	display: block;
+	text-align: center;
+	margin-left: 0;
+}
+
+.homeNew .buildImprovementProgram .continueLinks>li .button {
+	margin: 0 auto 15px;
+}
+
+.homeNew .featuredInWorksWith {
+	background-color: #f5f5f5;
+	width: 100%;
+	height: 140px;
+	margin: 0 0 40px;
+	padding: 0;
+}
+
+.homeNew .featuredInWorksWith .bleedInner {
+	width: 912px;
+	height: 140px;
+	margin: auto;
+	display: block;
+}
+
+.homeNew .featuredInWorksWith .bleedInner div {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	margin-top: 24px;
+}
+
+.homeNew .featuredInWorksWith div.featuredIn {
+	width: 600px;
+}
+
+.homeNew .featuredInWorksWith div.worksWith {
+	width: 288px;
+}
+
+.homeNew .featuredInWorksWith ul>li>img {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.homeNew .featuredInWorksWith .featuredIn ul {
+	text-align: left;
+	margin-bottom: 12px;
+}
+
+.homeNew .featuredInWorksWith .featuredIn ul>li {
+	display: inline-block;
+	height: 25px;
+}
+
+.homeNew .featuredInWorksWith h3 {
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.homeNew .featuredInWorksWith .featuredIn .guardian {
+	margin-left: 83px;
+}
+
+.homeNew .featuredInWorksWith .featuredIn .wired {
+	margin-left: 24px;
+}
+
+.homeNew .featuredInWorksWith .featuredIn .laTimes {
+	margin-left: 21px;
+}
+
+.homeNew .featuredInWorksWith .featuredIn .newYorker {
+	margin-left: 145px;
+}
+
+.homeNew .featuredInWorksWith .featuredIn .lancet {
+	margin-left: 34px;
+}
+
+.homeNew .featuredInWorksWith .featuredIn ul {
+	text-align: left;
+}
+
+.homeNew .featuredInWorksWith .worksWith ul>li {
+	display: inline-block;
+	height: 43px;
+}
+
+.homeNew .featuredInWorksWith .worksWith .jawbone {
+	margin-left: 28px;
+}
+
+.homeNew .featuredInWorksWith .worksWith .health {
+	margin-left: 25px;
+}
+
+.homeNew .featuredInWorksWith .worksWith .fitbit {
+	margin-left: 20px;
+}
+
+.homeNew .featuredInWorksWith .worksWith .fitbit img {
+	margin-top: 4px;
+}
+
+.homeNew .expertsBehindSleepio img {
+	width: 200px;
+	margin-bottom: 8px;
+}
+
+.homeNew .scienceBehindSleepio ul>li {
+	padding-top: 163px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 150px 150px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.homeNew .scienceBehindSleepio ul>li.yourLifestyle {
+	background-image: url(/img/home/science-your-lifestyle.png);
+}
+
+.homeNew .scienceBehindSleepio ul>li.yourThoughts {
+	background-image: url(/img/home/science-your-thoughts.png);
+}
+
+.homeNew .scienceBehindSleepio ul>li.yourSchedule {
+	background-image: url(/img/home/science-your-schedule.png);
+}
+
+.homeNew .howSleepioWorks ul>li {
+	padding-top: 163px;
+	width: 210px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 150px 150px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.homeNew .howSleepioWorks .howSleepioWorksVideo {
+	width: 600px;
+	margin: auto;
+}
+
+.homeNew .howSleepioWorks ul>li.setGoals {
+	background-image: url(/img/home/works-set-goal.png);
+}
+
+.homeNew .howSleepioWorks ul>li.testSleep {
+	background-image: url(/img/home/works-test-sleep.png);
+}
+
+.homeNew .howSleepioWorks ul>li.buildProgram {
+	background-image: url(/img/home/works-build-program.png);
+}
+
+.homeNew .howSleepioWorks ul>li.cbtLessons {
+	background-image: url(/img/home/works-cbt-lesson.png);
+}
+
+.homeNew .sleepioReviews .reviewVideo {
+	width: 600px;
+	margin: auto;
+}
+
+.homeNew .sleepioReviews ul>li>img {
+	padding-left: 68px;
+	padding-right: 67px;
+}
+
+.homeNew .sleepioReviews ul>li>blockquote>p {
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.homeNew .sleepioReviews ul>li>blockquote>cite {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.homeNew .whatSleepioCanDoForYou ul>li {
+	padding-top: 163px;
+	width: 288px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 150px 150px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.homeNew .whatSleepioCanDoForYou ul>li>h3 {
+	margin-bottom: 0;
+}
+
+.homeNew .whatSleepioCanDoForYou ul>li.fallAsleep {
+	background-image: url(/img/home/doforyou-fall-asleep.png);
+}
+
+.homeNew .whatSleepioCanDoForYou ul>li.stayAsleep {
+	background-image: url(/img/home/doforyou-stay-asleep.png);
+}
+
+.homeNew .whatSleepioCanDoForYou ul>li.feelRefreshed {
+	background-image: url(/img/home/doforyou-feel-refreshed.png);
+}
+
+.homeNew .whatSleepioCanDoForYou ul>li.boostEnergy {
+	background-image: url(/img/home/doforyou-boost-energy.png);
+}
+
+.homeNew .whatSleepioCanDoForYou ul>li.improvePerformance {
+	background-image: url(/img/home/doforyou-improve-performance.png);
+}
+
+.homeNew .whatSleepioCanDoForYou ul>li.drugFree {
+	background-image: url(/img/home/doforyou-drug-free.png);
+}
+
+/*TELL A FRIEND*/
+#sharingButtons {
+	float: left;
+	position: relative;
+	left: 50%;
+	margin-left: -200px;
+	width: 400px;
+
+}
+
+#sharingButtons>li {
+	float: left;
+	width: 200px;
+	text-align: center;
+}
+
+#sharingButtons>li#facebookShare {
+	width: 88px;
+	padding: 0 56px;
+}
+
+/* CLINIC */
+.clinic.home .homeHeader hgroup {
+	margin-bottom: 30px;
+}
+
+.clinic.home .homeHeader h1,
+.clinic.home .homeHeader h2 {
+	min-height: 0;
+	margin-bottom: 0;
+	color: #003366;
+	font-size: 48px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.clinic.home .homeHeader h1:after {
+	content: ':';
+}
+
+.clinic.home .homeHeader .continueLinks {
+	margin-bottom: 50px;
+}
+
+.clinic.home .insideTheSleepioClinic ol {
+	margin-bottom: 40px;
+}
+
+.clinic.home .insideTheSleepioClinic ol>li {
+	position: relative;
+	padding: 60px 341px 60px 121px;
+	width: 450px;
+	background-repeat: no-repeat;
+	background-position: 611px center;
+	background-size: 180px 180px;
+}
+
+.clinic.home .insideTheSleepioClinic ol>li.alternate {
+	padding-left: 341px;
+	padding-right: 121px;
+	background-position: 121px center;
+}
+
+.clinic.home .insideTheSleepioClinic li.research {
+	background-image: url(/img/clinic/home/bookmark.png);
+}
+
+.clinic.home .insideTheSleepioClinic li.tools {
+	background-image: url(/img/clinic/home/tools.png);
+}
+
+.clinic.home .insideTheSleepioClinic li.colleagues {
+	background-image: url(/img/clinic/home/discussion-bubbles.png);
+}
+
+.clinic.home .insideTheSleepioClinic li.patientSupport {
+	background-image: url(/img/clinic/home/graph.png);
+}
+
+.clinic.home .insideTheSleepioClinic ol>li:before,
+.clinic.home .insideTheSleepioClinic ol>li:after {
+	display: block;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+.clinic.home .insideTheSleepioClinic li.tools:after {
+	content: '';
+	width: 69px;
+	height: 149px;
+	right: 50px;
+	top: -60px;
+	background-size: 69px 149px;
+	background-image: url(/img/home/arrow-curved-nw-to-sw.png);
+}
+
+.clinic.home .insideTheSleepioClinic li.colleagues:before {
+	content: '';
+	width: 61px;
+	height: 153px;
+	left: 50px;
+	top: -60px;
+	background-size: 61px 153px;
+	background-image: url(/img/home/arrow-curved-ne-to-se.png);
+}
+
+.clinic.home .insideTheSleepioClinic li.patientSupport:after {
+	content: '';
+	width: 69px;
+	height: 149px;
+	right: 50px;
+	top: -60px;
+	background-size: 69px 149px;
+	background-image: url(/img/home/arrow-curved-nw-to-sw.png);
+}
+
+.clinic.home .insideTheSleepioClinic p {
+	color: #999;
+}
+
+.clinic.home .whatIsSleepio .whatSleepioIs {
+	width: 550px;
+	margin: 0 auto 40px;
+	font-size: 30px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.clinic.home .whatIsSleepio .embedVideoThumbnail {
+	display: block;
+	margin: 0 auto 40px;
+}
+
+.clinic.home .whatIsSleepio .quotes {
+	text-align: center;
+}
+
+.clinic.home .whatIsSleepio .quotes>li {
+	display: inline-block;
+	vertical-align: top;
+	width: 275px;
+	margin-left: 40px;
+}
+
+.clinic.home .whatIsSleepio .quotes>li:first-child {
+	margin-left: 0;
+}
+
+.clinic.home .whatIsSleepio .quotes blockquote {
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.clinic.home .whatIsSleepio .quotes blockquote p {
+	height: 4.667em;
+}
+
+.clinic.home .whatIsSleepio .quotes blockquote:not(.noQuotationMarks) p:before {
+	content: '“';
+}
+
+.clinic.home .whatIsSleepio .quotes blockquote:not(.noQuotationMarks) p:after {
+	content: '”';
+}
+
+.clinic.home .whatIsSleepio .quotes cite {
+	color: #16a2bb;
+	line-height: 48px;
+}
+
+.clinic.home .whatIsSleepio .quotes cite>img {
+	display: block;
+	height: 48px;
+	margin: 0 auto;
+}
+
+.clinic.home .whatIsSleepio .availableVia {
+	text-align: center;
+	margin: 50px 0;
+}
+
+.clinic.home .whatIsSleepio .availableVia h3 {
+	color: #666;
+}
+
+.clinic.home .whatIsSleepio .readMore {
+	font-size: 24px;
+	display: block;
+	text-align: center;
+}
+
+.clinic.home .pageContent .signUpForSleepio {
+	padding-bottom: 150px;
+}
+
+.clinic.home .signUpForSleepio h2 {
+	font-size: 24px;
+	color: #003366;
+}
+
+/* RETINA IMAGES */
+@media
+(-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+	.home .testYourSleep.sleepTestLanding h1 {
+		background-image: url(/img/home/the-prof-sleep-test-landing@2x.png);
+	}
+
+	.home .intro {
+		background-image: url(/img/home/mountains@2x.png);
+	}
+
+	.home .intro .embedVideoThumbnail {
+		background-image: url(/img/home/sleepio-intro-video-thumbnail@2x.jpg);
+	}
+
+	.home .intro .embedVideoThumbnail.alternatePoster {
+		background-image: url(/img/home/sleepio-intro-video-alternate-thumbnail@2x.jpg);
+	}
+
+	.home .intro .tabbedLinks>li.gift a {
+		background-image: url(/img/controls/gift-bow-pink@2x.png);
+	}
+
+	.home .howSleepioWorks li.questionnaire {
+		background-image: url(/img/home/notepad@2x.png);
+	}
+
+	.home .howSleepioWorks li.questionnaire.withPartners {
+		background-image: url(/img/home/notepad-partners@2x.png);
+	}
+
+	.home .howSleepioWorks li.theProf {
+		background-image: url(/img/home/the-prof@2x.png);
+	}
+
+	.home .howSleepioWorks li.techniques {
+		background-image: url(/img/home/schedule-bedroom-lifestyle-thoughts@2x.png);
+	}
+
+	.home .howSleepioWorks li.tools {
+		background-image: url(/img/home/alarm-clock@2x.png);
+	}
+	.home .howSleepioWorks li.questionnaire:before,
+	.home .howSleepioWorks li.tools:before {
+		background-image: url(/img/home/clouds@2x.png);
+	}
+
+	.home .howSleepioWorks li.theProf:after,
+	.home .howSleepioWorks li.tools:after {
+		background-image: url(/img/home/arrow-curved-nw-to-sw@2x.png);
+	}
+
+	.home .howSleepioWorks li.techniques:before {
+		background-image: url(/img/home/arrow-curved-ne-to-se@2x.png);
+	}
+
+	.home .clinicallyProven li.fallAsleepFaster {
+		background-image: url(/img/home/face-1@2x.png);
+	}
+
+	.home .clinicallyProven li.reduceNightTimeAwakenings {
+		background-image: url(/img/home/face-2@2x.png);
+	}
+
+	.home .clinicallyProven li.boostDaytimeEnergy {
+		background-image: url(/img/home/face-3@2x.png);
+	}
+
+	.homeNew .scienceBehindSleepio ul>li.yourLifestyle {
+		background-image: url(/img/home/science-your-lifestyle@2x.png);
+	}
+
+	.homeNew .scienceBehindSleepio ul>li.yourThoughts {
+		background-image: url(/img/home/science-your-thoughts@2x.png);
+	}
+
+	.homeNew .scienceBehindSleepio ul>li.yourSchedule {
+		background-image: url(/img/home/science-your-schedule@2x.png);
+	}
+	.homeNew .howSleepioWorks ul>li.setGoals {
+		background-image: url(/img/home/works-set-goal@2x.png);
+	}
+
+	.homeNew .howSleepioWorks ul>li.testSleep {
+		background-image: url(/img/home/works-test-sleep@2x.png);
+	}
+
+	.homeNew .howSleepioWorks ul>li.buildProgram {
+		background-image: url(/img/home/works-build-program@2x.png);
+	}
+
+	.homeNew .howSleepioWorks ul>li.cbtLessons {
+		background-image: url(/img/home/works-cbt-lesson@2x.png);
+	}
+	.homeNew .whatSleepioCanDoForYou ul>li.fallAsleep {
+		background-image: url(/img/home/doforyou-fall-asleep@2x.png);
+	}
+
+	.homeNew .whatSleepioCanDoForYou ul>li.stayAsleep {
+		background-image: url(/img/home/doforyou-stay-asleep@2x.png);
+	}
+
+	.homeNew .whatSleepioCanDoForYou ul>li.feelRefreshed {
+		background-image: url(/img/home/doforyou-feel-refreshed@2x.png);
+	}
+
+	.homeNew .whatSleepioCanDoForYou ul>li.boostEnergy {
+		background-image: url(/img/home/doforyou-boost-energy@2x.png);
+	}
+
+	.homeNew .whatSleepioCanDoForYou ul>li.improvePerformance {
+		background-image: url(/img/home/doforyou-improve-performance@2x.png);
+	}
+
+	.homeNew .whatSleepioCanDoForYou ul>li.drugFree {
+		background-image: url(/img/home/doforyou-drug-free@2x.png);
+	}
+
+	.clinic.home .insideTheSleepioClinic li.research {
+		background-image: url(/img/clinic/home/bookmark@2x.png);
+	}
+
+	.clinic.home .insideTheSleepioClinic li.tools {
+		background-image: url(/img/clinic/home/tools@2x.png);
+	}
+
+	.clinic.home .insideTheSleepioClinic li.colleagues {
+		background-image: url(/img/clinic/home/discussion-bubbles@2x.png);
+	}
+
+	.clinic.home .insideTheSleepioClinic li.patientSupport {
+		background-image: url(/img/clinic/home/graph@2x.png);
+	}
+
+	.clinic.home .insideTheSleepioClinic li.tools:after {
+		background-image: url(/img/home/arrow-curved-nw-to-sw@2x.png);
+	}
+
+	.clinic.home .insideTheSleepioClinic li.colleagues:before {
+		background-image: url(/img/home/arrow-curved-ne-to-se@2x.png);
+	}
+
+	.clinic.home .insideTheSleepioClinic li.patientSupport:after {
+		background-image: url(/img/home/arrow-curved-nw-to-sw@2x.png);
+	}
+
+}
