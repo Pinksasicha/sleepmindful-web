@@ -1,0 +1,14 @@
+# ใช้ PHP 8 เวอร์ชัน CLI
+FROM php:8.1-cli
+
+# ตั้ง working directory
+WORKDIR /app
+
+# ก๊อปไฟล์ทั้งหมดจาก repo เข้า image
+COPY . /app
+
+# เปิด port 10000 สำหรับ Render
+EXPOSE 10000
+
+# สั่งให้เริ่มเว็บด้วย PHP built-in server
+CMD ["php", "-S", "0.0.0.0:10000"]
