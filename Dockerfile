@@ -1,14 +1,16 @@
-# ใช้ PHP 8 เวอร์ชัน CLI
 FROM php:8.1-cli
 
-# ตั้ง working directory
+# ติดตั้ง mysqli เพื่อให้ใช้ฐานข้อมูล MySQL ได้
+RUN docker-php-ext-install mysqli
+
+# ตั้งโฟลเดอร์ทำงาน
 WORKDIR /app
 
-# คัดลอกไฟล์ทั้งหมดจาก repository ไปใน container
+# คัดลอกไฟล์ทั้งหมดจาก repo เข้า container
 COPY . /app
 
-# เปิด port 10000 สำหรับ Render
+# เปิดพอร์ตให้ Render เข้าถึง
 EXPOSE 10000
 
-# สั่งให้รัน PHP built-in server บน port 10000
-CMD ["php", "-S", "0.0.0.0:10000"]
+# รัน PHP server ที่โฟลเดอร์ root
+CMD ["php", "-S", "0.0.0.0:10000", "-t", "."]
